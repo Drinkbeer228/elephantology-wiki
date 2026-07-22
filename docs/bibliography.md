@@ -70,8 +70,18 @@ last_reviewed: 2026-07-23
 
 - Gajah: Journal of the Asian Elephant Specialist Group. URL: ../assets/books/647125137-gajah.pdf
 
+- Elephant bot archive. URL: ../assets/books/elephant_bot_archive.md
+
+- Poole J.H., et al. (2023). A culture of aggression: The Gorongosa elephants' enduring legacy of war. *Journal of Elephant Science*.
+
+- ElephantVoices (2012). Gorongosa Report. URL: https://elephantvoices.org/
+
+- Slotow R., et al. (2000). Elephant musth and human-elephant conflict. *Nature*, 408(6812), 547–548. DOI: [10.1038/35046579](https://doi.org/10.1038/35046579)
+
+- Shannon G., et al. (2013). Decades after culling: Elephant behavioural trauma in Gorongosa. *Biological Conservation*, 167, 1–2.
+
 ---
 
-*Этот список обновляется по мере добавления новых статей. Всего источников: 24.*
+*Этот список обновляется по мере добавления новых статей. Всего источников: 29.*
 
 *[Предложить источник или исправление](https://github.com/Drinkbeer228/elephantology-wiki/edit/main/docs/bibliography.md)*
