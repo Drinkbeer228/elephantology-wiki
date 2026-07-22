@@ -1,16 +1,16 @@
 /* ==========================================================================
-   Metal Gear / MSX CRT Phosphor Terminal Theme (Elephantology Wiki)
+   GTA: San Andreas HUD / 2004 Sunset Theme (Elephantology Wiki)
    ========================================================================== */
 :root {
-  --md-primary-fg-color: #00ff66;
-  --md-primary-bg-color: #020903;
-  --md-accent-fg-color: #33ff99;
-  --md-default-bg-color: #020903;
-  --md-default-fg-color: #2ce677;
-  --md-code-bg-color: #051408;
-  --md-code-fg-color: #00ff66;
-  --md-typeset-a-color: #00ff66;
-  --md-typeset-mark-color: rgba(0, 255, 102, 0.2);
+  --md-primary-fg-color: #ff9900;       /* Закатный оранжевый (HUD Orange) */
+  --md-primary-bg-color: #121212;       /* Асфальтовый темно-серый фон */
+  --md-accent-fg-color: #ffd700;        /* Золотисто-желтый акцент */
+  --md-default-bg-color: #121212;
+  --md-default-fg-color: #e1e1e1;       /* Мягкий светлый текст для чтения */
+  --md-code-bg-color: #1a1a1a;
+  --md-code-fg-color: #ff9900;
+  --md-typeset-a-color: #ff9900;
+  --md-typeset-mark-color: rgba(255, 153, 0, 0.25);
   
   --spacing-xs: 0.25rem;
   --spacing-sm: 0.5rem;
@@ -21,142 +21,94 @@
 body {
   background-color: var(--md-default-bg-color);
   color: var(--md-default-fg-color);
-  font-family: 'Courier New', Courier, monospace, Roboto;
 }
 
-/* CRT Scanline / Grid effect */
-.md-typeset::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background: linear-gradient(
-    rgba(18, 16, 16, 0) 50%, 
-    rgba(0, 0, 0, 0.25) 50%
-  ), linear-gradient(
-    90deg,
-    rgba(255, 0, 0, 0.03),
-    rgba(0, 255, 0, 0.01),
-    rgba(0, 0, 255, 0.03)
-  );
-  background-size: 100% 3px, 3px 100%;
-  z-index: -1;
-  pointer-events: none;
-}
-
-/* ==========================================================================
-   3. Typography & Headings Enhancements
-   ========================================================================== */
+/* Стиль заголовков в духе шрифтов HUD San Andreas */
 .md-typeset h1, 
 .md-typeset h2, 
 .md-typeset h3 {
-  font-family: 'Courier New', Courier, monospace;
-  letter-spacing: 0.08em;
-  text-shadow: 0 0 10px rgba(0, 255, 102, 0.6);
+  font-family: 'Impact', 'Arial Black', sans-serif;
+  letter-spacing: 0.05em;
   color: var(--md-primary-fg-color);
   text-transform: uppercase;
 }
 
 .md-typeset h1 {
-  border-bottom: 2px dashed var(--md-primary-fg-color);
+  border-bottom: 3px solid var(--md-primary-fg-color);
   padding-bottom: var(--spacing-xs);
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.8);
 }
 
-/* ==========================================================================
-   4. Accessibility & Focus States
-   ========================================================================== */
+.md-typeset h2 {
+  color: #ffd700;
+}
+
+/* Фокус для доступности */
 *:focus-visible {
   outline: 2px solid var(--md-primary-fg-color);
   outline-offset: 4px;
 }
 
-.md-skip {
-  position: absolute;
-  top: -40px;
-  left: 0;
-  background: var(--md-primary-fg-color);
-  color: #020903;
-  padding: 8px var(--spacing-md);
-  z-index: 100;
-}
-
-.md-skip:focus {
-  top: 0;
-}
-
 .md-nav__link:hover,
 .md-nav__link--active {
-  color: var(--md-accent-fg-color);
-  text-shadow: 0 0 5px rgba(0, 255, 102, 0.5);
+  color: var(--md-primary-fg-color);
+  font-weight: bold;
 }
 
-/* ==========================================================================
-   5. Interactive Elements, Cards, and Tables
-   ========================================================================== */
+/* Таблицы в стиле игровых меню */
 .md-typeset table:not([class]) {
-  border-radius: 0px;
-  border: 1px solid #1b4d2b;
-  box-shadow: inset 0 0 10px rgba(0, 255, 102, 0.1);
+  border: 2px solid #333333;
+  background-color: #181818;
 }
 
 .md-typeset table:not([class]) th {
-  background-color: var(--md-code-bg-color);
+  background-color: #222222;
   color: var(--md-primary-fg-color);
   border-bottom: 2px solid var(--md-primary-fg-color);
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Impact', 'Arial Black', sans-serif;
+  letter-spacing: 0.05em;
 }
 
 .md-typeset table:not([class]) td {
-  border-bottom: 1px dashed #1b4d2b;
+  border-bottom: 1px solid #2a2a2a;
 }
 
 /* ==========================================================================
-   6. Responsive Mobile Optimizations
-   ========================================================================== */
-@media (max-width: 768px) {
-  .md-typeset::before {
-    display: none;
-  }
-  .md-typeset h1 { font-size: 1.6rem; }
-  .md-typeset h2 { font-size: 1.3rem; }
-}
-
-/* ==========================================================================
-   7. Additional Component Styling (Metal Gear MSX Theme)
+   Additional Component Styling (GTA San Andreas Theme)
    ========================================================================== */
 /* Header */
 .md-header {
-  background: linear-gradient(90deg, #020903 0%, #051408 50%, #020903 100%);
-  border-bottom: 1px solid #1b4d2b;
+  background: linear-gradient(180deg, #1a1a1a 0%, #0d0d0d 100%);
+  border-bottom: 2px solid var(--md-primary-fg-color);
 }
 
 .md-header__title {
   color: var(--md-primary-fg-color);
-  font-weight: 600;
-  font-family: 'Courier New', Courier, monospace;
+  font-weight: 900;
+  font-family: 'Impact', 'Arial Black', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 /* Sidebar */
 .md-sidebar {
-  background: rgba(2, 9, 3, 0.95);
-  border-right: 1px solid #1b4d2b;
+  background: #121212;
+  border-right: 2px solid #333333;
 }
 
 /* Code Blocks */
 code {
   color: var(--md-code-fg-color);
-  background: rgba(0, 255, 102, 0.1);
-  border: 1px solid #1b4d2b;
+  background: rgba(255, 153, 0, 0.15);
+  border: 1px solid var(--md-primary-fg-color);
   border-radius: 0px;
   padding: 0.15em 0.35em;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Courier New', monospace;
 }
 
 pre {
   background: var(--md-code-bg-color);
-  border: 1px solid #1b4d2b;
+  border: 2px solid #333333;
   border-radius: 0px;
 }
 
@@ -178,20 +130,23 @@ a:hover {
 
 /* Blockquotes */
 blockquote {
-  border-left: 3px solid var(--md-primary-fg-color);
-  background: linear-gradient(90deg, rgba(0, 255, 102, 0.1) 0%, transparent 100%);
+  border-left: 4px solid var(--md-primary-fg-color);
+  background: linear-gradient(90deg, rgba(255, 153, 0, 0.15) 0%, transparent 100%);
   color: var(--md-default-fg-color);
 }
 
 /* Admonitions */
 .admonition {
-  background: rgba(5, 20, 8, 0.6);
-  border-left: 3px solid var(--md-accent-fg-color);
+  background: rgba(26, 26, 26, 0.8);
+  border-left: 4px solid var(--md-accent-fg-color);
+  border-radius: 0px;
 }
 
 .admonition-title {
   color: var(--md-accent-fg-color);
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Impact', 'Arial Black', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 .admonition.note {
@@ -204,25 +159,28 @@ blockquote {
 
 /* Buttons */
 .md-button {
-  background: rgba(0, 255, 102, 0.1);
-  border: 1px solid var(--md-accent-fg-color);
-  color: var(--md-accent-fg-color);
+  background: linear-gradient(180deg, #ff9900 0%, #cc7a00 100%);
+  border: 2px solid #ffd700;
+  color: #000000;
   transition: all 0.2s ease;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Impact', 'Arial Black', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: bold;
 }
 
 .md-button:hover {
-  background: rgba(51, 255, 153, 0.15);
-  border-color: var(--md-primary-fg-color);
-  color: var(--md-primary-fg-color);
+  background: linear-gradient(180deg, #ffd700 0%, #ff9900 100%);
+  border-color: #ffffff;
+  color: #000000;
 }
 
 /* Search */
 .md-search__input {
-  background: rgba(5, 20, 8, 0.8);
-  border: 1px solid #1b4d2b;
+  background: #1a1a1a;
+  border: 2px solid #333333;
   color: var(--md-default-fg-color);
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Arial', sans-serif;
 }
 
 .md-search__input:focus {
@@ -231,22 +189,23 @@ blockquote {
 
 /* Scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 12px;
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--md-default-bg-color);
+  background: #121212;
 }
 
 ::-webkit-scrollbar-thumb {
   background: linear-gradient(180deg, var(--md-primary-fg-color) 0%, var(--md-accent-fg-color) 100%);
   border-radius: 0px;
+  border: 2px solid #121212;
 }
 
 /* Footer */
 .md-footer {
-  background: linear-gradient(90deg, #020903 0%, #051408 50%, #020903 100%);
-  border-top: 1px solid #1b4d2b;
+  background: linear-gradient(180deg, #1a1a1a 0%, #0d0d0d 100%);
+  border-top: 2px solid #333333;
 }
 
 .md-footer__link {
@@ -259,19 +218,22 @@ blockquote {
 
 /* Tab Navigation */
 .md-tabs {
-  background: linear-gradient(90deg, #020903 0%, #02a035 50%, #020903 100%);
-  border-bottom: 1px solid #1b4d2b;
+  background: linear-gradient(180deg, #1a1a1a 0%, #0d0d0d 100%);
+  border-bottom: 2px solid var(--md-primary-fg-color);
 }
 
 .md-tabs__link {
   color: var(--md-default-fg-color);
   transition: color 0.2s ease;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Arial', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 .md-tabs__link--active {
-  color: var(--md-accent-fg-color);
-  border-bottom: 2px solid var(--md-primary-fg-color);
+  color: var(--md-primary-fg-color);
+  border-bottom: 3px solid var(--md-accent-fg-color);
+  font-weight: bold;
 }
 
 .md-tabs__link:hover {
@@ -284,7 +246,7 @@ blockquote {
 }
 
 .md-nav--secondary .md-nav__link:hover {
-  color: var(--md-accent-fg-color);
+  color: var(--md-primary-fg-color);
 }
 
 /* Content Area */
@@ -294,4 +256,32 @@ blockquote {
 
 .md-main {
   background: transparent;
+}
+
+/* Skip Link */
+.md-skip {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--md-primary-fg-color);
+  color: #000000;
+  padding: 8px var(--spacing-md);
+  z-index: 100;
+  font-family: 'Impact', 'Arial Black', sans-serif;
+  text-transform: uppercase;
+}
+
+.md-skip:focus {
+  top: 0;
+}
+
+/* Responsive Mobile */
+@media (max-width: 768px) {
+  .md-typeset h1 { font-size: 1.6rem; }
+  .md-typeset h2 { font-size: 1.3rem; }
+  .md-typeset h3 { font-size: 1.1rem; }
+  
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
 }
