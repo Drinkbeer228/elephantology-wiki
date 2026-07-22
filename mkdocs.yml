@@ -1,0 +1,74 @@
+site_name: "Энциклопедия «Слонология»"
+site_description: "Глубокая интерактивная база знаний по биологии, анатомии, этологии, эволюции и ветеринарии слонов."
+site_author: "Elephantology Wiki Team"
+site_url: "https://elephantology-wiki.local"
+repo_url: "https://github.com/ageti/elephantology-wiki"
+repo_name: "ageti/elephantology-wiki"
+copyright: "Copyright © 2026 Энциклопедия «Слонология»"
+
+theme:
+  name: material
+  language: ru
+  palette:
+    - scheme: slate
+      primary: pink
+      accent: cyan
+  font:
+    text: Roboto
+    code: Roboto Mono
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.action.edit
+
+markdown_extensions:
+  - meta
+  - admonition
+  - attr_list
+  - md_in_html
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
+
+plugins:
+  - search:
+      lang: ru
+  - minify:
+      minify_html: true
+      minify_js: true
+      minify_css: true
+
+extra_css:
+  - stylesheets/extra.css
+
+nav:
+  - Главная: index.md
+  - Анатомия:
+    - Сердечно-сосудистая система: anatomy/cardiovascular.md
+    - Пищеварительная система: anatomy/digestive_system.md
+    - Покровная система: anatomy/integumentary_system.md
+    - Мышечный гидростат: anatomy/muscular_hydrostat.md
+    - Дыхательная система: anatomy/respiratory_system.md
+    - Череп: anatomy/skeletal_system_cranial.md
+    - Конечности: anatomy/skeletal_system_appendicular.md
+    - Мочеполовая система: anatomy/urogenital_system.md
+  - Этограмма и поведение:
+    - Акустические паттерны: ethogram/acoustic_patterns.md
+    - Агрессивные паттерны: ethogram/aggression_patterns.md
+    - Социальные паттерны: ethogram/social_patterns.md
+  - Таксономия и эволюция: taxonomy/taxonomy_evolution.md
+  - Ветеринария и уход:
+    - Протокол ухода за стопами: veterinary/foot_care_protocol.md
+    - Экстренные схемы лечения EEHV: veterinary/eehv_protocol.md

@@ -1,0 +1,251 @@
+/* Clean Synthwave Theme for Elephantology Wiki */
+
+/* Global Variables - Soft Synthwave Palette */
+:root {
+  --md-primary-fg-color: #ff2a85;
+  --md-primary-bg-color: #0c0721;
+  --md-accent-fg-color: #00f3ff;
+  --md-default-bg-color: #0c0721;
+  --md-default-fg-color: #e8e8e8;
+  --md-code-bg-color: #1a1235;
+  --md-code-fg-color: #00f3ff;
+  --md-typeset-a-color: #ff2a85;
+  --md-typeset-mark-color: rgba(0, 243, 255, 0.2);
+}
+
+/* Body Background - Deep Night */
+body {
+  background-color: #0c0721;
+  background: linear-gradient(180deg, #0c0721 0%, #120a2a 100%);
+}
+
+/* Headers - Subtle Neon Glow */
+h1, h2, h3, h4, h5, h6 {
+  color: #ff2a85;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+h1 {
+  color: #ff2a85;
+  text-shadow: 0 0 10px rgba(255, 42, 133, 0.3);
+}
+
+h2 {
+  color: #ff2a85;
+  text-shadow: 0 0 8px rgba(255, 42, 133, 0.25);
+  border-bottom: 1px solid rgba(0, 243, 255, 0.3);
+  padding-bottom: 0.5rem;
+}
+
+h3 {
+  color: #00f3ff;
+  text-shadow: 0 0 6px rgba(0, 243, 255, 0.2);
+}
+
+/* Navigation Links */
+.md-nav__link {
+  color: #e8e8e8;
+  transition: color 0.2s ease;
+}
+
+.md-nav__link:hover,
+.md-nav__link--active {
+  color: #00f3ff;
+}
+
+/* Header */
+.md-header {
+  background: linear-gradient(90deg, #0c0721 0%, #120a2a 50%, #0c0721 100%);
+  border-bottom: 1px solid rgba(255, 42, 133, 0.2);
+}
+
+.md-header__title {
+  color: #ff2a85;
+  font-weight: 600;
+}
+
+/* Sidebar */
+.md-sidebar {
+  background: rgba(12, 7, 33, 0.95);
+  border-right: 1px solid rgba(0, 243, 255, 0.15);
+}
+
+/* Code Blocks */
+code {
+  color: #00f3ff;
+  background: rgba(0, 243, 255, 0.08);
+  border: 1px solid rgba(0, 243, 255, 0.2);
+  border-radius: 3px;
+  padding: 0.15em 0.35em;
+}
+
+pre {
+  background: #1a1235;
+  border: 1px solid rgba(255, 42, 133, 0.2);
+  border-radius: 4px;
+}
+
+pre code {
+  background: transparent;
+  border: none;
+}
+
+/* Links */
+a {
+  color: #ff2a85;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: #00f3ff;
+}
+
+/* Tables */
+th {
+  background: rgba(255, 42, 133, 0.15);
+  color: #00f3ff;
+  border: 1px solid rgba(0, 243, 255, 0.2);
+}
+
+td {
+  border: 1px solid rgba(0, 243, 255, 0.1);
+  background: rgba(18, 10, 42, 0.3);
+}
+
+tr:hover td {
+  background: rgba(255, 42, 133, 0.08);
+}
+
+/* Blockquotes */
+blockquote {
+  border-left: 3px solid #ff2a85;
+  background: linear-gradient(90deg, rgba(255, 42, 133, 0.08) 0%, transparent 100%);
+  color: #d0d0d0;
+}
+
+/* Admonitions */
+.admonition {
+  background: rgba(18, 10, 42, 0.6);
+  border-left: 3px solid #00f3ff;
+}
+
+.admonition-title {
+  color: #00f3ff;
+}
+
+.admonition.note {
+  border-left-color: #ff2a85;
+}
+
+.admonition.note .admonition-title {
+  color: #ff2a85;
+}
+
+/* Buttons */
+.md-button {
+  background: rgba(255, 42, 133, 0.15);
+  border: 1px solid #00f3ff;
+  color: #00f3ff;
+  transition: all 0.2s ease;
+}
+
+.md-button:hover {
+  background: rgba(0, 243, 255, 0.15);
+  border-color: #ff2a85;
+  color: #ff2a85;
+}
+
+/* Search */
+.md-search__input {
+  background: rgba(18, 10, 42, 0.8);
+  border: 1px solid rgba(0, 243, 255, 0.3);
+  color: #e8e8e8;
+}
+
+.md-search__input:focus {
+  border-color: #ff2a85;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0c0721;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #ff2a85 0%, #00f3ff 100%);
+  border-radius: 4px;
+}
+
+/* Footer */
+.md-footer {
+  background: linear-gradient(90deg, #0c0721 0%, #120a2a 50%, #0c0721 100%);
+  border-top: 1px solid rgba(0, 243, 255, 0.2);
+}
+
+.md-footer__link {
+  color: #00f3ff;
+}
+
+.md-footer__link:hover {
+  color: #ff2a85;
+}
+
+/* Tab Navigation */
+.md-tabs {
+  background: linear-gradient(90deg, #0c0721 0%, #120a2a 50%, #0c0721 100%);
+  border-bottom: 1px solid rgba(0, 243, 255, 0.2);
+}
+
+.md-tabs__link {
+  color: #e8e8e8;
+  transition: color 0.2s ease;
+}
+
+.md-tabs__link--active {
+  color: #00f3ff;
+  border-bottom: 2px solid #ff2a85;
+}
+
+.md-tabs__link:hover {
+  color: #00f3ff;
+}
+
+/* TOC (Table of Contents) */
+.md-nav--secondary .md-nav__link {
+  color: #e8e8e8;
+}
+
+.md-nav--secondary .md-nav__link:hover {
+  color: #00f3ff;
+}
+
+/* Content Area */
+.md-content {
+  background: transparent;
+}
+
+.md-main {
+  background: transparent;
+}
+
+/* Subtle Grid Background */
+.md-typeset::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(rgba(0, 243, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 243, 255, 0.02) 1px, transparent 1px);
+  background-size: 60px 60px;
+  pointer-events: none;
+  z-index: -1;
+}
