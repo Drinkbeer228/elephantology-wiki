@@ -48,13 +48,13 @@ last_reviewed: 2026-07-23
 
 ## Веб-ресурсы
 
-- EEHV Information Center. Elephant Care Community. URL: https://www.elephantcare.org/eehv/ (доступ: 2026-07-23)
+- EEHV Information Center. Elephant Care Community. URL: https://www.elephantcare.org/eehv/
 
-- IUCN Red List — African Elephant (*Loxodonta africana*). URL: https://www.iucnredlist.org/species/12392/3339343 (доступ: 2026-07-23)
+- IUCN Red List — African Elephant (*Loxodonta africana*). URL: https://www.iucnredlist.org/species/12392/3339343
 
-- IUCN Red List — Asian Elephant (*Elephas maximus*). URL: https://www.iucnredlist.org/species/7140/45818198 (доступ: 2026-07-23)
+- IUCN Red List — Asian Elephant (*Elephas maximus*). URL: https://www.iucnredlist.org/species/7140/45818198
 
-- Elephant Database. URL: https://www.elephant.se/ (доступ: 2026-07-23)
+- Elephant Database. URL: https://www.elephant.se/
 
 ## Стандарты и протоколы
 
