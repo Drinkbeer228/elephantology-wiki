@@ -60,6 +60,7 @@ nav:
     - Конечности: anatomy/skeletal_system_appendicular.md
     - Мочеполовая система: anatomy/urogenital_system.md
   - Этограмма и поведение:
+    - Когнитивная архитектура и самосознание: ethogram/cognitive_architecture.md
     - Акустические паттерны: ethogram/acoustic_patterns.md
     - Агрессивные паттерны: ethogram/aggression_patterns.md
     - Социальные паттерны: ethogram/social_patterns.md
