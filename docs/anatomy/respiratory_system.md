@@ -1,7 +1,20 @@
 ---
-title: 'Дыхательная система'
-category: 'ANATOMY'
-tags: [анатомия, дыхание, легкие, плевральная полость]
+title: "Дыхательная система"
+description: "Морфология легких слонов, отсутствие плевральной полости, адаптация к давлению и дыханию под водой."
+tags:
+  - анатомия
+  - дыхание
+  - легкие
+  - плевральная полость
+difficulty: advanced
+last_reviewed: 2026-07-23
+references:
+  - type: book
+    title: "Asian Elephant Anatomy - Clark Science Center"
+    path: "../assets/books/196174216674_10153550202311675.pdf"
+  - type: book
+    title: "Manual of diseases of the elephant"
+    path: "../assets/books/A_manual_of_the_diseases_of_the_elephant_and_of_his_management_and_uses_(IA_cu31924000918486).pdf"
 ---
 
 ## Общая морфология легких и плевральной полости
@@ -22,10 +35,19 @@ tags: [анатомия, дыхание, легкие, плевральная п
 
 Кроме того, глубокие проникающие ранения грудной клетки не несут для слонов типичной смертельной опасности возникновения пневмоторакса. Поскольку легкие спаяны с ребрами и диафрагмой, они не могут спадаться при нарушении герметичности грудной стенки [3].
 
-## Источники
+---
 
-[1] Asian Elephant Anatomy - Clark Science Center, стр. 4 - см. [196174216674_10153550202311675.pdf](../assets/books/196174216674_10153550202311675.pdf)
-[2] Анатомические исследования дыхательной системы слонов, стр. 77 - см. [196174216674_10153550202311675.pdf](../assets/books/196174216674_10153550202311675.pdf)
-[3] Manual of diseases of the elephant, стр. 46-47 - см. [A_manual_of_the_diseases_of_the_elephant_and_of_his_management_and_uses_(IA_cu31924000918486).pdf](../assets/books/A_manual_of_the_diseases_of_the_elephant_and_of_his_management_and_uses_(IA_cu31924000918486).pdf)
-[4] Poole et al.: Loxodonta africana respiratory adaptations, стр. 189
-[5] Elephants and Kings: Environmental history, стр. 16 - см. [elephants-and-kings-an-environmental-history-022626422x-9780226264226_compress.pdf](../assets/books/elephants-and-kings-an-environmental-history-022626422x-9780226264226_compress.pdf)
+## 📚 Источники
+
+<div class="article-sources" markdown>
+
+| Источник | Тип | Ссылка |
+|----------|-----|--------|
+| Asian Elephant Anatomy - Clark Science Center | PDF | [196174216674_10153550202311675.pdf](../assets/books/196174216674_10153550202311675.pdf) |
+| Manual of diseases of the elephant | PDF | [A_manual_of_the_diseases_of_the_elephant_and_of_his_management_and_uses_(IA_cu31924000918486).pdf](../assets/books/A_manual_of_the_diseases_of_the_elephant_and_of_his_management_and_uses_(IA_cu31924000918486).pdf) |
+
+</div>
+
+---
+
+*Последняя проверка актуальности: 2026-07-23*

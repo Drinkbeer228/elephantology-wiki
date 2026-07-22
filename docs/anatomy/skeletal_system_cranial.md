@@ -1,7 +1,23 @@
 ---
-title: 'Остеология: Строение черепа'
-category: 'ANATOMY'
-tags: [остеология, череп, скелет, адаптация]
+title: "Остеология: Строение черепа"
+description: "Морфология черепа слона, пневматизация костей, адаптация к мышечной нагрузке и поддержке бивней."
+tags:
+  - остеология
+  - череп
+  - скелет
+  - адаптация
+difficulty: intermediate
+last_reviewed: 2026-07-23
+references:
+  - type: book
+    title: "The Proboscidea: Evolution and palaeoecology"
+    path: "../assets/books/the-proboscidea-evolution-and-palaeoecology-of-elephants-and-their-relatives.pdf"
+  - type: book
+    title: "Asian Elephant Anatomy - Clark Science Center"
+    path: "../assets/books/196174216674_10153550202311675.pdf"
+  - type: book
+    title: "Manual of diseases of the elephant"
+    path: "../assets/books/A_manual_of_the_diseases_of_the_elephant_and_of_his_management_and_uses_(IA_cu31924000918486).pdf"
 ---
 
 ## Общая морфология и пневматизация костей
@@ -27,15 +43,20 @@ tags: [остеология, череп, скелет, адаптация]
 | **Мозговой отдел** | Теменные, затылочные, лобные, чешуйчатые кости | Защита относительно небольшой мозговой камеры. Экстремальное расширение поверхности (за счет пневматизации диплоэ) для крепления массивной связочной и мышечной системы, удерживающей огромный вес головы [4][10]. |
 | **Лицевой отдел** | Верхнечелюстные, предчелюстные, носовые кости, нижняя челюсть | Обеспечение глубоких альвеолярных областей для горизонтальной ротации и фиксации огромных моляров. Костная поддержка корней тяжелых бивней. Структурная опора (вогнутости и гребни) для интеграции 150 000 мышечных пучков хобота [2][9]. |
 
-## Источники
+---
 
-[1] Manual of diseases of the elephant, стр. 42 - см. [A_manual_of_the_diseases_of_the_elephant_and_of_his_management_and_uses_(IA_cu31924000918486).pdf](../assets/books/A_manual_of_the_diseases_of_the_elephant_and_of_his_management_and_uses_(IA_cu31924000918486).pdf)
-[2] Poole et al.: Loxodonta africana skull morphology, стр. 189
-[3] Исследования остеологии хоботных, стр. 173 - см. [169.pdf](../assets/books/169.pdf)
-[4] The Proboscidea: Evolution and palaeoecology, стр. 11 - см. [the-proboscidea-evolution-and-palaeoecology-of-elephants-and-their-relatives.pdf](../assets/books/the-proboscidea-evolution-and-palaeoecology-of-elephants-and-their-relatives.pdf)
-[5] Asian Elephant Anatomy - Clark Science Center, стр. 2 - см. [196174216674_10153550202311675.pdf](../assets/books/196174216674_10153550202311675.pdf)
-[6] Исследования остеологии хоботных, стр. 178 - см. [169.pdf](../assets/books/169.pdf)
-[7] Manual of diseases of the elephant, стр. 43 - см. [A_manual_of_the_diseases_of_the_elephant_and_of_his_management_and_uses_(IA_cu31924000918486).pdf](../assets/books/A_manual_of_the_diseases_of_the_elephant_and_of_his_management_and_uses_(IA_cu31924000918486).pdf)
-[8] Исследования остеологии хоботных, стр. 181 - см. [169.pdf](../assets/books/169.pdf)
-[9] Philosophical Transactions of the Royal Society, стр. 104 - см. [rstb.1904.0004.pdf](../assets/books/rstb.1904.0004.pdf)
-[10] Philosophical Transactions of the Royal Society, стр. 103 - см. [rstb.1904.0004.pdf](../assets/books/rstb.1904.0004.pdf)
+## 📚 Источники
+
+<div class="article-sources" markdown>
+
+| Источник | Тип | Ссылка |
+|----------|-----|--------|
+| The Proboscidea: Evolution and palaeoecology | PDF | [the-proboscidea-evolution-and-palaeoecology-of-elephants-and-their-relatives.pdf](../assets/books/the-proboscidea-evolution-and-palaeoecology-of-elephants-and-their-relatives.pdf) |
+| Asian Elephant Anatomy - Clark Science Center | PDF | [196174216674_10153550202311675.pdf](../assets/books/196174216674_10153550202311675.pdf) |
+| Manual of diseases of the elephant | PDF | [A_manual_of_the_diseases_of_the_elephant_and_of_his_management_and_uses_(IA_cu31924000918486).pdf](../assets/books/A_manual_of_the_diseases_of_the_elephant_and_of_his_management_and_uses_(IA_cu31924000918486).pdf) |
+
+</div>
+
+---
+
+*Последняя проверка актуальности: 2026-07-23*

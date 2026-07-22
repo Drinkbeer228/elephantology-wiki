@@ -1,7 +1,23 @@
 ---
-title: 'Мышечная система: Анатомия хобота'
-category: 'ANATOMY'
-tags: [анатомия, хобот, мышцы, гидростат]
+title: "Мышечная система: Анатомия хобота"
+description: "Биомеханика хобота слона как мышечного гидростата, топография мышечных групп и функциональное значение."
+tags:
+  - анатомия
+  - хобот
+  - мышцы
+  - гидростат
+difficulty: advanced
+last_reviewed: 2026-07-23
+references:
+  - type: report
+    title: "Proboscidea Morphology Research"
+    path: "../assets/books/ProboscidaeMorph_RG.pdf"
+  - type: journal
+    title: "Gajah Journal: Elephant trunk morphology"
+    path: "../assets/books/647125137-gajah.pdf"
+  - type: book
+    title: "The Amboseli Elephants: A Long-Term Perspective on a Long-Lived Mammal"
+    path: "../assets/books/the-amboseli-elephants-a-long-term-perspective-on-a-long-lived-mammal-9780226542263_compress.pdf"
 ---
 
 ## Общая морфология и биомеханика
@@ -24,13 +40,20 @@ tags: [анатомия, хобот, мышцы, гидростат]
 
 **Вокализация и акустическая коммуникация:** Хобот является критически важным компонентом удлиненного вокального тракта слона, внешний размер которого может достигать 2,5 метров [6]. Форсированный выброс воздуха через носовые каналы с одновременным изменением положения и мышечного тонуса гидростата позволяет генерировать широкий спектр высокочастотных сигналов — трубных звуков (trumpets) и фырканий (snorts) [7]. Кроме того, намеренная мышечная модуляция формы хобота используется животными для искусственного изменения формантной структуры низкочастотных вокализаций (rumbles). Эта анатомическая особенность напрямую обслуживает потребности сложной социальной структуры видов рода *Loxodonta*, так как модуляция резонансных частот хоботом снижает риск акустического затухания и повышает эффективность коммуникации на дальних дистанциях [8].
 
-## Источники
+---
 
-[1] Proboscidea Morphology Research, стр. 2-3 - см. [ProboscidaeMorph_RG.pdf](../assets/books/ProboscidaeMorph_RG.pdf)
-[2] Proboscidea Morphology Research, стр. 2-3 - см. [ProboscidaeMorph_RG.pdf](../assets/books/ProboscidaeMorph_RG.pdf)
-[3] Gajah Journal: Elephant trunk morphology, стр. 3 - см. [647125137-gajah.pdf](../assets/books/647125137-gajah.pdf)
-[4] Исследования биомеханики хобота слонов, стр. 172 - см. [169.pdf](../assets/books/169.pdf)
-[5] Poole & Moss: Elephant behavior and tool use, стр. 82 - см. [the-amboseli-elephants-a-long-term-perspective-on-a-long-lived-mammal-9780226542263_compress.pdf](../assets/books/the-amboseli-elephants-a-long-term-perspective-on-a-long-lived-mammal-9780226542263_compress.pdf)
-[6] Poole: Behavioral Contexts of Elephant Acoustic Communication, стр. 126 - см. [647125137-gajah.pdf](../assets/books/647125137-gajah.pdf)
-[7] Poole: Behavioral Contexts of Elephant Acoustic Communication, стр. 127 - см. [647125137-gajah.pdf](../assets/books/647125137-gajah.pdf)
-[8] Hedwig et al.: Social complexity drives vocal complexity, стр. 11 - см. [goodman-et-al-2009-phylogenomic-analyses-reveal-convergent-patterns-of-adaptive-evolution-in-elephant-and-human.pdf](../assets/books/goodman-et-al-2009-phylogenomic-analyses-reveal-convergent-patterns-of-adaptive-evolution-in-elephant-and-human.pdf)
+## 📚 Источники
+
+<div class="article-sources" markdown>
+
+| Источник | Тип | Ссылка |
+|----------|-----|--------|
+| Proboscidea Morphology Research | PDF | [ProboscidaeMorph_RG.pdf](../assets/books/ProboscidaeMorph_RG.pdf) |
+| Gajah Journal: Elephant trunk morphology | PDF | [647125137-gajah.pdf](../assets/books/647125137-gajah.pdf) |
+| The Amboseli Elephants: A Long-Term Perspective | PDF | [the-amboseli-elephants-a-long-term-perspective-on-a-long-lived-mammal-9780226542263_compress.pdf](../assets/books/the-amboseli-elephants-a-long-term-perspective-on-a-long-lived-mammal-9780226542263_compress.pdf) |
+
+</div>
+
+---
+
+*Последняя проверка актуальности: 2026-07-23*

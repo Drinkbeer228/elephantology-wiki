@@ -23,9 +23,13 @@ theme:
     - navigation.sections
     - navigation.expand
     - navigation.top
+    - navigation.footer
+    - toc.integrate
     - search.suggest
     - search.highlight
     - content.code.copy
+    - content.action.edit
+    - content.action.view
 
 markdown_extensions:
   - meta
@@ -51,6 +55,7 @@ extra_css:
 nav:
   - Главная: index.md
   - Анатомия:
+    - Обзор: anatomy/index.md
     - Сердечно-сосудистая система: anatomy/cardiovascular.md
     - Пищеварительная система: anatomy/digestive_system.md
     - Покровная система: anatomy/integumentary_system.md
@@ -60,13 +65,19 @@ nav:
     - Конечности: anatomy/skeletal_system_appendicular.md
     - Мочеполовая система: anatomy/urogenital_system.md
   - Этограмма и поведение:
+    - Обзор: ethogram/index.md
     - Когнитивная архитектура и самосознание: ethogram/cognitive_architecture.md
     - Сейсмическая коммуникация: ethogram/seismic_communication.md
     - Акустические паттерны: ethogram/acoustic_patterns.md
     - Агрессивные паттерны: ethogram/aggression_patterns.md
     - Социальные паттерны: ethogram/social_patterns.md
-  - Таксономия и эволюция: taxonomy/taxonomy_evolution.md
+  - Таксономия и эволюция:
+    - Обзор: taxonomy/index.md
+    - Таксономия, эволюция и вымершие родственники: taxonomy/taxonomy_evolution.md
   - Ветеринария и уход:
+    - Обзор: veterinary/index.md
     - Протокол ухода за стопами: veterinary/foot_care_protocol.md
     - Экстренные схемы лечения EEHV: veterinary/eehv_protocol.md
     - Выхаживание и реабилитация слонят-сирот: veterinary/orphan_calf_rehabilitation.md
+  - Словарь терминов: glossary.md
+  - Библиография: bibliography.md

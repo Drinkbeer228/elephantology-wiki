@@ -1,7 +1,19 @@
 ---
-title: 'Акустические паттерны слонов'
-category: 'ETHOGRAM'
-tags: [акустика, коммуникация, вокализация]
+title: "Акустические паттерны слонов"
+description: "Каталог акустических коммуникационных паттернов слонов: муст-рамбл, труба, рев, фырканье, лай."
+tags:
+  - акустика
+  - коммуникация
+  - вокализация
+difficulty: intermediate
+last_reviewed: 2026-07-23
+references:
+  - type: book
+    title: "The Amboseli Elephants: A Long-Term Perspective on a Long-Lived Mammal"
+    path: "../assets/books/the-amboseli-elephants-a-long-term-perspective-on-a-long-lived-mammal-9780226542263_compress.pdf"
+  - type: journal
+    title: "Gajah Journal"
+    path: "../assets/books/647125137-gajah.pdf"
 ---
 
 # Акустические паттерны слонов
@@ -66,7 +78,19 @@ tags: [акустика, коммуникация, вокализация]
 
 **Источник:** [2]
 
-## Источники
+---
 
-[1] Poole: Rutting behaviour in African elephants, стр. 298 - см. [the-amboseli-elephants-a-long-term-perspective-on-a-long-lived-mammal-9780226542263_compress.pdf](../assets/books/the-amboseli-elephants-a-long-term-perspective-on-a-long-lived-mammal-9780226542263_compress.pdf)
-[2] Poole: Behavioral Contexts of Elephant Acoustic Communication, стр. 132, 134, 136 - см. [647125137-gajah.pdf](../assets/books/647125137-gajah.pdf)
+## 📚 Источники
+
+<div class="article-sources" markdown>
+
+| Источник | Тип | Ссылка |
+|----------|-----|--------|
+| The Amboseli Elephants: A Long-Term Perspective | PDF | [the-amboseli-elephants-a-long-term-perspective-on-a-long-lived-mammal-9780226542263_compress.pdf](../assets/books/the-amboseli-elephants-a-long-term-perspective-on-a-long-lived-mammal-9780226542263_compress.pdf) |
+| Gajah Journal | PDF | [647125137-gajah.pdf](../assets/books/647125137-gajah.pdf) |
+
+</div>
+
+---
+
+*Последняя проверка актуальности: 2026-07-23*

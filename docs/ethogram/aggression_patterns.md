@@ -1,7 +1,27 @@
-title: 'Standing-Tall (Демонстрация величины)'
-category: 'ETHOGRAM'
-tags: [угроза, доминирование, визуальный сигнал]
-Описание: Агрессивная демонстрация, при которой слон поворачивается к противнику анфас и визуально максимизирует свои габариты.
+---
+title: "Агрессивные паттерны"
+description: "Каталог агрессивных и угрожающих поведенческих паттернов слонов: демонстрация величины, складывание ушей, атака, походка в состоянии муста."
+tags:
+  - этология
+  - агрессия
+  - угроза
+  - доминирование
+difficulty: intermediate
+last_reviewed: 2026-07-23
+references:
+  - type: journal
+    title: "Gajah Journal: Signals, Gestures and Behavior"
+    path: "../assets/books/647125137-gajah.pdf"
+  - type: book
+    title: "The Amboseli Elephants: A Long-Term Perspective on a Long-Lived Mammal"
+    path: "../assets/books/the-amboseli-elephants-a-long-term-perspective-on-a-long-lived-mammal-9780226542263_compress.pdf"
+---
+
+# Агрессивные паттерны
+
+## Standing-Tall (Демонстрация величины)
+
+**Описание:** Агрессивная демонстрация, при которой слон поворачивается к противнику анфас и визуально максимизирует свои габариты.
 Визуальные маркеры:
 
 Голова: Поднята значительно выше уровня лопаток, бивни направлены в сторону противника.
@@ -87,12 +107,19 @@ tags: [муст, локомоЦия, доминирование]
 Контекст: Состояние повышенной половой активности и агрессивности (муст). Самец использует этот паттерн при патрулировании, приближении к группам самок или для психологического подавления других самцов на расстоянии.
 Источник: [2][7]
 
-## Источники
+---
 
-[1] Signals, Gestures and Behavior, стр. 110 - см. [647125137-gajah.pdf](../assets/books/647125137-gajah.pdf)
-[2] Poole: Musth and male-male competition, стр. 278-283 - см. [the-amboseli-elephants-a-long-term-perspective-on-a-long-lived-mammal-9780226542263_compress.pdf](../assets/books/the-amboseli-elephants-a-long-term-perspective-on-a-long-lived-mammal-9780226542263_compress.pdf)
-[3] Signals, Gestures and Behavior, стр. 118 - см. [647125137-gajah.pdf](../assets/books/647125137-gajah.pdf)
-[4] Poole: Rutting behaviour in African elephants, стр. 283 - см. [the-amboseli-elephants-a-long-term-perspective-on-a-long-lived-mammal-9780226542263_compress.pdf](../assets/books/the-amboseli-elephants-a-long-term-perspective-on-a-long-lived-mammal-9780226542263_compress.pdf)
-[5] Communication of African Elephants, стр. 6 - см. [647125137-gajah.pdf](../assets/books/647125137-gajah.pdf)
-[6] Poole: Behavioral Contexts of Elephant Acoustic Communication, стр. 141 - см. [647125137-gajah.pdf](../assets/books/647125137-gajah.pdf)
-[7] Poole and Granli: The Elephant Ethogram, стр. 106 - см. [647125137-gajah.pdf](../assets/books/647125137-gajah.pdf)
+## 📚 Источники
+
+<div class="article-sources" markdown>
+
+| Источник | Тип | Ссылка |
+|----------|-----|--------|
+| Gajah Journal: Signals, Gestures and Behavior | PDF | [647125137-gajah.pdf](../assets/books/647125137-gajah.pdf) |
+| The Amboseli Elephants: A Long-Term Perspective | PDF | [the-amboseli-elephants-a-long-term-perspective-on-a-long-lived-mammal-9780226542263_compress.pdf](../assets/books/the-amboseli-elephants-a-long-term-perspective-on-a-long-lived-mammal-9780226542263_compress.pdf) |
+
+</div>
+
+---
+
+*Последняя проверка актуальности: 2026-07-23*

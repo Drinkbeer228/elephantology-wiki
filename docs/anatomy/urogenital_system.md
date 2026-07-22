@@ -1,7 +1,22 @@
 ---
-title: 'Мочеполовая система'
-category: 'ANATOMY'
-tags: [анатомия, почки, репродуктивная система]
+title: "Мочеполовая система"
+description: "Морфология почек, репродуктивная система самцов и самок слонов."
+tags:
+  - анатомия
+  - почки
+  - репродуктивная система
+difficulty: intermediate
+last_reviewed: 2026-07-23
+references:
+  - type: book
+    title: "Asian Elephant Anatomy - Clark Science Center"
+    path: "../assets/books/196174216674_10153550202311675.pdf"
+  - type: report
+    title: "Proboscidea Morphology Research"
+    path: "../assets/books/ProboscidaeMorph_RG.pdf"
+  - type: book
+    title: "Manual of diseases of the elephant"
+    path: "../assets/books/A_manual_of_the_diseases_of_the_elephant_and_of_his_management_and_uses_(IA_cu31924000918486).pdf"
 ---
 
 ## Морфология почек
@@ -22,13 +37,20 @@ tags: [анатомия, почки, репродуктивная система
 
 В невозбужденном состоянии эта трубчатая структура изогнута вперед, в результате чего вульварное отверстие открывается на вентральной поверхности живота между задними ногами. Такое расположение наружных половых органов самки визуально очень схоже с позицией пениса у самцов [7][8]. Данная морфологическая особенность исторически приводила к частым ошибкам при визуальном определении пола слонов в естественной среде [2]. Клитор также сильно увеличен, снабжен препуцием и может достигать в длину более 30 сантиметров [8].
 
-## Источники
+---
 
-[1] Manual of diseases of the elephant, стр. 48 - см. [A_manual_of_the_diseases_of_the_elephant_and_of_his_management_and_uses_(IA_cu31924000918486).pdf](../assets/books/A_manual_of_the_diseases_of_the_elephant_and_of_his_management_and_uses_(IA_cu31924000918486).pdf)
-[2] Asian Elephant Anatomy - Clark Science Center, стр. 4 - см. [196174216674_10153550202311675.pdf](../assets/books/196174216674_10153550202311675.pdf)
-[3] Анатомические исследования мочеполовой системы слонов, стр. 67 - см. [196174216674_10153550202311675.pdf](../assets/books/196174216674_10153550202311675.pdf)
-[4] Living African elephants: Two species study, стр. 152 - см. [the-amboseli-elephants-a-long-term-perspective-on-a-long-lived-mammal-9780226542263_compress.pdf](../assets/books/the-amboseli-elephants-a-long-term-perspective-on-a-long-lived-mammal-9780226542263_compress.pdf)
-[5] Анатомические исследования мочеполовой системы слонов, стр. 59 - см. [196174216674_10153550202311675.pdf](../assets/books/196174216674_10153550202311675.pdf)
-[6] Proboscidea Morphology Research, стр. 1-2 - см. [ProboscidaeMorph_RG.pdf](../assets/books/ProboscidaeMorph_RG.pdf)
-[7] Анатомические исследования мочеполовой системы слонов, стр. 64-65 - см. [196174216674_10153550202311675.pdf](../assets/books/196174216674_10153550202311675.pdf)
-[8] Manual of diseases of the elephant, стр. 68 - см. [A_manual_of_the_diseases_of_the_elephant_and_of_his_management_and_uses_(IA_cu31924000918486).pdf](../assets/books/A_manual_of_the_diseases_of_the_elephant_and_of_his_management_and_uses_(IA_cu31924000918486).pdf)
+## 📚 Источники
+
+<div class="article-sources" markdown>
+
+| Источник | Тип | Ссылка |
+|----------|-----|--------|
+| Asian Elephant Anatomy - Clark Science Center | PDF | [196174216674_10153550202311675.pdf](../assets/books/196174216674_10153550202311675.pdf) |
+| Proboscidea Morphology Research | PDF | [ProboscidaeMorph_RG.pdf](../assets/books/ProboscidaeMorph_RG.pdf) |
+| Manual of diseases of the elephant | PDF | [A_manual_of_the_diseases_of_the_elephant_and_of_his_management_and_uses_(IA_cu31924000918486).pdf](../assets/books/A_manual_of_the_diseases_of_the_elephant_and_of_his_management_and_uses_(IA_cu31924000918486).pdf) |
+
+</div>
+
+---
+
+*Последняя проверка актуальности: 2026-07-23*

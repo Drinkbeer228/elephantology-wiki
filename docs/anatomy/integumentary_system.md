@@ -1,7 +1,23 @@
 ---
-title: 'Покровная система и железы'
-category: 'ANATOMY'
-tags: [кожа, эпидермис, височная железа, секреция]
+title: "Покровная система и железы"
+description: "Структура кожи слонов, отсутствие потовых желез, морфология и функции височной железы."
+tags:
+  - кожа
+  - эпидермис
+  - височная железа
+  - секреция
+difficulty: beginner
+last_reviewed: 2026-07-23
+references:
+  - type: journal
+    title: "Gajah Journal: Elephant skin morphology"
+    path: "../assets/books/647125137-gajah.pdf"
+  - type: book
+    title: "Asian Elephant Anatomy - Clark Science Center"
+    path: "../assets/books/196174216674_10153550202311675.pdf"
+  - type: report
+    title: "Proboscidea Morphology Research"
+    path: "../assets/books/ProboscidaeMorph_RG.pdf"
 ---
 
 ## Структура кожи и отсутствие потовых желез
@@ -18,12 +34,20 @@ tags: [кожа, эпидермис, височная железа, секрец
 
 Выводной проток железы короткий, имеет малый калибр и открывается в нижней части органа через наружное отверстие длиной около 20 мм, которое визуально определяется как вертикальная щель в глубокой кожной складке [2][7].
 
-## Источники
+---
 
-[1] Gajah Journal: Elephant skin morphology, стр. 2 - см. [647125137-gajah.pdf](../assets/books/647125137-gajah.pdf)
-[2] Asian Elephant Anatomy - Clark Science Center, стр. 2 - см. [196174216674_10153550202311675.pdf](../assets/books/196174216674_10153550202311675.pdf)
-[3] Proboscidea Morphology Research, стр. 2 - см. [ProboscidaeMorph_RG.pdf](../assets/books/ProboscidaeMorph_RG.pdf)
-[4] Proboscidea Morphology Research, стр. 3 - см. [ProboscidaeMorph_RG.pdf](../assets/books/ProboscidaeMorph_RG.pdf)
-[5] Poole et al.: Loxodonta africana temporal gland study, стр. 104
-[6] Анатомические исследования покровной системы слонов, стр. 66 - см. [196174216674_10153550202311675.pdf](../assets/books/196174216674_10153550202311675.pdf)
-[7] Анатомические исследования покровной системы слонов, стр. 66-67 - см. [196174216674_10153550202311675.pdf](../assets/books/196174216674_10153550202311675.pdf)
+## 📚 Источники
+
+<div class="article-sources" markdown>
+
+| Источник | Тип | Ссылка |
+|----------|-----|--------|
+| Gajah Journal: Elephant skin morphology | PDF | [647125137-gajah.pdf](../assets/books/647125137-gajah.pdf) |
+| Asian Elephant Anatomy - Clark Science Center | PDF | [196174216674_10153550202311675.pdf](../assets/books/196174216674_10153550202311675.pdf) |
+| Proboscidea Morphology Research | PDF | [ProboscidaeMorph_RG.pdf](../assets/books/ProboscidaeMorph_RG.pdf) |
+
+</div>
+
+---
+
+*Последняя проверка актуальности: 2026-07-23*

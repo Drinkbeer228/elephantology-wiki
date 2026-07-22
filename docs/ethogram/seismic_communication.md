@@ -1,7 +1,24 @@
 ---
-title: 'Сейсмическая коммуникация и прием инфразвуковых вибраций'
-category: 'ETHOGRAM'
-tags: [сейсмическая коммуникация, инфразвук, вибрации, рецепция, этология]
+title: "Сейсмическая коммуникация и прием инфразвуковых вибраций"
+description: "Физика сейсмических волн, анатомический механизм приема сигналов и алгоритм расшифровки сейсмической коммуникации слонов."
+tags:
+  - сейсмическая коммуникация
+  - инфразвук
+  - вибрации
+  - рецепция
+  - этология
+difficulty: advanced
+last_reviewed: 2026-07-23
+references:
+  - type: report
+    title: "Poole: Behavioral Contexts of Elephant Acoustic Communication"
+    path: "../assets/books/CH09 2011 Poole Behavioral Contexts of Elephant Acoustic Communication.pdf"
+  - type: journal
+    title: "OConnell-Rodwell et al. JASA 2007"
+    path: "../assets/books/OConnell_Rodwell_et_al_JASA_2007.pdf"
+  - type: report
+    title: "Joyce Poole affidavit"
+    path: "../assets/books/2009 09 24 joyce_poole_affidavit_sanwild.pdf"
 ---
 
 # Сейсмическая коммуникация и прием инфразвуковых вибраций у слонов
@@ -31,4 +48,22 @@ tags: [сейсмическая коммуникация, инфразвук, в
 1.  **Синхронное замирание (Freezing):** Слоны резко прерывают текущую активность и вокализации, часто после предупреждающего акустического фырканья (snort). Стадо полностью замирает, чтобы минимизировать вибрации от собственных движений (Источник: [CH09 2011 Poole Behavioral Contexts of Elephant Acoustic Communication.pdf](../assets/books/CH09 2011 Poole Behavioral Contexts of Elephant Acoustic Communication.pdf), стр. 161).
 2.  **Постуральная адаптация (перенос веса):** Для повышения сейсмической чувствительности слон отрывает одну переднюю ногу от земли и переносит вес тела на оставшиеся конечности. Это увеличивает механическое давление на жировые подушки опорных стоп и улучшает проводимость волн к рецепторам Пачини (Источник: [elephant_bot_archive.md](../assets/books/elephant_bot_archive.md), стр. 565).
 3.  **Тактильное сканирование хоботом:** Одновременно слоны могут опускать кончик хобота и плотно прижимать его к грунту, активируя дополнительные механорецепторы для сбора тактильной информации (Источник: [2009 09 24 joyce_poole_affidavit_sanwild.pdf](../assets/books/2009 09 24 joyce_poole_affidavit_sanwild.pdf), стр. 53; Источник: [elephant_bot_archive.md](../assets/books/elephant_bot_archive.md), стр. 565).
-4.  **Анализ и когнитивная дискриминация:** Животные декодируют тонкие различия в частотной модуляции. Эксперименты показывают, что слоны способны не просто фиксировать наличие вибраций, но и отличать сейсмические сигналы тревоги (alarm calls), изданные знакомыми сородичами, от аналогичных сигналов незнакомых особей, реагируя сплочением и повышенной бдительностью только на «своих» (Источник: [OConnell_Rodwell_et_al_JASA_2007.pdf](../assets/books/OConnell_Rodwell_et_al_JASA_2007.pdf), стр. 260, 271, 277).
+4.  **Анализ и когнитивная дискриминация:** Животные декодируют тонкие различия в частотной модуляции. Эксперименты показывают, что слоны способны не просто фиксировать наличие вибраций, но и отличать сейсмические сигналы тревоги (alarm calls), изданные знакомыми сородичами, от аналогичных сигналов незнакомых особей, реагируя сплочением и повышенной бдительностью только на «своих».
+
+---
+
+## 📚 Источники
+
+<div class="article-sources" markdown>
+
+| Источник | Тип | Ссылка |
+|----------|-----|--------|
+| Poole: Behavioral Contexts of Elephant Acoustic Communication | PDF | [CH09 2011 Poole Behavioral Contexts of Elephant Acoustic Communication.pdf](../assets/books/CH09 2011 Poole Behavioral Contexts of Elephant Acoustic Communication.pdf) |
+| OConnell-Rodwell et al. JASA 2007 | PDF | [OConnell_Rodwell_et_al_JASA_2007.pdf](../assets/books/OConnell_Rodwell_et_al_JASA_2007.pdf) |
+| Joyce Poole affidavit | PDF | [2009 09 24 joyce_poole_affidavit_sanwild.pdf](../assets/books/2009 09 24 joyce_poole_affidavit_sanwild.pdf) |
+
+</div>
+
+---
+
+*Последняя проверка актуальности: 2026-07-23*
