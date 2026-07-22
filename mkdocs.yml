@@ -1,9 +1,9 @@
 site_name: "Энциклопедия «Слонология»"
 site_description: "Глубокая интерактивная база знаний по биологии, анатомии, этологии, эволюции и ветеринарии слонов."
 site_author: "Elephantology Wiki Team"
-site_url: "https://elephantology-wiki.local"
-repo_url: "https://github.com/ageti/elephantology-wiki"
-repo_name: "ageti/elephantology-wiki"
+site_url: "https://Drinkbeer228.github.io/elephantology-wiki/"
+repo_url: "https://github.com/Drinkbeer228/elephantology-wiki"
+repo_name: "Drinkbeer228/elephantology-wiki"
 copyright: "Copyright © 2026 Энциклопедия «Слонология»"
 
 theme:
@@ -26,7 +26,6 @@ theme:
     - search.suggest
     - search.highlight
     - content.code.copy
-    - content.action.edit
 
 markdown_extensions:
   - meta
@@ -45,10 +44,6 @@ markdown_extensions:
 plugins:
   - search:
       lang: ru
-  - minify:
-      minify_html: true
-      minify_js: true
-      minify_css: true
 
 extra_css:
   - stylesheets/extra.css
