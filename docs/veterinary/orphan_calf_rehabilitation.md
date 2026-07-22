@@ -65,9 +65,9 @@ references:
 
 | Источник | Тип | Ссылка |
 |----------|-----|--------|
-| Elephant bot archive | PDF | [elephant_bot_archive.md](../assets/books/elephant_bot_archive.md) |
-| Poole Tuli Elephants Court Affidavit | PDF | [1998 Poole Tuli Elephants Court Affidavit.pdf](../assets/books/1998 Poole Tuli Elephants Court Affidavit.pdf) |
-| Joyce H Poole statement for NSPCA | PDF | [2015 Joyce H Poole statement for NSPCA Knysna Elephant Park 16 March.pdf](../assets/books/2015 Joyce H Poole statement for NSPCA Knysna Elephant Park 16 March.pdf) |
+| Elephant bot archive | PDF | elephant_bot_archive.md |
+| Poole Tuli Elephants Court Affidavit | PDF | 1998 Poole Tuli Elephants Court Affidavit.pdf |
+| Joyce H Poole statement for NSPCA | PDF | 2015 Joyce H Poole statement for NSPCA Knysna Elephant Park 16 March.pdf |
 
 </div>
 

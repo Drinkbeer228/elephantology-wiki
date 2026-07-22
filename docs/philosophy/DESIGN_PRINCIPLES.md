@@ -191,7 +191,7 @@ These principles guide every design decision, from content structure to user int
 - Links validated regularly
 
 **Example:**
-- ✅ "See [Musth](../glossary/musth.md) for reproductive behavior"
+- ✅ "See [Musth](../glossary.md#musth) for reproductive behavior"
 - ❌ "Musth is a reproductive state characterized by..." (full repetition)
 
 ---
