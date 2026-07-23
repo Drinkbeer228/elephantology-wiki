@@ -1,616 +1,127 @@
-/* ========================================================================
-   GTA San Andreas Theme — Elephantology Wiki (Clean)
-   ======================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Bebas+Neue&display=swap');
-
+/* ===== Elephantology Wiki — чистый холст + пиксель без арта ===== */
 :root {
-  --md-default-bg-color: #000000;
-  --md-default-fg-color: #aaaaaa;
-  --md-accent-fg-color: #ffffff;
+  /* НЕЙТРАЛЬНАЯ тёмная палитра (без синевы): текст светлее, фон графитовый.
+     Синий оставлен ТОЛЬКО акцентом (ссылки/h2), чтобы не сливаться с фоном. */
+  --sl-bg:        #1a1a1a;   /* нейтральный графит, без фиолета */
+  --sl-surface:   #242424;   /* карточки/панели */
+  --sl-surface-2: #202020;   /* код/таблицы */
+  --sl-border:    #383838;   /* границы (чуть светлее, чтобы пиксель-бордер читался) */
+  --sl-text:      #e2e2e2;   /* ОСНОВНОЙ ТЕКСТ — светлый, НЕЙТРАЛЬНЫЙ (был синеватый #c0caf5) */
+  --sl-text-dim:  #9a9a9a;   /* приглушённый */
+  --sl-heading:   #f5f5f5;   /* заголовки почти белые */
+  --sl-accent:    #89b4fa;   /* ссылки — синий акцент (на нейтральном фоне читается ярче) */
+  --sl-accent-2:  #7dcfff;   /* h2 и ховер */
+  --sl-ok:        #9ece6a;
 
-  --md-primary-fg-color: #111111;
-  --md-primary-bg-color: #000000;
-
-  --md-code-bg-color: #0a0a0a;
-  --md-code-fg-color: #cccccc;
-
-  --md-typeset-a-color: #ffffff;
-  --md-typeset-mark-color: rgba(255, 255, 255, 0.1);
+  --md-primary-fg-color:    #141414;
+  --md-primary-bg-color:    var(--sl-text);
+  --md-accent-fg-color:     var(--sl-accent-2);
+  --md-default-bg-color:    var(--sl-bg);
+  --md-default-fg-color:    var(--sl-text);
+  --md-code-bg-color:       var(--sl-surface-2);
+  --md-code-fg-color:       var(--sl-accent-2);
+  --md-typeset-a-color:     var(--sl-accent);
+  --md-typeset-mark-color:  rgba(137, 180, 250, 0.25);
 }
 
-/* ============================================================
-   Body — Чёрный фон
-   ============================================================ */
 body {
-  background-color: #000000;
-  color: #aaaaaa;
-  font-family: 'Bebas Neue', 'Segoe UI', sans-serif;
-  letter-spacing: 2px;
+  background-color: var(--sl-bg);
+  color: var(--sl-text);
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Scanlines */
-body::after {
-  content: '';
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  pointer-events: none;
-  z-index: 9999;
-  background: repeating-linear-gradient(
-    0deg,
-    transparent, transparent 2px,
-    rgba(0, 0, 0, 0.04) 2px, rgba(0, 0, 0, 0.04) 4px
-  );
-}
+/* Подготовка под будущий пиксель-арт: картинки не мылятся при масштабировании */
+img { image-rendering: pixelated; }
 
-/* Vignette */
-body::before {
-  content: '';
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  pointer-events: none;
-  z-index: 9998;
-  background: radial-gradient(ellipse at center, transparent 50%, rgba(0, 0, 0, 0.6) 100%);
+/* Типографика: 16px (было 18 — уменьшили по комфорту автора) */
+.md-typeset { font-size: 16px; line-height: 1.75; }
+.md-typeset h1, .md-typeset h2, .md-typeset h3,
+.md-typeset h4, .md-typeset h5, .md-typeset h6 {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  color: var(--sl-heading);
+  text-transform: none;
+  letter-spacing: -0.01em;
+  text-shadow: none;
 }
+.md-typeset h1 { font-size: 2.1em; margin-bottom: 1.2rem; padding-bottom: .7rem;
+  border-bottom: 2px solid var(--sl-border); }
+.md-typeset h2 { font-size: 1.5em; margin-top: 2.4rem; color: var(--sl-accent-2); }
+.md-typeset h3 { font-size: 1.25em; margin-top: 1.9rem; color: var(--sl-heading); }
+.md-typeset p, .md-typeset ul, .md-typeset ol { margin-bottom: 1.4em; }
+.md-typeset li { margin-bottom: .45em; }
 
-/* ============================================================
-   Typography
-   ============================================================ */
-.md-typeset {
-  font-size: 17px;
-  line-height: 1.6;
-  color: #aaaaaa;
-}
+.md-typeset a { color: var(--sl-accent); text-decoration: none;
+  border-bottom: 1px solid transparent; transition: color .15s, border-color .15s; }
+.md-typeset a:hover { color: var(--sl-accent-2); border-bottom-color: var(--sl-accent-2); }
 
-.md-typeset h1 {
-  font-family: 'Oswald', sans-serif;
-  font-size: 2.5em;
-  color: #ffffff;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  border-bottom: 2px solid #222;
-  padding-bottom: 0.75rem;
-  margin-bottom: 1.5rem;
-}
+.md-nav__link { font-weight: 400; }
+.md-nav__link--active, .md-nav__link:hover { color: var(--sl-accent-2); }
+.md-tabs__link { font-weight: 500; opacity: .8; }
+.md-tabs__link--active, .md-tabs__link:hover { opacity: 1; color: var(--sl-accent-2); }
 
-.md-typeset h2 {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 1.8em;
-  letter-spacing: 4px;
-  color: #cccccc;
-  text-transform: uppercase;
-  border-bottom: 1px solid #222;
-  padding-bottom: 0.5rem;
-  margin-top: 2.5rem;
-  margin-bottom: 1.2rem;
-}
+/* ===== ПИКСЕЛЬ: острые углы + ступенчатые тени (без размытия) ===== */
 
-.md-typeset h3 {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 1.3em;
-  letter-spacing: 3px;
-  color: #999999;
-  text-transform: uppercase;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-}
+/* Таблицы */
+.md-typeset table:not([class]) { border: 2px solid var(--sl-border);
+  background: var(--sl-surface-2); border-radius: 0; overflow: hidden;
+  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.4); width: 100%; margin-bottom: 2rem; }
+.md-typeset table:not([class]) th { background: var(--sl-surface); color: var(--sl-heading);
+  font-weight: 600; border-bottom: 2px solid var(--sl-border); padding: 12px 16px; text-align: left; }
+.md-typeset table:not([class]) td { border-bottom: 1px solid var(--sl-border);
+  padding: 12px 16px; color: var(--sl-text); vertical-align: top; }
+.md-typeset table:not([class]) tr:last-child td { border-bottom: none; }
 
-/* ============================================================
-   Header
-   ============================================================ */
-.md-header {
-  background: #000000;
-  border-bottom: 2px solid #222;
-  box-shadow: none;
-}
+/* Код */
+.md-typeset code { background: var(--sl-surface-2); color: var(--sl-accent-2);
+  border: 1px solid var(--sl-border); border-radius: 0; padding: .1em .35em; }
+.md-typeset pre { border: 2px solid var(--sl-border); border-radius: 0;
+  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.4); }
 
-.md-header__inner {
-  padding-top: 8px;
-  padding-bottom: 8px;
-}
+/* Admonition */
+.md-typeset .admonition, .md-typeset details { border: 2px solid var(--sl-border);
+  border-radius: 0; background: var(--sl-surface); box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.35); }
 
-.md-header__title {
-  font-family: 'Oswald', sans-serif;
-  font-size: 1.3em;
-  color: #ffffff !important;
-  letter-spacing: 2px;
+/* Карточки разделов — пиксельный бордер + тень, hover = сдвиг без размытия */
+.md-typeset .grid.cards > ul > li,
+.md-typeset .grid.cards > .card { background: var(--sl-surface);
+  border: 2px solid var(--sl-border); border-radius: 0; padding: 1rem 1.1rem;
+  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.4);
+  transition: transform .12s, box-shadow .12s, border-color .12s; }
+.md-typeset .grid.cards > ul > li:hover { border-color: var(--sl-accent);
+  transform: translate(-2px, -2px); box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.45); }
+.md-typeset .grid.cards strong { color: var(--sl-heading); }
+
+/* ===== HERO со слоном-заглушкой + пиксельный латинский лейбл ===== */
+.sa-hero { text-align: center; margin: 1.5rem 0 2rem; }
+.sa-hero__emoji {
+  display: inline-block; font-size: 4.5rem; line-height: 1; padding: 18px 26px;
+  background: var(--sl-surface); border: 3px solid var(--sl-border); border-radius: 0;
+  box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.45); }
+.sa-hero__tag { margin-top: 14px; }
+
+/* Пиксельный шрифт — ТОЛЬКО латинский декор (кириллицу им НЕ набирать!) */
+.pixel {
+  font-family: "Silkscreen", "Inter", monospace;
+  letter-spacing: 1px;
+  color: var(--sl-text-dim);
+  font-size: .72rem;
   text-transform: uppercase;
 }
 
-/* ============================================================
-   Navigation
-   ============================================================ */
-.md-nav {
-  font-family: 'Bebas Neue', sans-serif;
-}
+/* ===== Честная статистика (счётчики, пиксель-рамки) ===== */
+.sa-facts { display: flex; flex-wrap: wrap; gap: 14px; margin: 1.2rem 0 2rem; }
+.sa-fact { flex: 1 1 130px; text-align: center; background: var(--sl-surface);
+  border: 2px solid var(--sl-border); border-radius: 0;
+  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.4); padding: 16px 10px; }
+.sa-fact__num { display: block; font-size: 2rem; font-weight: 700;
+  color: var(--sl-accent); line-height: 1.1; }
+.sa-fact__label { display: block; margin-top: 6px; font-size: .85rem; color: var(--sl-text-dim); }
 
-.md-nav__title {
-  font-size: 1.2em;
-  letter-spacing: 4px;
-  color: #ffffff !important;
-  text-transform: uppercase;
-}
-
-.md-nav__link {
-  font-weight: 400;
-  color: #888888;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  font-size: 15px;
-  padding: 4px 8px;
-  border-radius: 0;
-  transition: all 0.2s ease;
-  position: relative;
-}
-
-.md-nav__link:hover {
-  color: #ffffff !important;
-}
-
-.md-nav__link:hover::before {
-  content: '►';
-  position: absolute;
-  left: -4px;
-  color: #ffffff;
-  font-size: 10px;
-}
-
-.md-nav__link--active {
-  color: #ffffff !important;
-  border-left: 3px solid #ffffff;
-}
-
-.md-nav__item--active > .md-nav__link {
-  color: #ffffff !important;
-  border-left: 3px solid #ffffff;
-}
-
-/* Tabs */
-.md-tabs {
-  background: #000000;
-  border-bottom: 2px solid #222;
-}
-
-.md-tabs__link {
-  font-family: 'Bebas Neue', sans-serif;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  font-size: 15px;
-  color: #888888;
-}
-
-.md-tabs__link:hover {
-  color: #ffffff;
-}
-
-.md-tabs__item--active .md-tabs__link {
-  color: #ffffff;
-}
-
-/* ============================================================
-   Grid Cards
-   ============================================================ */
-.md-typeset .grid.cards > ul {
-  list-style: none;
-  padding: 0;
-  display: grid;
-  gap: 12px;
-}
-
-.md-typeset .grid.cards > ul > li {
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid #222;
-  border-left: 4px solid #666;
-  padding: 20px 24px;
-  margin: 0;
-  transition: all 0.25s ease;
-  position: relative;
-  overflow: hidden;
-}
-
-.md-typeset .grid.cards > ul > li::before {
-  content: '►';
-  position: absolute;
-  left: -20px;
-  top: 50%;
-  transform: translateY(-50%);
-  opacity: 0;
-  color: #ffffff;
-  font-size: 12px;
-  transition: all 0.25s ease;
-}
-
-.md-typeset .grid.cards > ul > li:hover {
-  background: rgba(255, 255, 255, 0.05);
-  border-left-color: #ff6600;
-  transform: translateX(6px);
-}
-
-.md-typeset .grid.cards > ul > li:hover::before {
-  opacity: 1;
-  left: 10px;
-}
-
-.md-typeset .grid.cards > ul > li > p:first-child {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 1.4em;
-  letter-spacing: 4px;
-  color: #ffffff;
-  text-transform: uppercase;
-  margin: 0 0 8px 0;
-}
-
-/* ============================================================
-   Tables
-   ============================================================ */
-.md-typeset table:not([class]) {
-  border: 1px solid #222;
-  background: #0a0a0a;
-  border-radius: 0;
-  overflow: hidden;
-  box-shadow: none;
-  width: 100%;
-  margin-bottom: 2rem;
-}
-
-.md-typeset table:not([class]) th {
-  background: #111111;
-  color: #ffffff;
-  font-family: 'Bebas Neue', sans-serif;
-  font-weight: 400;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  border-bottom: 2px solid #222;
-  padding: 12px 16px;
-  text-align: left;
-  font-size: 15px;
-}
-
-.md-typeset table:not([class]) td {
-  border-bottom: 1px solid #1a1a1a;
-  padding: 12px 16px;
-  color: #aaaaaa;
-  vertical-align: top;
-  font-family: 'Courier New', monospace;
-  font-size: 14px;
-  letter-spacing: 0;
-}
-
-.md-typeset table:not([class]) tr:nth-child(even) td {
-  background-color: rgba(255, 255, 255, 0.01);
-}
-
-.md-typeset table:not([class]) tr:last-child td {
-  border-bottom: none;
-}
-
-/* ============================================================
-   Code Blocks
-   ============================================================ */
-.md-typeset code {
-  background: #111111;
-  color: #cccccc;
-  border: 1px solid #222;
-  padding: 2px 6px;
-  border-radius: 0;
-  font-family: 'Courier New', monospace;
-}
-
-.md-typeset pre {
-  border: 1px solid #222;
-  border-radius: 0;
-  background: #0a0a0a !important;
-  box-shadow: none;
-}
-
-.md-typeset pre code {
-  border: none;
-  background: transparent;
-  color: #cccccc;
-}
-
-/* ============================================================
-   Links
-   ============================================================ */
-.md-typeset a {
-  color: #cccccc;
-  text-decoration: none;
-  border-bottom: 1px solid transparent;
-  transition: all 0.2s ease;
-}
-
-.md-typeset a:hover {
-  color: #ffffff;
-  border-bottom: 1px solid #ffffff;
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
-}
-
-/* ============================================================
-   Admonitions
-   ============================================================ */
-.md-typeset .admonition,
-.md-typeset details {
-  border: 1px solid #222;
-  border-radius: 0;
-  background: #0a0a0a;
-  box-shadow: none;
-}
-
-.md-typeset .admonition > .admonition-title,
-.md-typeset details > summary {
-  background: #111111;
-  color: #ffffff;
-  font-family: 'Bebas Neue', sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  border-bottom: 1px solid #222;
-}
-
-/* ============================================================
-   Search
-   ============================================================ */
-.md-search__input {
-  background-color: #111111;
-  border: 1px solid #222;
-  border-radius: 0;
-  color: #ffffff;
-}
-
-.md-search__input::placeholder {
-  color: #666666;
-  font-family: 'Bebas Neue', sans-serif;
-  letter-spacing: 2px;
-}
-
-.md-search__result {
-  background-color: #111111;
-}
-
-/* ============================================================
-   Scrollbar
-   ============================================================ */
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-::-webkit-scrollbar-track {
-  background: #000000;
-  border: 1px solid #111;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #333333;
-  border: 1px solid #000;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #555555;
-}
-
-/* ============================================================
-   Footer
-   ============================================================ */
-.md-footer {
-  border-top: 2px solid #222;
-  background: #000000;
-}
-
-.md-footer-meta {
-  background: #000000;
-  border-top: 1px solid #111;
-}
-
-/* ============================================================
-   Scroll Fixes
-   ============================================================ */
-html {
-  scroll-padding-top: 120px;
-  scroll-behavior: smooth;
-}
-
-.md-typeset h1,
-.md-typeset h2,
-.md-typeset h3,
-.md-typeset h4,
-.md-typeset h5,
-.md-typeset h6 {
-  scroll-margin-top: 120px;
-}
-
-/* ============================================================
-   Blockquotes
-   ============================================================ */
-.md-typeset blockquote {
-  border-left: 3px solid #333;
-  background: rgba(255, 255, 255, 0.02);
-  padding: 12px 20px;
-  color: #999999;
-  font-style: italic;
-}
-
-/* ============================================================
-   Stats Bars
-   ============================================================ */
-.sa-stats {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  margin: 20px 0;
-}
-
-.sa-stat-row {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.sa-stat-label {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 14px;
-  letter-spacing: 3px;
-  color: #aaaaaa;
-  text-transform: uppercase;
-  min-width: 120px;
-}
-
-.sa-stat-bar {
-  flex: 1;
-  height: 14px;
-  background: #0a0a0a;
-  border: 1px solid #222;
-  position: relative;
-  overflow: hidden;
-}
-
-.sa-stat-fill {
-  height: 100%;
-  background: linear-gradient(90deg, #2d5a26 0%, #4a8c3f 100%);
-  transition: width 0.5s ease;
-}
-
-.sa-stat-value {
-  font-family: 'Courier New', monospace;
-  font-size: 12px;
-  color: #888;
-  min-width: 50px;
-  text-align: right;
-  letter-spacing: 0;
-}
-
-/* Reader stats — orange accent (like wanted level) */
-.sa-stats--reader .sa-stat-fill {
-  background: linear-gradient(90deg, #8b4513 0%, #ff6600 100%);
-}
-
-.sa-stats--reader .sa-stat-label {
-  color: #ffaa66;
-}
-
-/* Project stats — green accent */
-.sa-stats--project .sa-stat-fill {
-  background: linear-gradient(90deg, #2d5a26 0%, #4a8c3f 100%);
-}
-
-/* ============================================================
-   GTA SA Map Legend — Navigation
-   ============================================================ */
-.sa-legend {
-  position: fixed;
-  top: 80px;
-  right: 20px;
-  width: 200px;
-  background: rgba(0, 0, 0, 0.95);
-  border: 1px solid #222;
-  padding: 16px;
-  z-index: 999;
-}
-
-.sa-legend-title {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 18px;
-  letter-spacing: 4px;
-  color: #ffffff;
-  text-transform: uppercase;
-  margin-bottom: 12px;
-  padding-bottom: 8px;
-  border-bottom: 1px solid #333;
-}
-
-.sa-legend-item {
-  display: flex;
-  align-items: center;
-  padding: 8px 0;
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 14px;
-  letter-spacing: 2px;
-  color: #888888;
-  text-transform: uppercase;
-  text-decoration: none;
-  transition: all 0.15s ease;
-  cursor: pointer;
-  border-left: 3px solid transparent;
-  padding-left: 8px;
-  margin-left: -8px;
-}
-
-.sa-legend-item:hover {
-  color: #ffffff;
-  border-left-color: currentColor;
-  transform: translateX(4px);
-}
-
-.sa-legend-item.active {
-  color: #ffffff;
-  border-left-color: currentColor;
-}
-
-.sa-legend-dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  margin-right: 12px;
-  flex-shrink: 0;
-  box-shadow: 0 0 4px currentColor;
-}
-
-.dot-anatomy { background: #ff4444; color: #ff4444; }
-.dot-ethogram { background: #44ff44; color: #44ff44; }
-.dot-taxonomy { background: #4488ff; color: #4488ff; }
-.dot-vet { background: #ffcc00; color: #ffcc00; }
-.dot-ecology { background: #cc44ff; color: #cc44ff; }
-.dot-glossary { background: #00cccc; color: #00cccc; }
-.dot-biblio { background: #ff8844; color: #ff8844; }
-
-/* Mobile: legend becomes horizontal bar at bottom */
-@media (max-width: 768px) {
-  .sa-legend {
-    position: fixed;
-    top: auto;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 8px;
-    padding: 10px;
-    border-top: 1px solid #222;
-    border-left: none;
-    border-right: none;
-  }
-
-  .sa-legend-title {
-    width: 100%;
-    text-align: center;
-    margin-bottom: 6px;
-    font-size: 14px;
-    padding-bottom: 4px;
-  }
-
-  .sa-legend-item {
-    padding: 4px 8px;
-    font-size: 12px;
-    border-left: none;
-    border-bottom: 2px solid transparent;
-    padding-left: 0;
-    margin-left: 0;
-  }
-
-  .sa-legend-item:hover,
-  .sa-legend-item.active {
-    transform: translateY(-2px);
-    border-left: none;
-    border-bottom-color: currentColor;
-  }
-
-  .sa-legend-dot {
-    width: 8px;
-    height: 8px;
-    margin-right: 6px;
-  }
-}
+html { scroll-padding-top: 110px; scroll-behavior: smooth; }
+.md-typeset h1, .md-typeset h2, .md-typeset h3,
+.md-typeset h4, .md-typeset h5, .md-typeset h6 { scroll-margin-top: 110px; }
