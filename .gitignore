@@ -2,4 +2,4 @@ site/
 *.pyc
 __pycache__/
 .venv/
-first/
+first/.kilocode/

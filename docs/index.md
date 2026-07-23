@@ -4,7 +4,7 @@ hide:
   - toc
 ---
 
-# 🐘 Добро пожаловать в «Слонологию»
+# Энциклопедия «Слонология»
 
 **Слонология** — это интерактивная база знаний и структурированный датасет, собранный на основе современных академических исследований, ветеринарных протоколов и полевых этограмм.
 
@@ -12,22 +12,48 @@ hide:
 
 ---
 
-## � Статистика проекта
+## Статистика проекта
 
-| Метрика | Значение |
-|---------|----------|
-| Статей | 17 |
-| Источников | 24 |
-| Терминов | 40+ |
-| Разделов | 4 (анатомия, этограмма, таксономия, ветеринария) |
+<div class="sa-stats">
+  <div class="sa-stat-row">
+    <span class="sa-stat-label">Анатомия</span>
+    <div class="sa-stat-bar"><div class="sa-stat-fill anatomy"></div></div>
+    <span class="sa-stat-value">8/10</span>
+  </div>
+  <div class="sa-stat-row">
+    <span class="sa-stat-label">Этограмма</span>
+    <div class="sa-stat-bar"><div class="sa-stat-fill ethogram"></div></div>
+    <span class="sa-stat-value">6/8</span>
+  </div>
+  <div class="sa-stat-row">
+    <span class="sa-stat-label">Таксономия</span>
+    <div class="sa-stat-bar"><div class="sa-stat-fill taxonomy"></div></div>
+    <span class="sa-stat-value">2/3</span>
+  </div>
+  <div class="sa-stat-row">
+    <span class="sa-stat-label">Ветеринария</span>
+    <div class="sa-stat-bar"><div class="sa-stat-fill vet"></div></div>
+    <span class="sa-stat-value">3/5</span>
+  </div>
+  <div class="sa-stat-row">
+    <span class="sa-stat-label">Экология</span>
+    <div class="sa-stat-bar"><div class="sa-stat-fill ecology"></div></div>
+    <span class="sa-stat-value">2/4</span>
+  </div>
+  <div class="sa-stat-row">
+    <span class="sa-stat-label">Словарь</span>
+    <div class="sa-stat-bar"><div class="sa-stat-fill glossary"></div></div>
+    <span class="sa-stat-value">40+/80</span>
+  </div>
+</div>
 
 ---
 
-## �🗂 Архитектура данных
+## Разделы
 
 <div class="grid cards" markdown>
 
--   :anatomical_heart: **Анатомия**
+-   **Анатомия**
 
     ---
 
@@ -35,7 +61,7 @@ hide:
 
     → [Обзор раздела](anatomy/index.md)
 
--   :ear: **Этограмма и поведение**
+-   **Этограмма и поведение**
 
     ---
 
@@ -43,7 +69,7 @@ hide:
 
     → [Обзор раздела](ethogram/index.md)
 
--   :dna: **Таксономия и эволюция**
+-   **Таксономия и эволюция**
 
     ---
 
@@ -51,7 +77,7 @@ hide:
 
     → [Обзор раздела](taxonomy/index.md)
 
--   :medical_services: **Ветеринария и уход**
+-   **Ветеринария и уход**
 
     ---
 
@@ -59,21 +85,29 @@ hide:
 
     → [Обзор раздела](veterinary/index.md)
 
--   :book: **Словарь терминов**
+-   **Экология и социальная психология**
+
+    ---
+
+    Влияние браконьерства, culling и потери миграционных коридоров на популяции слонов. ПТСР, синдром «Elephant Breakdown», онтогенез и жизненный цикл.
+
+    → [Обзор раздела](ecology/index.md)
+
+-   **Словарь терминов**
 
     ---
 
     Алфавитический глоссарий с определениями ключевых терминов по анатомии, этологии, таксономии и ветеринарии.
 
-    → [Открыть словарь](glossary.md)
+    [:octicons-arrow-right-24: Открыть словарь](glossary.md)
 
--   :books: **Библиография**
+-   **Библиография**
 
     ---
 
     Полный список источников, сгруппированных по типу: журнальные статьи, книги, веб-ресурсы, стандарты и PDF-материалы.
 
-    → [Открыть библиографию](bibliography.md)
+    [:octicons-arrow-right-24: Открыть библиографию](bibliography.md)
 
 </div>
 
