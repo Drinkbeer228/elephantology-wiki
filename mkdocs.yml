@@ -48,10 +48,10 @@ plugins:
       lang: [ru, en]
 
 extra_css:
-  - stylesheets/extra.css
+  - stylesheets/extra.css?v=3
 
 extra_javascript:
-  - javascripts/extra.js
+  - javascripts/extra.js?v=3
 
 nav:
   - Главная: index.md

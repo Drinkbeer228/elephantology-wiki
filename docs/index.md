@@ -10,6 +10,8 @@ hide:
 
 Этот проект преодолевает пропасть между сухой академической наукой и практическим применением. Строгая разметка Markdown и YAML делает эти данные идеальным фундаментом не только для чтения, но и для интеграции в IT-экосистемы: от алгоритмов машинного обучения и Telegram-ботов до программирования логики поведения (Behavior Trees) в игровых движках.
 
+<div class="sa-main" markdown>
+
 ---
 
 ## Состояние базы знаний
@@ -105,6 +107,8 @@ hide:
 
 !!! info "Структура данных"
     Все статьи используют стандартизированный YAML frontmatter с полями `title`, `description`, `tags`, `difficulty`, `last_reviewed` и типизированными `references`. Это обеспечивает машиночитаемость данных для будущей миграции в динамические приложения. Подробнее см. [README.md](https://github.com/Drinkbeer228/elephantology-wiki/blob/main/README.md).
+
+</div>
 
 <!-- GTA SA Map Legend — Navigation -->
 <div class="sa-legend">

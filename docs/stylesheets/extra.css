@@ -581,8 +581,10 @@ html {
 .dot-glossary { background: #00cccc; color: #00cccc; }
 .dot-biblio { background: #ff8844; color: #ff8844; }
 
-/* ===== MAP LEGEND: интеграция в сетку страницы (не оверлей) ===== */
+/* ===== MAP LEGEND: встроенная левая колонка (НЕ оверлей) ===== */
 
+/* Grid только на страницах, где легенда есть в DOM (главная).
+   На статьях :has() не матчит → их layout не трогается. */
 .md-content__inner:has(> .sa-legend) {
   display: grid;
   grid-template-columns: 220px minmax(0, 1fr);
@@ -590,30 +592,40 @@ html {
   align-items: start;
 }
 
+/* H1 — во всю ширину сверху (занимает обе колонки, строка создаётся автоматически) */
 .md-content__inner:has(> .sa-legend) > h1 {
   grid-column: 1 / -1;
-  grid-row: 1;
 }
 
-.md-content__inner:has(> .sa-legend) > *:not(.sa-legend):not(h1) {
+/* Весь контент — правая колонка (один блок, без авто-размещения кучи элементов) */
+.md-content__inner > .sa-main {
   grid-column: 2;
+  min-width: 0;
 }
 
+/* Легенда — левая колонка, прилипает при скролле */
 .md-content__inner > .sa-legend {
   grid-column: 1;
-  grid-row: 2 / -1;
   position: sticky;
-  top: 100px;
+  top: 96px;
   align-self: start;
+  left: auto;
+  right: auto;
+  bottom: auto;
+  transform: none;
   width: auto;
   margin: 0;
   background: transparent;
-  border: none;
-  border-right: 1px solid var(--gta-border);
+  backdrop-filter: none;
+  border: 0;
+  border-right: 1px solid var(--gta-border, #1a1a1a);
   border-radius: 0;
-  padding: 8px 20px 8px 0;
+  box-shadow: none;
+  padding: 4px 20px 4px 0;
 }
 
+/* Узкие экраны: откат в одну колонку, легенду прячем
+   (её роль берут верхние табы + поиск) */
 @media (max-width: 960px) {
   .md-content__inner:has(> .sa-legend) {
     display: block;
