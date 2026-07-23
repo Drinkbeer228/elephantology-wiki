@@ -12,7 +12,7 @@ permissions:
 
 concurrency:
   group: pages
-  url_cancel: true
+  cancel-in-progress: true
 
 jobs:
   deploy:
