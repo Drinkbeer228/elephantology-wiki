@@ -525,17 +525,6 @@ html {
 /* ============================================================
    GTA SA Map Legend — Navigation
    ============================================================ */
-.sa-legend {
-  position: fixed;
-  top: 80px;
-  right: 20px;
-  width: 200px;
-  background: rgba(0, 0, 0, 0.95);
-  border: 1px solid var(--gta-border);
-  padding: 16px;
-  z-index: 999;
-}
-
 .sa-legend-title {
   font-family: 'Bebas Neue', 'Oswald', sans-serif;
   font-size: 18px;
@@ -592,59 +581,44 @@ html {
 .dot-glossary { background: #00cccc; color: #00cccc; }
 .dot-biblio { background: #ff8844; color: #ff8844; }
 
-/* Скрыть легенду на средних экранах (1024–1400px) */
-@media (max-width: 1400px) {
-  .sa-legend {
-    display: none;
-  }
+/* ===== MAP LEGEND: интеграция в сетку страницы (не оверлей) ===== */
+
+.md-content__inner:has(> .sa-legend) {
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr);
+  column-gap: 40px;
+  align-items: start;
 }
 
-/* Mobile: legend becomes horizontal bar at bottom */
-@media (max-width: 768px) {
-  .sa-legend {
-    display: flex;
-    position: fixed;
-    top: auto;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 8px;
-    padding: 10px;
-    border-top: 1px solid var(--gta-border);
-    border-left: none;
-    border-right: none;
-  }
+.md-content__inner:has(> .sa-legend) > h1 {
+  grid-column: 1 / -1;
+  grid-row: 1;
+}
 
-  .sa-legend-title {
-    width: 100%;
-    text-align: center;
-    margin-bottom: 6px;
-    font-size: 14px;
-    padding-bottom: 4px;
-  }
+.md-content__inner:has(> .sa-legend) > *:not(.sa-legend):not(h1) {
+  grid-column: 2;
+}
 
-  .sa-legend-item {
-    padding: 4px 8px;
-    font-size: 12px;
-    border-left: none;
-    border-bottom: 2px solid transparent;
-    padding-left: 0;
-    margin-left: 0;
-  }
+.md-content__inner > .sa-legend {
+  grid-column: 1;
+  grid-row: 2 / -1;
+  position: sticky;
+  top: 100px;
+  align-self: start;
+  width: auto;
+  margin: 0;
+  background: transparent;
+  border: none;
+  border-right: 1px solid var(--gta-border);
+  border-radius: 0;
+  padding: 8px 20px 8px 0;
+}
 
-  .sa-legend-item:hover,
-  .sa-legend-item.active {
-    transform: translateY(-2px);
-    border-left: none;
-    border-bottom-color: currentColor;
+@media (max-width: 960px) {
+  .md-content__inner:has(> .sa-legend) {
+    display: block;
   }
-
-  .sa-legend-dot {
-    width: 8px;
-    height: 8px;
-    margin-right: 6px;
+  .md-content__inner > .sa-legend {
+    display: none;
   }
 }
