@@ -64,13 +64,13 @@ last_reviewed: 2026-07-23
 
 ## PDF-ресурсы
 
-- Asian Elephant Anatomy - Clark Science Center. URL: ../assets/books/196174216674_10153550202311675.pdf
+- Asian Elephant Anatomy - Clark Science Center. URL: assets/books/196174216674_10153550202311675.pdf
 
-- The Amboseli Elephants: A Long-Term Perspective on a Long-Lived Mammal. URL: ../assets/books/the-amboseli-elephants-a-long-term-perspective-on-a-long-lived-mammal-9780226542263_compress.pdf
+- The Amboseli Elephants: A Long-Term Perspective on a Long-Lived Mammal. URL: assets/books/the-amboseli-elephants-a-long-term-perspective-on-a-long-lived-mammal-9780226542263_compress.pdf
 
-- Gajah: Journal of the Asian Elephant Specialist Group. URL: ../assets/books/647125137-gajah.pdf
+- Gajah: Journal of the Asian Elephant Specialist Group. URL: assets/books/647125137-gajah.pdf
 
-- Elephant bot archive. URL: ../assets/books/elephant_bot_archive.md
+- Elephant bot archive. URL: assets/books/elephant_bot_archive.md
 
 - Poole J.H., et al. (2023). A culture of aggression: The Gorongosa elephants' enduring legacy of war. *Journal of Elephant Science*.
 
