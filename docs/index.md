@@ -6,41 +6,6 @@ hide:
 
 # Энциклопедия «Слонология»
 
-<!-- GTA SA Map Legend — Navigation -->
-<div class="sa-legend">
-  <div class="sa-legend-title">MAP LEGEND</div>
-  <a href="anatomy/" class="sa-legend-item active">
-    <div class="sa-legend-dot dot-anatomy"></div>
-    Анатомия
-  </a>
-  <a href="ethogram/" class="sa-legend-item">
-    <div class="sa-legend-dot dot-ethogram"></div>
-    Этограмма
-  </a>
-  <a href="taxonomy/" class="sa-legend-item">
-    <div class="sa-legend-dot dot-taxonomy"></div>
-    Таксономия
-  </a>
-  <a href="veterinary/" class="sa-legend-item">
-    <div class="sa-legend-dot dot-vet"></div>
-    Ветеринария
-  </a>
-  <a href="ecology/" class="sa-legend-item">
-    <div class="sa-legend-dot dot-ecology"></div>
-    Экология
-  </a>
-  <a href="glossary/" class="sa-legend-item">
-    <div class="sa-legend-dot dot-glossary"></div>
-    Словарь
-  </a>
-  <a href="bibliography/" class="sa-legend-item">
-    <div class="sa-legend-dot dot-biblio"></div>
-    Библиография
-  </a>
-</div>
-
-<div class="sa-main" markdown>
-
 **Слонология** — это интерактивная база знаний и структурированный датасет, собранный на основе современных академических исследований, ветеринарных протоколов и полевых этограмм.
 
 ---
@@ -122,7 +87,7 @@ hide:
 
     Алфавитический глоссарий с определениями ключевых терминов по анатомии, этологии, таксономии и ветеринарии.
 
-    [:octicons-arrow-right-24: Открыть словарь](glossary.md)
+    → [Открыть словарь](glossary.md)
 
 -   **Библиография**
 
@@ -130,7 +95,7 @@ hide:
 
     Полный список источников, сгруппированных по типу: журнальные статьи, книги, веб-ресурсы, стандарты и PDF-материалы.
 
-    [:octicons-arrow-right-24: Открыть библиографию](bibliography.md)
+    → [Открыть библиографию](bibliography.md)
 
 </div>
 
