@@ -92,10 +92,45 @@
     observer.observe(document.body, { childList: true, subtree: true });
   }
 
+  // Highlight active legend item based on current page
+  function initLegendActive() {
+    var path = window.location.pathname;
+    var items = document.querySelectorAll('.sa-legend-item');
+
+    items.forEach(function(item) {
+      item.classList.remove('active');
+      var href = item.getAttribute('href');
+      if (href && path.includes(href.replace(/\/$/, ''))) {
+        item.classList.add('active');
+      }
+    });
+  }
+
+  // Init
+  function initAll() {
+    initHoverSounds();
+    initKonamiCode();
+    initLegendActive();
+
+    // Re-init after dynamic navigation (MkDocs instant loading)
+    document.addEventListener('DOMContentLoaded', function() {
+      initHoverSounds();
+      initLegendActive();
+    });
+
+    var observer = new MutationObserver(function() {
+      setTimeout(function() {
+        initHoverSounds();
+        initLegendActive();
+      }, 100);
+    });
+    observer.observe(document.body, { childList: true, subtree: true });
+  }
+
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', init);
+    document.addEventListener('DOMContentLoaded', initAll);
   } else {
-    init();
+    initAll();
   }
 
 })();

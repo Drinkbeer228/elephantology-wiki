@@ -119,32 +119,35 @@ hide:
 !!! info "Структура данных"
     Все статьи используют стандартизированный YAML frontmatter с полями `title`, `description`, `tags`, `difficulty`, `last_reviewed` и типизированными `references`. Это обеспечивает машиночитаемость данных для будущей миграции в динамические приложения. Подробнее см. [README.md](https://github.com/Drinkbeer228/elephantology-wiki/blob/main/README.md).
 
-<!-- GTA SA Radar -->
-<div class="sa-radar">
-  <div class="sa-radar-inner">
-    <div class="sa-radar-north">N</div>
-    <div class="sa-radar-road h1"></div>
-    <div class="sa-radar-road v1"></div>
-    <div class="sa-radar-road v2"></div>
-    <div class="sa-radar-road d1"></div>
-    <div class="sa-radar-building b1"></div>
-    <div class="sa-radar-building b2"></div>
-    <div class="sa-radar-building b3"></div>
-    <div class="sa-radar-icon player"></div>
-    <div class="sa-radar-icon anatomy" title="Анатомия"></div>
-    <div class="sa-radar-icon ethogram" title="Этограмма"></div>
-    <div class="sa-radar-icon taxonomy" title="Таксономия"></div>
-    <div class="sa-radar-icon vet" title="Ветеринария"></div>
-    <div class="sa-radar-icon ecology" title="Экология"></div>
-  </div>
-</div>
-
-<!-- GTA SA Map Legend -->
+<!-- GTA SA Map Legend — Navigation -->
 <div class="sa-legend">
   <div class="sa-legend-title">MAP LEGEND</div>
-  <div class="sa-legend-item"><div class="sa-legend-dot dot-anatomy"></div>Анатомия</div>
-  <div class="sa-legend-item"><div class="sa-legend-dot dot-ethogram"></div>Этограмма</div>
-  <div class="sa-legend-item"><div class="sa-legend-dot dot-taxonomy"></div>Таксономия</div>
-  <div class="sa-legend-item"><div class="sa-legend-dot dot-vet"></div>Ветеринария</div>
-  <div class="sa-legend-item"><div class="sa-legend-dot dot-ecology"></div>Экология</div>
+  <a href="anatomy/" class="sa-legend-item active">
+    <div class="sa-legend-dot dot-anatomy"></div>
+    Анатомия
+  </a>
+  <a href="ethogram/" class="sa-legend-item">
+    <div class="sa-legend-dot dot-ethogram"></div>
+    Этограмма
+  </a>
+  <a href="taxonomy/" class="sa-legend-item">
+    <div class="sa-legend-dot dot-taxonomy"></div>
+    Таксономия
+  </a>
+  <a href="veterinary/" class="sa-legend-item">
+    <div class="sa-legend-dot dot-vet"></div>
+    Ветеринария
+  </a>
+  <a href="ecology/" class="sa-legend-item">
+    <div class="sa-legend-dot dot-ecology"></div>
+    Экология
+  </a>
+  <a href="glossary/" class="sa-legend-item">
+    <div class="sa-legend-dot dot-glossary"></div>
+    Словарь
+  </a>
+  <a href="bibliography/" class="sa-legend-item">
+    <div class="sa-legend-dot dot-biblio"></div>
+    Библиография
+  </a>
 </div>

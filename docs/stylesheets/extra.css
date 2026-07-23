@@ -489,178 +489,121 @@ html {
 }
 
 /* ============================================================
-   GTA SA Radar (Mini-map) — right bottom
-   ============================================================ */
-.sa-radar {
-  position: fixed;
-  bottom: 24px;
-  right: 24px;
-  width: 140px;
-  height: 140px;
-  z-index: 1000;
-  pointer-events: none;
-}
-
-.sa-radar-inner {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  background: radial-gradient(circle at 35% 45%, #3a6b30 0%, #4a8c3f 40%, #2d5a26 100%);
-  border: 3px solid #000;
-  box-shadow:
-    0 0 0 2px #444,
-    0 0 25px rgba(0, 0, 0, 0.9),
-    inset 0 0 20px rgba(0, 0, 0, 0.5);
-  position: relative;
-  overflow: hidden;
-}
-
-/* Roads */
-.sa-radar-road {
-  position: absolute;
-  background: #2a2a2a;
-  border-radius: 1px;
-}
-
-.sa-radar-road.h1 { top: 48%; left: 0; width: 100%; height: 5px; }
-.sa-radar-road.v1 { top: 0; left: 38%; width: 4px; height: 100%; }
-.sa-radar-road.v2 { top: 0; left: 68%; width: 3px; height: 65%; }
-.sa-radar-road.d1 { top: 22%; left: 18%; width: 55%; height: 3px; transform: rotate(32deg); }
-
-/* Buildings */
-.sa-radar-building {
-  position: absolute;
-  background: rgba(180, 180, 180, 0.25);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.sa-radar-building.b1 { top: 28%; left: 42%; width: 16px; height: 12px; }
-.sa-radar-building.b2 { top: 58%; left: 22%; width: 12px; height: 16px; }
-.sa-radar-building.b3 { top: 62%; left: 72%; width: 20px; height: 10px; }
-
-/* Icons */
-.sa-radar-icon {
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  border: 2px solid;
-  z-index: 5;
-  animation: radar-pulse 2s infinite;
-}
-
-@keyframes radar-pulse {
-  0% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4); }
-  100% { box-shadow: 0 0 0 8px rgba(255, 255, 255, 0); }
-}
-
-.sa-radar-icon.player {
-  top: 50%; left: 50%;
-  transform: translate(-50%, -50%);
-  background: #fff;
-  border-color: #fff;
-  box-shadow: 0 0 6px #fff;
-  animation: none;
-}
-
-.sa-radar-icon.anatomy {
-  top: 26%; left: 62%;
-  background: #ff4444;
-  border-color: #ff4444;
-}
-
-.sa-radar-icon.ethogram {
-  top: 62%; left: 32%;
-  background: #44ff44;
-  border-color: #44ff44;
-}
-
-.sa-radar-icon.taxonomy {
-  top: 35%; left: 28%;
-  background: #4488ff;
-  border-color: #4488ff;
-}
-
-.sa-radar-icon.vet {
-  top: 72%; left: 58%;
-  background: #ffcc00;
-  border-color: #ffcc00;
-}
-
-.sa-radar-icon.ecology {
-  top: 45%; left: 75%;
-  background: #cc44ff;
-  border-color: #cc44ff;
-}
-
-/* North indicator */
-.sa-radar-north {
-  position: absolute;
-  top: -5px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: #000;
-  color: #fff;
-  font-size: 9px;
-  font-weight: bold;
-  padding: 1px 4px;
-  border-radius: 1px;
-  font-family: 'Bebas Neue', sans-serif;
-  letter-spacing: 1px;
-}
-
-/* ============================================================
-   Map Legend — right side
+   GTA SA Map Legend — Navigation
    ============================================================ */
 .sa-legend {
   position: fixed;
-  top: 90px;
+  top: 80px;
   right: 20px;
-  width: 180px;
+  width: 200px;
   background: rgba(0, 0, 0, 0.95);
   border: 1px solid #222;
-  padding: 14px;
+  padding: 16px;
   z-index: 999;
 }
 
 .sa-legend-title {
   font-family: 'Bebas Neue', sans-serif;
-  font-size: 16px;
+  font-size: 18px;
   letter-spacing: 4px;
-  color: #fff;
+  color: #ffffff;
   text-transform: uppercase;
-  margin-bottom: 10px;
-  padding-bottom: 6px;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
   border-bottom: 1px solid #333;
 }
 
 .sa-legend-item {
   display: flex;
   align-items: center;
-  padding: 4px 0;
+  padding: 8px 0;
   font-family: 'Bebas Neue', sans-serif;
-  font-size: 13px;
+  font-size: 14px;
   letter-spacing: 2px;
-  color: #888;
+  color: #888888;
   text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.15s ease;
   cursor: pointer;
-  transition: color 0.15s;
+  border-left: 3px solid transparent;
+  padding-left: 8px;
+  margin-left: -8px;
 }
 
 .sa-legend-item:hover {
-  color: #fff;
+  color: #ffffff;
+  border-left-color: currentColor;
+  transform: translateX(4px);
+}
+
+.sa-legend-item.active {
+  color: #ffffff;
+  border-left-color: currentColor;
 }
 
 .sa-legend-dot {
-  width: 8px;
-  height: 8px;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
-  margin-right: 10px;
+  margin-right: 12px;
   flex-shrink: 0;
+  box-shadow: 0 0 4px currentColor;
 }
 
-.dot-anatomy { background: #ff4444; }
-.dot-ethogram { background: #44ff44; }
-.dot-taxonomy { background: #4488ff; }
-.dot-vet { background: #ffcc00; }
-.dot-ecology { background: #cc44ff; }
+.dot-anatomy { background: #ff4444; color: #ff4444; }
+.dot-ethogram { background: #44ff44; color: #44ff44; }
+.dot-taxonomy { background: #4488ff; color: #4488ff; }
+.dot-vet { background: #ffcc00; color: #ffcc00; }
+.dot-ecology { background: #cc44ff; color: #cc44ff; }
+.dot-glossary { background: #00cccc; color: #00cccc; }
+.dot-biblio { background: #ff8844; color: #ff8844; }
+
+/* Mobile: legend becomes horizontal bar at bottom */
+@media (max-width: 768px) {
+  .sa-legend {
+    position: fixed;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px;
+    border-top: 1px solid #222;
+    border-left: none;
+    border-right: none;
+  }
+
+  .sa-legend-title {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 6px;
+    font-size: 14px;
+    padding-bottom: 4px;
+  }
+
+  .sa-legend-item {
+    padding: 4px 8px;
+    font-size: 12px;
+    border-left: none;
+    border-bottom: 2px solid transparent;
+    padding-left: 0;
+    margin-left: 0;
+  }
+
+  .sa-legend-item:hover,
+  .sa-legend-item.active {
+    transform: translateY(-2px);
+    border-left: none;
+    border-bottom-color: currentColor;
+  }
+
+  .sa-legend-dot {
+    width: 8px;
+    height: 8px;
+    margin-right: 6px;
+  }
+}
