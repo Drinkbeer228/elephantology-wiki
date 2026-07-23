@@ -30,6 +30,7 @@ theme:
     - content.code.copy
 
 markdown_extensions:
+  - footnotes
   - meta
   - admonition
   - attr_list
@@ -84,6 +85,7 @@ nav:
     - Обзор: ecology/index.md
     - ПТСР и синдром «Elephant Breakdown»: ecology/elephant_breakdown_syndrome.md
     - Онтогенез и жизненный цикл слонов: ecology/ontogeny_life_cycle.md
+    - Генетика популяций и фрагментация ареалов: ecology/population_genetics.md
   - Философия проекта:
     - Обзор: philosophy/PROJECT_MANIFESTO.md
     - Журнал решений: philosophy/DECISIONS.md
