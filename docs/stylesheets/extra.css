@@ -517,41 +517,9 @@ html {
   letter-spacing: 0;
 }
 
-/* Reader stats — orange accent (wanted level style) */
-.sa-stats--reader .sa-stat-fill {
-  background: linear-gradient(90deg, var(--gta-orange-dim), var(--gta-orange));
-}
-
-.sa-stats--reader .sa-stat-label {
-  color: var(--gta-orange);
-}
-
 /* Project stats — green accent */
 .sa-stats--project .sa-stat-fill {
   background: linear-gradient(90deg, #2d5a26, var(--gta-green));
-}
-
-/* ============================================================
-   Wanted Stars (замена полоски прогресса)
-   ============================================================ */
-.sa-wanted-stars {
-  display: flex;
-  gap: 4px;
-  align-items: center;
-}
-
-.sa-wanted-stars .star {
-  width: 16px;
-  height: 16px;
-  background: #333;
-  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
-  transition: background 0.3s, filter 0.3s;
-  flex-shrink: 0;
-}
-
-.sa-wanted-stars .star.active {
-  background: var(--gta-orange);
-  filter: drop-shadow(0 0 4px rgba(255, 153, 0, 0.6));
 }
 
 /* ============================================================

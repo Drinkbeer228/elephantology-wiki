@@ -39,41 +39,6 @@ hide:
 
 ---
 
-## Твой прогресс
-
-<div class="sa-stats sa-stats--reader">
-  <div class="sa-stat-row">
-    <span class="sa-stat-label">Прочитано статей</span>
-    <div class="sa-stat-bar"><div class="sa-stat-fill sa-stat-fill--reader-read" style="width: 0%"></div></div>
-    <span class="sa-stat-value sa-stat-value--reader-read">0/18</span>
-  </div>
-  <div class="sa-stat-row">
-    <span class="sa-stat-label">Уровень розыска</span>
-    <div class="sa-wanted-stars">
-      <span class="star"></span>
-      <span class="star"></span>
-      <span class="star"></span>
-      <span class="star"></span>
-      <span class="star"></span>
-    </div>
-  </div>
-  <div class="sa-stat-row">
-    <span class="sa-stat-label">Время на сайте</span>
-    <div class="sa-stat-bar"><div class="sa-stat-fill" style="width: 10%"></div></div>
-    <span class="sa-stat-value sa-stat-value--reader-time">0мин</span>
-  </div>
-  <div class="sa-stat-row">
-    <span class="sa-stat-label">Визитов</span>
-    <div class="sa-stat-bar"><div class="sa-stat-fill" style="width: 5%"></div></div>
-    <span class="sa-stat-value sa-stat-value--reader-visits">0</span>
-  </div>
-</div>
-
-!!! tip "Как прокачаться?"
-    Читай статьи, возвращайся — твой прогресс сохраняется в браузере. Цель: зачистить всю базу знаний! 🐘
-
----
-
 ## Разделы
 
 <div class="grid cards" markdown>
