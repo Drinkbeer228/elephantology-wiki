@@ -1,308 +1,308 @@
-# Elephantology Project Manifesto
+# Манифест проекта «Слонология»
 
-**Version:** 1.0  
-**Status:** Foundational Document  
-**Last Updated:** 2026-07-23
-
----
-
-## What is Elephantology?
-
-Elephantology is a scientific knowledge platform for elephant biology, veterinary medicine, husbandry, and conservation. It is not a wiki, not a blog, and not a collection of articles. It is a structured, interconnected knowledge base designed to bridge the gap between academic research and practical application.
-
-The platform transforms scattered scientific literature, veterinary protocols, field experience, and institutional knowledge into a unified system of interconnected Knowledge Objects that can be searched, navigated, and applied in real-world situations.
+**Версия:** 1.0  
+**Статус:** Базовый документ  
+**Последнее обновление:** 2026-07-23
 
 ---
 
-## Why does it exist?
+## Что такое «Слонология»?
 
-**The Problem:**
-- Elephant knowledge is scattered across thousands of academic papers, veterinary manuals, field reports, and institutional guidelines
-- Critical information is often inaccessible to practitioners who need it most
-- Scientific research rarely reaches field application in a timely manner
-- No single source provides comprehensive, evidence-based elephant knowledge
-- Existing resources are either too academic (inaccessible) or too practical (unverified)
+«Слонология» — это научная платформа знаний по биологии слонов, ветеринарии, содержанию и уходу, а также охране. Это не вики, не блог и не коллекция статей. Это структурированная, взаимосвязанная база знаний, созданная для преодоления разрыва между академическими исследованиями и практическим применением.
 
-**The Solution:**
-- Centralize verified elephant knowledge in one location
-- Structure information for practical application
-- Bridge research to practice through protocols and case studies
-- Provide evidence-based guidance for decision-making
-- Make scientific knowledge accessible to all who need it
+Платформа трансформирует разрозненную научную литературу, ветеринарные протоколы, полевой опыт и институциональные знания в единую систему взаимосвязанных объектов знаний, которые можно искать, навигировать и применять в реальных ситуациях.
 
 ---
 
-## Who is it for?
+## Почему она существует?
 
-**Primary Users:**
-- **Veterinarians** treating elephants in clinical settings
-- **Zoo professionals** managing elephant care and welfare
-- **Researchers** studying elephant biology and behavior
-- **Conservationists** working with wild elephant populations
+**Проблема:**
+- Знания о слонах разбросаны по тысячам академических статей, ветеринарных руководств, полевых отчётов и институциональных рекомендаций
+- Критическая информация часто недоступна практикам, которым она нужна больше всего
+- Научные исследования редко достигают практического применения в своевременном порядке
+- Ни один источник не предоставляет исчерпывающие основанные на доказательствах знания о слонах
+- Существующие ресурсы либо слишком академические (недоступны), либо слишком практические (непроверены)
 
-**Secondary Users:**
-- Veterinary and zoology students
-- Elephant handlers and keepers
-- Policy makers and regulators
-- General public with scientific interest
-
-**Non-Users:**
-- Casual readers seeking entertainment
-- Advocacy groups seeking confirmation of pre-existing beliefs
-- Those unwilling to engage with scientific evidence
+**Решение:**
+- Централизовать проверенные знания о слонах в одном месте
+- Структурировать информацию для практического применения
+- Связать исследования с практикой через протоколы и кейсы
+- Предоставлять основанные на доказательствах рекомендации для принятия решений
+- Сделать научные знания доступными для всех, кто в них нуждается
 
 ---
 
-## What problems does it solve?
+## Для кого она предназначена?
 
-**For Veterinarians:**
-- Rapid access to evidence-based treatment protocols
-- Drug dosage information and interactions
-- Disease diagnosis and management guidance
-- Case studies for clinical reference
+**Основные пользователи:**
+- **Ветеринары**, лечащие слонов в клинических условиях
+- **Сотрудники зоопарков**, управляющие содержанием и благополучием слонов
+- **Исследователи**, изучающие биологию и поведение слонов
+- **Зоозащитники**, работающие с популяциями диких слонов
 
-**For Zoo Professionals:**
-- Husbandry best practices and standards
-- Enrichment program design
-- Handling and training protocols
-- Facility design and management
+**Вторичные пользователи:**
+- Студенты ветеринарных и зоологических специальностей
+- Махауты и смотрители слонов
+- Политики и регуляторы
+- Общественность с научным интересом
 
-**For Researchers:**
-- Comprehensive literature synthesis
-- Species comparison data
-- Research methodology guidance
-- Collaboration opportunities
-
-**For Conservationists:**
-- Population status and threat assessments
-- Conservation strategy guidance
-- Human-elephant conflict mitigation
-- Policy and regulatory information
+**Не пользователи:**
+- Случайные читатели, ищущие развлечения
+- Адвокатские группы, ищущие подтверждение существующих убеждений
+- Те, кто не готов взаимодействовать с научными доказательствами
 
 ---
 
-## What makes it different from Wikipedia?
+## Какие проблемы она решает?
 
-**Wikipedia:**
-- General encyclopedia for all topics
-- Anyone can edit
-- Variable quality and reliability
-- No structured metadata
-- No practical protocols
-- No evidence rating system
-- No relationship graph between topics
+**Для ветеринаров:**
+- Быстрый доступ к протоколам лечения на основе доказательств
+- Информация о дозировках лекарств и взаимодействиях
+- Руководство по диагностике и управлению болезнями
+- Кейсы для клинической справки
 
-**Elephantology:**
-- Specialized knowledge platform for elephants only
-- Editorial review process
-- Consistent quality standards
-- Structured metadata for every object
-- Practical protocols and procedures
-- Evidence level rating system
-- Knowledge graph with defined relationships
-- Focus on practical application
+**Для сотрудников зоопарков:**
+- Лучшие практики и стандарты содержания и ухода
+- Дизайн программ обогащения среды
+- Протоколы обращения и дрессировки
+- Дизайн и управление объектами
 
----
+**Для исследователей:**
+- Комплексный синтез литературы
+- Данные для сравнения видов
+- Руководство по методологии исследований
+- Возможности для сотрудничества
 
-## What makes it different from EAZA manuals?
-
-**EAZA Manuals:**
-- Organization-specific guidelines
-- Focus on zoo management
-- Limited scope
-- Static documents
-- No cross-references
-- No evidence transparency
-- No searchability across content
-
-**Elephantology:**
-- Organization-independent platform
-- Covers biology, veterinary, husbandry, conservation
-- Comprehensive scope
-- Dynamic, interconnected content
-- Extensive cross-references and relationships
-- Transparent evidence and sources
-- Advanced search and navigation
-- Includes wild elephant conservation
+**Для зоозащитников:**
+- Оценка статуса популяций и угроз
+- Руководство по стратегиям охраны
+- Смягчение конфликтов человек-слон
+- Информация о политике и регулировании
 
 ---
 
-## What makes it different from a veterinary textbook?
+## Чем она отличается от Википедии?
 
-**Veterinary Textbooks:**
-- Static, infrequently updated
-- Linear reading experience
-- Limited scope (usually one species or system)
-- No practical protocols
-- No case studies
-- No community contribution
-- Expensive and inaccessible
+**Википедия:**
+- Общая энциклопедия для всех тем
+- Любой может редактировать
+- Переменное качество и надёжность
+- Нет структурированных метаданных
+- Нет практических протоколов
+- Нет системы рейтинга доказательности
+- Нет графа отношений между темами
 
-**Elephantology:**
-- Continuously updated
-- Non-linear, relationship-based navigation
-- Comprehensive scope (all aspects of elephant knowledge)
-- Practical protocols and procedures
-- Extensive case studies
-- Community contribution workflow
-- Free and accessible
-- Interactive knowledge graph
-
----
-
-## What should every visitor understand within the first 30 seconds?
-
-1. **This is a scientific knowledge platform, not a general website**
-2. **All content is evidence-based with source reliability ratings**
-3. **Information is structured as interconnected Knowledge Objects**
-4. **The platform is designed for practical application**
-5. **Content undergoes editorial review**
-6. **This is not advocacy—it presents scientific consensus and acknowledges uncertainty**
+**«Слонология»:**
+- Специализированная платформа знаний только для слонов
+- Процесс редакционного обзора
+- Согласованные стандарты качества
+- Структурированные метаданные для каждого объекта
+- Практические протоколы и процедуры
+- Система рейтинга уровня доказательности
+- Граф знаний с определёнными отношениями
+- Фокус на практическом применении
 
 ---
 
-## What should contributors understand?
+## Чем она отличается от руководств EAZA?
 
-1. **This is a scientific knowledge platform, not a personal blog**
-2. **All claims must be sourced with evidence level ratings**
-3. **Content follows strict editorial guidelines**
-4. **Terminology must be consistent with the glossary**
-5. **Relationships between knowledge objects are as important as the objects themselves**
-6. **Scientific neutrality is required—no advocacy**
-7. **Content will be reviewed and may require revision**
-8. **The platform is designed for long-term scalability**
+**Руководства EAZA:**
+- Рекомендации, специфичные для организации
+- Фокус на управлении зоопарком
+- Ограниченный охват
+- Статичные документы
+- Нет перекрёстных ссылок
+- Нет прозрачности доказательств
+- Нет поиска по содержанию
 
----
-
-## What should AI agents understand?
-
-1. **This is a knowledge graph, not a collection of documents**
-2. **Every object has structured metadata and defined relationships**
-3. **Evidence levels indicate source reliability**
-4. **Consensus status indicates scientific agreement**
-5. **Content is designed for machine readability**
-6. **The ontology provides entity and relationship definitions**
-7. **API access is available for programmatic interaction**
-8. **Content follows consistent formatting and structure**
+**«Слонология»:**
+- Платформа, независимая от организации
+- Охватывает биологию, ветеринарию, содержание и уход, охрану
+- Комплексный охват
+- Динамическое, взаимосвязанное содержимое
+- Обширные перекрёстные ссылки и отношения
+- Прозрачные доказательства и источники
+- Расширенный поиск и навигация
+- Включает охрану диких слонов
 
 ---
 
-## What should never change even after ten years?
+## Чем она отличается от ветеринарного учебника?
 
-**Non-Negotiable Principles:**
+**Ветеринарные учебники:**
+- Статичные, редко обновляются
+- Линейный опыт чтения
+- Ограниченный охват (обычно один вид или система)
+- Нет практических протоколов
+- Нет кейсов
+- Нет вклада сообщества
+- Дорогие и недоступные
 
-1. **Evidence-Based Foundation** - All claims must be sourced
-2. **Scientific Neutrality** - No advocacy, present facts objectively
-3. **Knowledge Object Model** - Content as structured objects, not articles
-4. **Relationship-Based Navigation** - Knowledge graph over linear reading
-5. **Source Reliability Rating** - Evidence levels for all content
-6. **Editorial Review Process** - Quality control before publication
-7. **Terminology Consistency** - One term, one definition
-8. **Practical Applicability** - Bridge research to practice
-9. **Open Access** - Free to access, proper attribution
-10. **Long-Term Scalability** - Architecture designed for thousands of objects
-
----
-
-## What principles are non-negotiable?
-
-**Content Principles:**
-- Every important statement must have a source
-- Scientific consensus must be distinguished from controversy
-- Uncertainty must be acknowledged explicitly
-- No advocacy or opinion presented as fact
-- Terminology must be consistent with glossary
-
-**Structural Principles:**
-- One concept → one canonical page
-- One term → one definition
-- Never duplicate information—link instead
-- Relationships over repetition
-- Structure over volume
-
-**Quality Principles:**
-- Evidence over opinion
-- Clarity over completeness
-- Practical applicability over theoretical depth
-- Editorial review before publication
-- Regular content updates
-
-**Technical Principles:**
-- Everything should be searchable
-- Everything should be reusable
-- Metadata-driven architecture
-- No hard-coded content assumptions
-- API-first design
+**«Слонология»:**
+- Постоянно обновляется
+- Нелинейная, основанная на отношениях навигация
+- Комплексный охват (все аспекты знаний о слонах)
+- Практические протоколы и процедуры
+- Обширные кейсы
+- Рабочий процесс вклада сообщества
+- Бесплатная и доступная
+- Интерактивный граф знаний
 
 ---
 
-## What is outside the scope of this project?
+## Что должен понять каждый посетитель в первые 30 секунд?
 
-**Explicitly Out of Scope:**
-
-1. **Advocacy or Activism** - The platform presents scientific evidence, not political positions
-2. **General Animal Knowledge** - Focus exclusively on elephants and proboscideans
-3. **Entertainment Content** - Not a general-interest website or blog
-4. **Personal Opinions** - No editorializing or commentary
-5. **Commercial Promotion** - No product endorsements or advertising
-6. **Social Features** - No forums, comments, or social networking
-7. **Real-Time Data** - Not a live monitoring or alerting system
-8. **Medical Advice** - Provides information, not specific medical diagnoses
-9. **Legal Advice** - Provides information, not legal guidance
-10. **Political Lobbying** - Not a platform for policy advocacy
-
-**Future Considerations (Not Current Scope):**
-
-- Mobile application (may be developed later)
-- API for third-party integration (may be developed later)
-- AI-powered features (may be developed later)
-- Multilingual content beyond Russian/English (may be developed later)
-- User accounts and personalization (may be developed later)
+1. **Это научная платформа знаний, не общий веб-сайт**
+2. **Всё содержимое основано на доказательствах с рейтингами надёжности источников**
+3. **Информация структурирована как взаимосвязанные объекты знаний**
+4. **Платформа разработана для практического применения**
+5. **Содержимое проходит редакционный обзор**
+6. **Это не адвокатство — она представляет научный консенсус и признаёт неопределённость**
 
 ---
 
-## The Knowledge Platform Philosophy
+## Что должны понять авторы?
 
-Elephantology is not a website. It is a knowledge platform.
-
-This distinction changes everything:
-
-**A Website:**
-- Pages to read
-- Linear navigation
-- Static content
-- Author-centric
-- Temporary relevance
-
-**A Knowledge Platform:**
-- Objects to understand
-- Relationship-based navigation
-- Dynamic, interconnected content
-- Knowledge-centric
-- Long-term relevance
-
-Every feature, every design decision, every content choice is evaluated by one question:
-
-**"Does this help the platform better store, connect, and transmit knowledge?"**
-
-If the answer is no, the feature does not belong.
+1. **Это научная платформа знаний, не личный блог**
+2. **Все утверждения должны быть подтверждены источниками с рейтингом уровня доказательности**
+3. **Содержимое следует строгим редакционным рекомендациям**
+4. **Терминология должна быть согласована с глоссарием**
+5. **Отношения между объектами знаний так же важны, как сами объекты**
+6. **Требуется научная нейтральность — никакого адвокатства**
+7. **Содержимое будет рассмотрено и может потребовать редактирования**
+8. **Платформа разработана для долгосрочной масштабируемости**
 
 ---
 
-## The Long-Term Vision
+## Что должны понять AI-агенты?
 
-Elephantology is designed to exist for decades, not years. The architecture, content model, and editorial principles are built to scale to thousands of Knowledge Objects while maintaining scientific credibility and practical applicability.
-
-The platform should become the definitive reference for elephant knowledge, enabling evidence-based decision-making in veterinary practice, conservation policy, and husbandry standards worldwide.
-
-This is not a project to be completed. It is a platform to be maintained, expanded, and refined continuously as elephant knowledge evolves.
+1. **Это граф знаний, не коллекция документов**
+2. **Каждый объект имеет структурированные метаданные и определённые отношения**
+3. **Уровни доказательности указывают на надёжность источников**
+4. **Статус консенсуса указывает на научное согласие**
+5. **Содержимое разработано для машинной читаемости**
+6. **Онтология предоставляет определения сущностей и отношений**
+7. **Доступен API для программного взаимодействия**
+8. **Содержимое следует согласованному форматированию и структуре**
 
 ---
 
-## Conclusion
+## Что никогда не должно измениться даже через десять лет?
 
-Elephantology exists to solve a specific problem: the gap between scientific knowledge and practical application in elephant care, research, and conservation.
+**Неприемлемые принципы:**
 
-The platform is defined by what it is (a scientific knowledge platform), what it is not (a wiki, blog, or advocacy site), and what it will never compromise on (evidence-based, scientifically neutral, practically applicable).
+1. **Основа на доказательствах** — Все утверждения должны быть подтверждены источниками
+2. **Научная нейтральность** — Никакого адвокатства, представлять факты объективно
+3. **Модель объекта знаний** — Содержимое как структурированные объекты, не статьи
+4. **Навигация на основе отношений** — Граф знаний над линейным чтением
+5. **Рейтинг надёжности источников** — Уровни доказательности для всего содержимого
+6. **Процесс редакционного обзора** — Контроль качества перед публикацией
+7. **Согласованность терминологии** — Один термин, одно определение
+8. **Практическая применимость** — Связь исследований с практикой
+9. **Открытый доступ** — Бесплатный доступ с proper атрибуцией
+10. **Долгосрочная масштабируемость** — Архитектура разработана для тысяч объектов
 
-This manifesto serves as the north star for all architectural decisions, content choices, and feature development. When in doubt, return to these principles.
+---
+
+## Какие принципы неприемлемы для компромисса?
+
+**Принципы содержимого:**
+- Каждое важное утверждение должно иметь источник
+- Научный консенсус должен быть отличен от противоречия
+- Неопределённость должна быть признана явно
+- Никакого адвокатства или мнения, представленного как факт
+- Терминология должна быть согласована с глоссарием
+
+**Структурные принципы:**
+- Одна концепция → одна каноническая страница
+- Один термин → одно определение
+- Никогда не дублировать информацию — ссылайтесь вместо этого
+- Отношения над повторением
+- Структура над объёмом
+
+**Принципы качества:**
+- Доказательства над мнением
+- Ясность над полнотой
+- Практическая применимость над теоретической глубиной
+- Редакционный обзор перед публикацией
+- Регулярные обновления содержимого
+
+**Технические принципы:**
+- Всё должно быть доступно для поиска
+- Всё должно быть повторно используемым
+- Архитектура на основе метаданных
+- Никаких жёстко закодированных предположений о содержимом
+- Дизайн с приоритетом API
+
+---
+
+## Что находится вне рамок этого проекта?
+
+**Явно вне рамок:**
+
+1. **Адвокатство или активизм** — Платформа представляет научные доказательства, не политические позиции
+2. **Общие знания о животных** — Фокус исключительно на слонах и хоботных
+3. **Развлекательное содержимое** — Не сайт общего интереса или блог
+4. **Личные мнения** — Никакого редакторства или комментария
+5. **Коммерческое продвижение** — Никаких одобрений продуктов или рекламы
+6. **Социальные функции** — Никаких форумов, комментариев или социальных сетей
+7. **Данные в реальном времени** — Не система мониторинга или оповещения в реальном времени
+8. **Медицинские советы** — Предоставляет информацию, не конкретные медицинские диагнозы
+9. **Юридические советы** — Предоставляет информацию, не юридическое руководство
+10. **Политическое лоббирование** — Не платформа для адвокатства политики
+
+**Будущие рассмотрения (не в текущих рамках):**
+
+- Мобильное приложение (может быть разработано позже)
+- API для интеграции со сторонними сервисами (может быть разработано позже)
+- Функции на основе AI (могут быть разработаны позже)
+- Многоязычное содержимое помимо русского/английского (может быть разработано позже)
+- Учётные записи пользователей и персонализация (может быть разработано позже)
+
+---
+
+## Философия платформы знаний
+
+«Слонология» — это не веб-сайт. Это платформа знаний.
+
+Это различие меняет всё:
+
+**Веб-сайт:**
+- Страницы для чтения
+- Линейная навигация
+- Статичное содержимое
+- Центрирован на авторе
+- Временная актуальность
+
+**Платформа знаний:**
+- Объекты для понимания
+- Навигация на основе отношений
+- Динамическое, взаимосвязанное содержимое
+- Центрирован на знаниях
+- Долгосрочная актуальность
+
+Каждая функция, каждое дизайнерское решение, каждый выбор содержимого оценивается одним вопросом:
+
+**«Помогает ли это платформе лучше хранить, связывать и передавать знания?»**
+
+Если ответ отрицательный, функция не принадлежит платформе.
+
+---
+
+## Долгосрочное видение
+
+«Слонология» разработана для существования десятилетиями, а не годами. Архитектура, модель содержимого и редакционные принципы созданы для масштабирования до тысяч объектов знаний при поддержании научной достоверности и практической применимости.
+
+Платформа должна стать окончательным справочником по знаниям о слонах, обеспечивая принятие решений на основе доказательств в ветеринарной практике, политике охраны и стандартах содержания и ухода во всём мире.
+
+Это не проект для завершения. Это платформа для поддержания, расширения и уточнения по мере эволюции знаний о слонах.
+
+---
+
+## Заключение
+
+«Слонология» существует для решения конкретной проблемы: разрыва между научными знаниями и практическим применением в содержании, исследованиях и охране слонов.
+
+Платформа определяется тем, что она есть (научная платформа знаний), чем она не является (вики, блог или сайт адвокатства), и чем она никогда не пожертвует (основана на доказательствах, научно нейтральна, практически применима).
+
+Этот манифест служит путеводной звездой для всех архитектурных решений, выбора содержимого и разработки функций. В случае сомнений вернитесь к этим принципам.

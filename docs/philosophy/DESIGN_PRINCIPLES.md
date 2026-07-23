@@ -1,452 +1,451 @@
-# Elephantology Design Principles
+# Принципы дизайна «Слонологии»
 
-**Version:** 1.0  
-**Status:** Foundational Document  
-**Last Updated:** 2026-07-23
-
----
-
-## Core Principles
-
-These principles guide every design decision, from content structure to user interface, from metadata schema to navigation architecture. They are read by humans, AI agents, and future contributors to understand the fundamental philosophy of the platform.
+**Версия:** 1.0  
+**Статус:** Базовый документ  
+**Последнее обновление:** 2026-07-23
 
 ---
 
-## Content Principles
+## Основные принципы
 
-### Every page should answer one question
-
-**Rationale:** Focused content is more discoverable, more maintainable, and more useful. When a page tries to answer multiple questions, it becomes difficult to navigate and update.
-
-**Implementation:**
-- Each Knowledge Object has a single primary focus
-- Secondary topics are linked to separate objects
-- Clear summary states the single question answered
-
-**Example:**
-- ✅ "What is the cardiovascular system of elephants?"
-- ❌ "What is the cardiovascular system and how does it relate to respiration?"
+Эти принципы направляют каждое дизайнерское решение, от структуры содержимого до пользовательского интерфейса, от схемы метаданных до архитектуры навигации. Их читают люди, AI-агенты и будущие авторы для понимания фундаментальной философии платформы.
 
 ---
 
-### Every page should be understandable independently
+## Принципы содержимого
 
-**Rationale:** Users may arrive at any page via search, external links, or direct navigation. Each page must provide sufficient context to be understood without reading prerequisite content first.
+### Каждая страница должна отвечать на один вопрос
 
-**Implementation:**
-- Brief context provided at the top of each object
-- Key terms defined or linked to glossary
-- Prerequisites listed but not required for basic understanding
-- Self-contained summaries
+**Обоснование:** Фокусированное содержимое более обнаруживаемо, поддерживаемо и полезно. Когда страница пытается ответить на несколько вопросов, её становится трудно навигировать и обновлять.
 
-**Example:**
-- ✅ "The cardiovascular system circulates blood throughout the elephant's body..." (with context)
-- ❌ "As discussed in the previous section, the system..." (without context)
+**Реализация:**
+- Каждый объект знаний имеет единый первичный фокус
+- Вторичные темы связаны с отдельными объектами
+- Чёткое резюме формулирует единый вопрос, на который отвечает объект
 
----
-
-### No article should exceed the reader's working memory
-
-**Rationale:** Cognitive science shows that humans can hold only 5-7 items in working memory. Long, complex articles overwhelm readers and reduce comprehension.
-
-**Implementation:**
-- Articles broken into logical sections
-- Each section focuses on one concept
-- Use of progressive disclosure
-- Recommended maximum: 2,000 words per object
-- Complex topics split into multiple linked objects
-
-**Example:**
-- ✅ Separate objects for "Heart Anatomy" and "Cardiovascular Physiology"
-- ❌ One massive object covering all cardiovascular topics
+**Пример:**
+- ✅ «Какова сердечно-сосудистая система слонов?»
+- ❌ «Какова сердечно-сосудистая система и как она связана с дыханием?»
 
 ---
 
-## Structural Principles
+### Каждая страница должна быть понятна независимо
 
-### One concept → one canonical page
+**Обоснование:** Пользователи могут прийти на любую страницу через поиск, внешние ссылки или прямую навигацию. Каждая страница должна предоставлять достаточный контекст для понимания без предварительного чтения предварительных материалов.
 
-**Rationale:** Duplicate information creates maintenance burden, confusion, and inconsistency. When information changes, it must be updated in multiple places.
+**Реализация:**
+- Краткий контекст предоставляется вверху каждого объекта
+- Ключевые термины определены или связаны с глоссарием
+- Предварительные материалы перечислены, но не требуются для базового понимания
+- Самодостаточные резюме
 
-**Implementation:**
-- Each concept exists in exactly one location
-- All references point to the canonical source
-- No content duplication across objects
-- Use relationships, not repetition
-
-**Example:**
-- ✅ "Musth" exists as one glossary object; all references link to it
-- ❌ "Musth" explained separately in behavior, veterinary, and husbandry sections
+**Пример:**
+- ✅ «Сердечно-сосудистая система циркулирует кровь по телу слона...» (с контекстом)
+- ❌ «Как обсуждалось в предыдущем разделе, система...» (без контекста)
 
 ---
 
-### One term → one definition
+### Ни одна статья не должна превышать рабочую память читателя
 
-**Rationale:** Inconsistent terminology creates confusion and reduces searchability. Users cannot find information if they don't know which term to search for.
+**Обоснование:** Когнитивная наука показывает, что люди могут удерживать только 5-7 элементов в рабочей памяти. Длинные, сложные статьи перегружают читателей и снижают понимание.
 
-**Implementation:**
-- Centralized glossary with canonical definitions
-- All terms link to glossary
-- Aliases redirect to canonical term
-- Deprecated terms noted with current equivalent
+**Реализация:**
+- Статьи разбиты на логические разделы
+- Каждый раздел фокусируется на одной концепции
+- Использование прогрессивного раскрытия
+- Рекомендуемый максимум: 2000 слов на объект
+- Сложные темы разделены на множество связанных объектов
 
-**Example:**
-- ✅ "Mahout" defined once in glossary; all uses link to it
-- ❌ "Mahout" defined differently in multiple articles
-
----
-
-### One source → one citation format
-
-**Rationale:** Inconsistent citations make it difficult to verify sources, assess reliability, and maintain content. Standardization enables automated validation and filtering.
-
-**Implementation:**
-- Single citation format across all content
-- Evidence level rating for every source
-- Consistent metadata (author, year, publisher)
-- Automated link validation
-
-**Example:**
-- ✅ `[1] Title, Authors, Year, Publisher, ⭐⭐⭐⭐⭐`
-- ❌ Mix of APA, MLA, and informal citation styles
+**Пример:**
+- ✅ Отдельные объекты для «Анатомии сердца» и «Физиологии сердечно-сосудистой системы»
+- ❌ Один массивный объект, охватывающий все сердечно-сосудистые темы
 
 ---
 
-## Navigation Principles
+## Структурные принципы
 
-### Navigation should never require more than three clicks
+### Одна концепция → одна каноническая страница
 
-**Rationale:** Deep navigation hierarchies frustrate users and make content difficult to discover. Three clicks is the maximum before user patience is tested.
+**Обоснование:** Дублирование информации создаёт нагрузку на поддержку, путаницу и несогласованность. Когда информация изменяется, её необходимо обновлять в нескольких местах.
 
-**Implementation:**
-- Maximum 3-level hierarchy: Domain → Category → Object
-- Breadcrumb navigation for path tracking
-- Search as primary discovery method
-- Related objects for lateral navigation
+**Реализация:**
+- Каждая концепция существует ровно в одном месте
+- Все ссылки указывают на канонический источник
+- Никакого дублирования содержимого между объектами
+- Используйте отношения, не повторение
 
-**Example:**
-- ✅ Home → Biology → Anatomy → Cardiovascular (3 clicks)
-- ❌ Home → Biology → Systems → Cardiovascular → Heart → Chambers (5 clicks)
-
----
-
-### Every article should have related objects
-
-**Rationale:** No knowledge exists in isolation. Showing related objects helps users discover connected concepts and understand the broader context.
-
-**Implementation:**
-- Automatic relationship-based suggestions
-- Manual editorial curation for key connections
-- Categorized related objects (prerequisite, advanced, related)
-- Visual relationship indicators
-
-**Example:**
-- ✅ "Cardiovascular System" shows related: "Respiratory System", "Blood Composition", "Heart Disease"
-- ❌ "Cardiovascular System" has no related content
+**Пример:**
+- ✅ «Муст» существует как один объект глоссария; все ссылки указывают на него
+- ❌ «Муст» объясняется отдельно в разделах поведения, ветеринарии и содержания
 
 ---
 
-## Quality Principles
+### Один термин → одно определение
 
-### Every important statement should have a source
+**Обоснование:** Несогласованная терминология создаёт путаницу и снижает обнаруживаемость. Пользователи не могут найти информацию, если не знают, какой термин искать.
 
-**Rationale:** Without sources, content cannot be verified, assessed for reliability, or distinguished from opinion. Sources enable evidence-based decision-making.
+**Реализация:**
+- Централизованный глоссарий с каноническими определениями
+- Все термины связаны с глоссарием
+- Алиасы перенаправляют на канонический термин
+- Устаревшие термины отмечены текущим эквивалентом
 
-**Implementation:**
-- All factual claims require citations
-- Source reliability rated (1-5 stars)
-- Consensus status indicated
-- Uncertainty acknowledged explicitly
-
-**Example:**
-- ✅ "Elephant heart rate is 28-35 bpm [Source #1, ⭐⭐⭐⭐⭐]"
-- ❌ "Elephant heart rate is 28-35 bpm" (no source)
+**Пример:**
+- ✅ «Махаут» определён один раз в глоссарии; все использования связаны с ним
+- ❌ «Махаут» определён по-разному в нескольких статьях
 
 ---
 
-### Never duplicate information
+### Один источник → один формат цитирования
 
-**Rationale:** Duplication creates maintenance burden, inconsistency, and confusion. When information changes, it must be updated in multiple places.
+**Обоснование:** Несогласованные цитаты затрудняют проверку источников, оценку надёжности и поддержку содержимого. Стандартизация обеспечивает автоматическую валидацию и фильтрацию.
 
-**Implementation:**
-- Link to canonical sources instead of repeating
-- Use relationships to connect concepts
-- Extract common information into shared objects
-- Automated duplicate detection
+**Реализация:**
+- Единый формат цитирования для всего содержимого
+- Рейтинг уровня доказательности для каждого источника
+- Согласованные метаданные (автор, год, издатель)
+- Автоматическая проверка ссылок
 
-**Example:**
-- ✅ Link to "Musth" glossary entry instead of redefining it
-- ❌ Define "Musth" separately in multiple articles
-
----
-
-### Link instead of repeating
-
-**Rationale:** Links create the knowledge graph. Repetition creates isolated content. Links enable discovery and maintainability.
-
-**Implementation:**
-- Internal links for all references to platform content
-- External links for supplementary information
-- Link text describes destination
-- Links validated regularly
-
-**Example:**
-- ✅ "See [Musth](../glossary.md#musth) for reproductive behavior"
-- ❌ "Musth is a reproductive state characterized by..." (full repetition)
+**Пример:**
+- ✅ `[1] Название, Авторы, Год, Издатель, ⭐⭐⭐⭐⭐`
+- ❌ Смесь стилей APA, MLA и неформальных цитат
 
 ---
 
-### Prefer relationships over repetition
+## Принципы навигации
 
-**Rationale:** Relationships enable the knowledge graph. Repetition creates isolated content. Relationships support future features like graph visualization and semantic search.
+### Навигация никогда не должна требовать более трёх кликов
 
-**Implementation:**
-- Define relationships in metadata
-- Use relationship types (is-a, part-of, causes, treats)
-- Bidirectional relationships where applicable
-- Relationship-based navigation
+**Обоснование:** Глубокие иерархии навигации расстраивают пользователей и делают содержимое труднодоступным для обнаружения. Три клика — это максимум, прежде чем будет проверено терпение пользователя.
 
-**Example:**
-- ✅ Metadata: `related_objects: ["ELE-BEH-REPR-MUST-001"]` with relationship type
-- ❌ Text description of relationship without structured metadata
+**Реализация:**
+- Максимум 3-уровневая иерархия: Домен → Категория → Объект
+- Навигационная цепочка для отслеживания пути
+- Поиск как основной метод обнаружения
+- Связанные объекты для латеральной навигации
 
----
-
-### Prefer structure over volume
-
-**Rationale:** More content is not better content. Well-structured, focused content is more valuable than large amounts of unstructured information.
-
-**Implementation:**
-- Break large topics into focused objects
-- Use progressive disclosure
-- Prioritize organization over comprehensiveness
-- Quality over quantity
-
-**Example:**
-- ✅ Three focused objects: "Heart Anatomy", "Cardiac Physiology", "Circulatory Pathways"
-- ❌ One massive object: "Complete Cardiovascular System"
+**Пример:**
+- ✅ Главная → Биология → Анатомия → Сердечно-сосудистая (3 клика)
+- ❌ Главная → Биология → Системы → Сердечно-сосудистая → Сердце → Камеры (5 кликов)
 
 ---
 
-### Prefer evidence over opinion
+### Каждая статья должна иметь связанные объекты
 
-**Rationale:** The platform is a scientific knowledge base, not an opinion forum. Evidence-based content enables reliable decision-making.
+**Обоснование:** Никакие знания не существуют в изоляции. Показ связанных объектов помогает пользователям открывать связанные концепции и понимать более широкий контекст.
 
-**Implementation:**
-- All claims sourced
-- Opinion clearly labeled as such
-- Scientific consensus distinguished from controversy
-- Uncertainty acknowledged
+**Реализация:**
+- Автоматические предложения на основе отношений
+- Ручная редакционная куратория для ключевых связей
+- Категоризированные связанные объекты (предварительные, продвинутые, связанные)
+- Визуальные индикаторы отношений
 
-**Example:**
-- ✅ "Studies show X [Source #1], though some research suggests Y [Source #2]"
-- ❌ "In my opinion, X is true"
-
----
-
-### Prefer clarity over completeness
-
-**Rationale:** Complete but incomprehensible content is useless. Clear, focused content that omits edge cases is more valuable than exhaustive but confusing content.
-
-**Implementation:**
-- Focus on core concepts first
-- Add complexity in separate, linked objects
-- Use progressive disclosure
-- Prioritize understanding over exhaustive coverage
-
-**Example:**
-- ✅ "Cardiovascular system overview" with links to detailed subtopics
-- ❌ "Complete cardiovascular system including rare anomalies and historical theories"
+**Пример:**
+- ✅ «Сердечно-сосудистая система» показывает связанные: «Дыхательная система», «Состав крови», «Болезни сердца»
+- ❌ «Сердечно-сосудистая система» не имеет связанного содержимого
 
 ---
 
-## Technical Principles
+## Принципы качества
 
-### Everything should be searchable
+### Каждое важное утверждение должно иметь источник
 
-**Rationale:** If content cannot be found, it does not exist. Search is the primary discovery mechanism for knowledge platforms.
+**Обоснование:** Без источников содержимое не может быть проверено, оценено на надёжность или отличено от мнения. Источники обеспечивают принятие решений на основе доказательств.
 
-**Implementation:**
-- Full-text search
-- Metadata search
-- Faceted search
-- Semantic search
-- Search optimization in content creation
+**Реализация:**
+- Все фактические утверждения требуют цитат
+- Надёжность источника оценивается (1-5 звёзд)
+- Статус консенсуса указан
+- Неопределённость признана явно
 
-**Example:**
-- ✅ Rich metadata, keywords, and descriptions for searchability
-- ❌ Content without search metadata or keywords
-
----
-
-### Everything should be reusable
-
-**Rationale:** Reusable components enable scalability, consistency, and maintainability. Hard-coded content creates technical debt.
-
-**Implementation:**
-- Metadata-driven architecture
-- Template-based content creation
-- Component-based design system
-- API-first design
-- Export capabilities
-
-**Example:**
-- ✅ Content templates with metadata fields
-- ❌ Hard-coded content structure
+**Пример:**
+- ✅ «Частота сердцебиения слона 28-35 уд/мин [Источник #1, ⭐⭐⭐⭐⭐]»
+- ❌ «Частота сердцебиения слона 28-35 уд/мин» (без источника)
 
 ---
 
-## User Experience Principles
+### Никогда не дублировать информацию
 
-### Respect the user's attention
+**Обоснование:** Дублирование создаёт нагрузку на поддержку, несогласованность и путаницу. Когда информация изменяется, её необходимо обновлять в нескольких местах.
 
-**Rationale:** Users have limited attention. Respect it by being concise, focused, and relevant.
+**Реализация:**
+- Ссылайтесь на канонические источники вместо повторения
+- Используйте отношения для связи концепций
+- Извлекайте общую информацию в общие объекты
+- Автоматическое обнаружение дубликатов
 
-**Implementation:**
-- Clear headings and structure
-- Progressive disclosure
-- Relevant content prioritized
-- No unnecessary information
-
-**Example:**
-- ✅ Focused article with clear structure
-- ❌ Meandering article with irrelevant tangents
+**Пример:**
+- ✅ Ссылка на запись глоссария «Муст» вместо переопределения
+- ❌ Определение «Муст» отдельно в нескольких статьях
 
 ---
 
-### Assume the user is intelligent but uninformed
+### Ссылайтесь вместо повторения
 
-**Rationale:** Users are capable of understanding complex concepts if explained clearly. Condescension and oversimplification are inappropriate for a scientific platform.
+**Обоснование:** Ссылки создают граф знаний. Повторение создаёт изолированное содержимое. Ссылки обеспечивают обнаруживаемость и поддерживаемость.
 
-**Implementation:**
-- Respectful tone
-- Clear explanations without oversimplification
-- Assume scientific literacy
-- Provide context without talking down
+**Реализация:**
+- Внутренние ссылки для всех ссылок на содержимое платформы
+- Внешние ссылки для дополнительной информации
+- Текст ссылки описывает назначение
+- Ссылки проверяются регулярно
 
-**Example:**
-- ✅ "The cardiovascular system circulates blood..." (clear, respectful)
-- ❌ "Blood goes around in circles..." (condescending)
-
----
-
-### Design for scanning, not just reading
-
-**Rationale:** Users scan content before reading. Design for scanning to improve discoverability and comprehension.
-
-**Implementation:**
-- Clear headings
-- Bullet points for lists
-- Highlighted key information
-- Short paragraphs
-- Visual hierarchy
-
-**Example:**
-- ✅ Well-structured article with headings and bullet points
-- ❌ Wall of text without structure
+**Пример:**
+- ✅ «См. [Муст](../glossary.md#musth) для репродуктивного поведения»
+- ❌ «Муст — это репродуктивное состояние, характеризующееся...» (полное повторение)
 
 ---
 
-## Accessibility Principles
+### Предпочитайте отношения повторению
 
-### Content must be accessible to all users
+**Обоснование:** Отношения обеспечивают граф знаний. Повторение создаёт изолированное содержимое. Отношения поддерживают будущие функции, такие как визуализация графа и семантический поиск.
 
-**Rationale:** Knowledge should be available to everyone, regardless of ability. Accessibility is a requirement, not a feature.
+**Реализация:**
+- Определите отношения в метаданных
+- Используйте типы отношений (is-a, part-of, causes, treats)
+- Двунаправленные отношения где применимо
+- Навигация на основе отношений
 
-**Implementation:**
-- WCAG AA compliance
-- Semantic HTML
-- Alt text for images
-- Keyboard navigation
-- Screen reader compatibility
-- Color contrast compliance
-
-**Example:**
-- ✅ Semantic heading structure, alt text, keyboard navigation
-- ❌ Unsemantic markup, missing alt text, mouse-only navigation
+**Пример:**
+- ✅ Метаданные: `related_objects: ["ELE-BEH-REPR-MUST-001"]` с типом отношения
+- ❌ Текстовое описание отношения без структурированных метаданных
 
 ---
 
-## Performance Principles
+### Предпочитайте структуру объёму
 
-### Fast loading is non-negotiable
+**Обоснование:** Больше содержимого — не лучше содержимое. Хорошо структурированное, фокусированное содержимое более ценно, чем большие объёмы неструктурированной информации.
 
-**Rationale:** Slow loading frustrates users and reduces engagement. Performance is a feature, not an afterthought.
+**Реализация:**
+- Разбивайте большие темы на фокусированные объекты
+- Используйте прогрессивное раскрытие
+- Приоритет организации над полнотой
+- Качество над количеством
 
-**Implementation:**
-- Optimize images and media
-- Minimize JavaScript
-- Use caching strategies
-- Optimize search indexing
-- Monitor performance metrics
-
-**Example:**
-- ✅ Optimized images, caching, minimal JavaScript
-- ❌ Unoptimized media, excessive JavaScript, no caching
+**Пример:**
+- ✅ Три фокусированных объекта: «Анатомия сердца», «Сердечная физиология», «Кровеносные пути»
+- ❌ Один массивный объект: «Полная сердечно-сосудистая система»
 
 ---
 
-## Maintenance Principles
+### Предпочитайте доказательства мнению
 
-### Design for long-term maintainability
+**Обоснование:** Платформа — это научная база знаний, не форум мнений. Содержимое на основе доказательств обеспечивает надёжное принятие решений.
 
-**Rationale:** The platform will exist for decades. Design for maintainability to prevent technical debt and ensure sustainability.
+**Реализация:**
+- Все утверждения подтверждены источниками
+- Мнение чётко помечено как таковое
+- Научный консенсус отличен от противоречия
+- Неопределённость признана
 
-**Implementation:**
-- Clear documentation
-- Consistent patterns
-- Automated testing
-- Regular audits
-- Deprecation process
-
-**Example:**
-- ✅ Well-documented architecture, consistent patterns, automated tests
-- ❌ Undocumented hacks, inconsistent patterns, no testing
+**Пример:**
+- ✅ «Исследования показывают X [Источник #1], хотя некоторые исследования предполагают Y [Источник #2]»
+- ❌ «По моему мнению, X верно»
 
 ---
 
-## Scalability Principles
+### Предпочитайте ясность полноте
 
-### Design for thousands of objects
+**Обоснование:** Полное, но непонятное содержимое бесполезно. Чёткое, фокусированное содержимое, которое опускает крайние случаи, более ценно, чем исчерпывающее, но путаное содержимое.
 
-**Rationale:** The platform will scale. Design for scalability from the beginning to avoid expensive rewrites.
+**Реализация:**
+- Фокус на основных концепциях сначала
+- Добавляйте сложность в отдельных, связанных объектах
+- Используйте прогрессивное раскрытие
+- Приоритет понимания над исчерпывающим охватом
 
-**Implementation:**
-- Metadata-driven architecture
-- No hard-coded content assumptions
-- Efficient search at scale
-- Automated relationship management
-- Scalable navigation
-
-**Example:**
-- ✅ Metadata-driven content, efficient search, automated relationships
-- ❌ Hard-coded content, manual relationship management
+**Пример:**
+- ✅ «Обзор сердечно-сосудистой системы» со ссылками на детальные подтемы
+- ❌ «Полная сердечно-сосудистая система, включая редкие аномалии и исторические теории»
 
 ---
 
-## AI Agent Principles
+## Технические принципы
 
-### Design for machine readability
+### Всё должно быть доступно для поиска
 
-**Rationale:** AI agents will consume and process this content. Design for machine readability to enable future AI features.
+**Обоснование:** Если содержимое не может быть найдено, оно не существует. Поиск — основной механизм обнаружения для платформ знаний.
 
-**Implementation:**
-- Structured metadata
-- Consistent formatting
-- Clear ontology
-- Relationship definitions
-- API access
+**Реализация:**
+- Полнотекстовый поиск
+- Поиск по метаданным
+- Фасетный поиск
+- Семантический поиск
+- Оптимизация поиска при создании содержимого
 
-**Example:**
-- ✅ Structured metadata, consistent formatting, clear ontology
-- ❌ Unstructured content, inconsistent formatting, no ontology
+**Пример:**
+- ✅ Богатые метаданные, ключевые слова и описания для обнаруживаемости
+- ❌ Содержимое без метаданных поиска или ключевых слов
 
 ---
 
-## Conclusion
+### Всё должно быть повторно используемым
 
-These principles are not guidelines—they are requirements. Every design decision, from content structure to user interface, must align with these principles.
+**Обоснование:** Повторно используемые компоненты обеспечивают масштабируемость, согласованность и поддерживаемость. Жёстко закодированное содержимое создаёт технический долг.
 
-When in doubt, return to these principles. They are the foundation upon which the entire platform is built.
+**Реализация:**
+- Архитектура на основе метаданных
+- Создание содержимого на основе шаблонов
+- Система дизайна на основе компонентов
+- Дизайн с приоритетом API
+- Возможности экспорта
 
-Violating a principle requires explicit justification and architectural decision logging. Principles may evolve over time, but changes require careful consideration and documentation.
+**Пример:**
+- ✅ Шаблоны содержимого с полями метаданных
+- ❌ Жёстко закодированная структура содержимого
+
+---
+
+## Принципы пользовательского опыта
+
+### Уважайте внимание пользователя
+
+**Обоснование:** У пользователей ограниченное внимание. Уважайте его, будучи кратким, фокусированным и релевантным.
+
+**Реализация:**
+- Чёткие заголовки и структура
+- Прогрессивное раскрытие
+- Приоритет релевантного содержимого
+- Никакой лишней информации
+
+**Пример:**
+- ✅ Фокусированная статья с чёткой структурой
+- ❌ Блуждающая статья с нерелевантными отступлениями
+
+---
+
+### Предполагайте, что пользователь умён, но не информирован
+
+**Обоснование:** Пользователи способны понимать сложные концепции, если они объяснены чётко. Пренебрежение и чрезмерное упрощение неуместны для научной платформы.
+
+**Реализация:**
+- Уважительный тон
+- Чёткие объяснения без чрезмерного упрощения
+- Предполагайте научную грамотность
+- Предоставляйте контекст без снисходительности
+
+**Пример:**
+- ✅ «Сердечно-сосудистая система циркулирует кровь...» (чётко, уважительно)
+- ❌ «Кровь ходит по кругам...» (снисходительно)
+
+---
+
+### Дизайн для сканирования, не только для чтения
+
+**Обоснование:** Пользователи сканируют содержимое перед чтением. Дизайн для сканирования улучшает обнаруживаемость и понимание.
+
+**Реализация:**
+- Чёткие заголовки
+- Маркированные списки для списков
+- Выделенная ключевая информация
+- Короткие абзацы
+- Визуальная иерархия
+
+**Пример:**
+- ✅ Хорошо структурированная статья с заголовками и маркированными списками
+- ❌ Стена текста без структуры
+
+---
+
+## Принципы доступности
+
+### Содержимое должно быть доступно всем пользователям
+
+**Обоснование:** Знания должны быть доступны всем, независимо от способностей. Доступность — это требование, не функция.
+
+**Реализация:**
+- Соответствие WCAG AA
+- Семантический HTML
+- Alt-текст для изображений
+- Навигация с клавиатуры
+- Совместимость со скринридерами
+- Соответствие контрастности цветов
+
+**Пример:**
+- ✅ Семантическая структура заголовков, alt-текст, навигация с клавиатуры
+- ❌ Несемантическая разметка, отсутствие alt-текста, навигация только мышью
+
+---
+
+## Принципы производительности
+
+### Быстрая загрузка неприемлема для компромисса
+
+**Обоснование:** Медленная загрузка расстраивает пользователей и снижает вовлечение. Производительность — это функция, не последствие.
+
+**Реализация:**
+- Оптимизация изображений и медиа
+- Минимизация JavaScript
+- Использование стратегий кэширования
+- Оптимизация индексации поиска
+- Мониторинг метрик производительности
+
+**Пример:**
+- ✅ Оптимизированные изображения, кэширование, минимальный JavaScript
+- ❌ Неоптимизированные медиа, чрезмерный JavaScript, отсутствие кэширования
+
+---
+
+## Принципы поддержки
+
+### Дизайн для долгосрочной поддерживаемости
+
+**Обоснование:** Платформа будет существовать десятилетиями. Дизайн для поддерживаемости для предотвращения технического долга и обеспечения устойчивости.
+
+**Реализация:**
+- Чёткая документация
+- Согласованные паттерны
+- Автоматическое тестирование
+- Регулярные аудиты
+- Процесс устаревания
+
+**Пример:**
+- ✅ Хорошо документированная архитектура, согласованные паттерны, автоматические тесты
+- ❌ Недокументированные хаки, несогласованные паттерны, отсутствие тестирования
+
+---
+
+## Принципы масштабируемости
+
+### Дизайн для тысяч объектов
+
+**Обоснование:** Платформа будет масштабироваться. Дизайн для масштабируемости с начала для предотвращения дорогостоящих переработок.
+
+**Реализация:**
+- Архитектура на основе метаданных
+- Никаких жёстко закодированных предположений о объёме содержимого
+- Эффективный поиск в масштабе
+- Автоматическое управление отношениями
+- Масштабируемая навигация
+
+**Пример:**
+- ✅ Содержимое на основе метаданных, эффективный поиск, автоматические отношения
+- ❌ Жёстко закодированное содержимое, ручное управление отношениями
+
+---
+
+## Принципы AI-агентов
+
+### Дизайн для машинной читаемости
+
+**Обоснование:** AI-агенты будут потреблять и обрабатывать это содержимое. Дизайн для машинной читаемости для обеспечения будущих функций AI.
+
+**Реализация:**
+- Структурированные метаданные
+- Согласованное форматирование
+- Чёткая онтология
+- Определения отношений
+- Доступ к API
+
+**Пример:**
+- ✅ Структурированные метаданные, согласованное форматирование, чёткая онтология
+- ❌ Неструктурированное содержимое, несогласованное форматирование, отсутствие онтологии
+
+---
+
+## Заключение
+
+Эти принципы — не рекомендации, это требования. Каждое дизайнерское решение, от структуры содержимого до пользовательского интерфейса, должно соответствовать этим принципам.
+
+В случае сомнений вернитесь к этим принципам. Они — фундамент, на котором построена вся платформа.
+Нарушение принципа требует явного обоснования и записи архитектурного решения. Принципы могут эволюционировать со временем, но изменения требуют тщательного рассмотрения и документации.

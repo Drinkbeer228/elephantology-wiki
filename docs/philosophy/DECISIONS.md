@@ -1,548 +1,548 @@
-# Elephantology Architectural Decisions
+# Журнал архитектурных решений «Слонологии»
 
-**Purpose:** Log of significant architectural decisions with rationale, alternatives, and status.  
-**Format:** ADR (Architecture Decision Record)  
-**Last Updated:** 2026-07-23
-
----
-
-## Decision #001: Knowledge Objects Instead of Articles
-
-**Status:** Accepted  
-**Date:** 2026-07-23  
-**Context:** The platform needs to scale to thousands of interconnected content items while maintaining structure and relationships.
-
-**Decision:** Use Knowledge Objects with structured metadata instead of traditional articles.
-
-**Rationale:**
-- Articles become difficult to extend and maintain at scale
-- Knowledge Objects enable future graph relationships
-- Structured metadata supports search, filtering, and API access
-- Relationships between objects are as important as the objects themselves
-- Enables machine readability for AI agents
-
-**Alternatives Considered:**
-1. **Traditional Articles:** Simple but lacks structure, difficult to scale
-2. **Database-Driven Content:** More complex, requires backend infrastructure
-3. **Hybrid Approach:** Articles with limited metadata - insufficient for knowledge graph
-
-**Consequences:**
-- Positive: Enables knowledge graph, API access, advanced search
-- Positive: Scalable to thousands of objects
-- Negative: Requires more upfront metadata definition
-- Negative: Steeper learning curve for contributors
-
-**Related Decisions:** #002, #003
+**Назначение:** Журнал значимых архитектурных решений с обоснованиями, альтернативами и статусом.  
+**Формат:** ADR (Architecture Decision Record)  
+**Последнее обновление:** 2026-07-23
 
 ---
 
-## Decision #002: Evidence Level Rating System
+## Решение #001: Объекты знаний вместо статей
 
-**Status:** Accepted  
-**Date:** 2026-07-23  
-**Context:** Users need to assess the reliability of information to make evidence-based decisions.
+**Статус:** Принято  
+**Дата:** 2026-07-23  
+**Контекст:** Платформа должна масштабироваться до тысяч взаимосвязанных элементов содержимого при поддержании структуры и отношений.
 
-**Decision:** Implement a 5-star evidence level rating system for all sources.
+**Решение:** Использовать объекты знаний со структурированными метаданными вместо традиционных статей.
 
-**Rationale:**
-- Not all sources are equally reliable
-- Users need to quickly assess information quality
-- Enables filtering by evidence level
-- Supports scientific neutrality by distinguishing consensus from controversy
-- Color-coded badges provide visual indicators
+**Обоснование:**
+- Статьи становятся трудными для расширения и поддержки в масштабе
+- Объекты знаний обеспечивают будущие отношения графа
+- Структурированные метаданные поддерживают поиск, фильтрацию и доступ к API
+- Отношения между объектами так же важны, как сами объекты
+- Обеспечивает машинную читаемость для AI-агентов
 
-**Alternatives Considered:**
-1. **No Evidence Rating:** Simple but users cannot assess reliability
-2. **Binary Rating (Reliable/Unreliable):** Too simplistic
-3. **Textual Descriptions:** Verbose, not scannable
-4. **Academic Citation Style:** Familiar but doesn't indicate reliability
+**Рассмотренные альтернативы:**
+1. **Традиционные статьи:** Простые, но лишены структуры, трудны для масштабирования
+2. **Содержимое на основе базы данных:** Более сложное, требует инфраструктуры бэкенда
+3. **Гибридный подход:** Статьи с ограниченными метаданными — недостаточно для графа знаний
 
-**Consequences:**
-- Positive: Users can assess information quality quickly
-- Positive: Enables evidence-based filtering
-- Negative: Requires editorial judgment
-- Negative: May be subjective in some cases
+**Последствия:**
+- Положительные: Обеспечивает граф знаний, доступ к API, расширенный поиск
+- Положительные: Масштабируется до тысяч объектов
+- Отрицательные: Требует большего объёма предварительного определения метаданных
+- Отрицательные: Более крутая кривая обучения для авторов
 
-**Evidence Levels:**
-- ⭐⭐⭐⭐⭐ Peer-reviewed research
-- ⭐⭐⭐⭐ Official organizations
-- ⭐⭐⭐ Academic books
-- ⭐⭐ Professional publications
-- ⭐ Web resources
-
-**Related Decisions:** #001, #005
+**Связанные решения:** #002, #003
 
 ---
 
-## Decision #003: Relationship-Based Knowledge Graph
+## Решение #002: Система рейтинга уровня доказательности
 
-**Status:** Accepted  
-**Date:** 2026-07-23  
-**Context:** Knowledge exists in a network of relationships, not in isolation. Linear navigation is insufficient for complex topics.
+**Статус:** Принято  
+**Дата:** 2026-07-23  
+**Контекст:** Пользователям нужно оценивать надёжность информации для принятия решений на основе доказательств.
 
-**Decision:** Implement a knowledge graph with defined relationship types between objects.
+**Решение:** Реализовать 5-звёздочную систему рейтинга уровня доказательности для всех источников.
 
-**Rationale:**
-- Knowledge is interconnected
-- Relationships enable discovery
-- Supports non-linear navigation
-- Enables graph visualization
-- Future-proof for AI features
+**Обоснование:**
+- Не все источники одинаково надёжны
+- Пользователям нужно быстро оценивать качество информации
+- Обеспечивает фильтрацию по уровню доказательности
+- Поддерживает научную нейтральность, отличая консенсус от противоречия
+- Цветовые значки обеспечивают визуальные индикаторы
 
-**Alternatives Considered:**
-1. **Linear Navigation Only:** Simple but insufficient for complex knowledge
-2. **Manual Cross-References:** Inconsistent, not scalable
-3. **Tag-Based System:** Better but lacks semantic relationships
-4. **Full RDF/OWL:** Overly complex for current needs
+**Рассмотренные альтернативы:**
+1. **Без рейтинга доказательности:** Просто, но пользователи не могут оценить надёжность
+2. **Бинарный рейтинг (Надёжный/Ненадёжный):** Слишком упрощённо
+3. **Текстовые описания:** Многословно, не сканируется
+4. **Академический стиль цитирования:** Знаком, но не указывает надёжность
 
-**Consequences:**
-- Positive: Enables knowledge graph visualization
-- Positive: Supports semantic search
-- Positive: Scalable relationship management
-- Negative: Requires relationship type definitions
-- Negative: More complex metadata
+**Последствия:**
+- Положительные: Пользователи могут быстро оценить качество информации
+- Положительные: Обеспечивает фильтрацию на основе доказательств
+- Отрицательные: Требует редакционного суждения
+- Отрицательные: Может быть субъективным в некоторых случаях
 
-**Relationship Types:**
-- is-a (taxonomic)
-- part-of (meronymic)
-- causes (causal)
-- treats (therapeutic)
-- prevents (prophylactic)
-- requires (prerequisite)
-- contradicts (conflict)
-- related-to (association)
-- prerequisite-for (learning path)
+**Уровни доказательности:**
+- ⭐⭐⭐⭐⭐ Рецензируемые исследования
+- ⭐⭐⭐⭐ Официальные организации
+- ⭐⭐⭐ Академические книги
+- ⭐⭐ Профессиональные публикации
+- ⭐ Веб-ресурсы
 
-**Related Decisions:** #001, #004
+**Связанные решения:** #001, #005
 
 ---
 
-## Decision #004: Three-Level Navigation Hierarchy
+## Решение #003: Граф знаний на основе отношений
 
-**Status:** Accepted  
-**Date:** 2026-07-23  
-**Context:** Navigation must scale to thousands of objects while remaining usable.
+**Статус:** Принято  
+**Дата:** 2026-07-23  
+**Контекст:** Знания существуют в сети отношений, не в изоляции. Линейная навигация недостаточна для сложных тем.
 
-**Decision:** Limit navigation hierarchy to maximum 3 levels: Domain → Category → Object.
+**Решение:** Реализовать граф знаний с определёнными типами отношений между объектами.
 
-**Rationale:**
-- Deep hierarchies frustrate users
-- Three clicks is maximum before user patience is tested
-- Flat navigation with search is more scalable
-- Knowledge graph provides alternative navigation
+**Обоснование:**
+- Знания взаимосвязаны
+- Отношения обеспечивают обнаружение
+- Поддерживает нелинейную навигацию
+- Обеспечивает визуализацию графа
+- Будущее для функций AI
 
-**Alternatives Considered:**
-1. **Two Levels Only:** Too restrictive for complex domains
-2. **Four or More Levels:** Too deep, poor user experience
-3. **Tag-Based Navigation:** Flexible but lacks structure
-4. **Search-Only Navigation:** Powerful but lacks context
+**Рассмотренные альтернативы:**
+1. **Только линейная навигация:** Простая, но недостаточная для сложных знаний
+2. **Ручные перекрёстные ссылки:** Несогласованные, не масштабируются
+3. **Система на основе тегов:** Лучше, но лишена семантических отношений
+4. **Полный RDF/OWL:** Слишком сложно для текущих потребностей
 
-**Consequences:**
-- Positive: Maintains usability at scale
-- Positive: Clear mental model for users
-- Negative: May require broader categories
-- Negative: Some topics may feel "shallow"
+**Последствия:**
+- Положительные: Обеспечивает визуализацию графа знаний
+- Положительные: Поддерживает семантический поиск
+- Положительные: Масштабируемое управление отношениями
+- Отрицательные: Требует определений типов отношений
+- Отрицательные: Более сложные метаданные
 
-**Navigation Structure:**
-- Level 1: Domain (8 items)
-- Level 2: Category (5-8 items per domain)
-- Level 3: Knowledge Objects (unlimited)
+**Типы отношений:**
+- is-a (таксономический)
+- part-of (меронимический)
+- causes (причинный)
+- treats (терапевтический)
+- prevents (профилактический)
+- requires (предварительный)
+- contradicts (конфликт)
+- related-to (ассоциация)
+- prerequisite-for (путь обучения)
 
-**Related Decisions:** #003
-
----
-
-## Decision #005: Editorial Review Process
-
-**Status:** Accepted  
-**Date:** 2026-07-23  
-**Context:** Content quality must be maintained as the platform scales. Open editing would compromise scientific credibility.
-
-**Decision:** Implement editorial review process with status tracking (draft → reviewed → published).
-
-**Rationale:**
-- Maintains scientific credibility
-- Ensures quality standards
-- Enables accountability
-- Supports evidence-based content
-- Prevents misinformation
-
-**Alternatives Considered:**
-1. **Open Editing (Wiki Model):** Scalable but quality varies
-2. **No Editorial Process:** Fast but quality uncontrolled
-3. **Peer Review Only:** Too slow for practical content
-4. **Community Voting:** Susceptible to bias
-
-**Consequences:**
-- Positive: Maintains quality and credibility
-- Positive: Clear accountability
-- Negative: Slower content publication
-- Negative: Requires editorial resources
-- Negative: May limit contributor growth
-
-**Editorial Status:**
-- draft: Initial creation
-- reviewed: Internal editorial review
-- published: Publicly accessible
-- update-needed: Flagged for review
-- deprecated: Outdated, marked as such
-
-**Related Decisions:** #002
+**Связанные решения:** #001, #004
 
 ---
 
-## Decision #006: Centralized Glossary
+## Решение #004: Трёхуровневая иерархия навигации
 
-**Status:** Accepted  
-**Date:** 2026-07-23  
-**Context:** Terminology consistency is critical for searchability and comprehension. Duplicate definitions create confusion.
+**Статус:** Принято  
+**Дата:** 2026-07-23  
+**Контекст:** Навигация должна масштабироваться до тысяч объектов при оставлении удобной.
 
-**Decision:** Implement centralized glossary with canonical definitions. All terms link to glossary.
+**Решение:** Ограничить иерархию навигации максимум 3 уровнями: Домен → Категория → Объект.
 
-**Rationale:**
-- One term, one definition
-- Improves searchability
-- Ensures consistency
-- Enables translation
-- Supports AI processing
+**Обоснование:**
+- Глубокие иерархии расстраивают пользователей
+- Три клика — максимум, прежде чем будет проверено терпение пользователя
+- Плоская навигация с поиском более масштабируема
+- Граф знаний обеспечивает альтернативную навигацию
 
-**Alternatives Considered:**
-1. **Inline Definitions:** Convenient but inconsistent
-2. **Distributed Glossaries:** Hard to maintain
-3. **No Glossary:** Simple but terminology inconsistent
-4. **External Glossary:** Not integrated with platform
+**Рассмотренные альтернативы:**
+1. **Только два уровня:** Слишком ограничительно для сложных доменов
+2. **Четыре или более уровней:** Слишком глубоко, плохой пользовательский опыт
+3. **Навигация на основе тегов:** Гибкая, но лишена структуры
+4. **Только поиск:** Мощный, но лишён контекста
 
-**Consequences:**
-- Positive: Consistent terminology
-- Positive: Improved searchability
-- Positive: Enables translation
-- Negative: Requires upfront glossary creation
-- Negative: Additional linking overhead
+**Последствия:**
+- Положительные: Поддерживает удобство в масштабе
+- Положительные: Чёткая ментальная модель для пользователей
+- Отрицательные: Может требовать более широкие категории
+- Отрицательные: Некоторые темы могут казаться «мелкими»
 
-**Related Decisions:** #001
+**Структура навигации:**
+- Уровень 1: Домен (8 элементов)
+- Уровень 2: Категория (5-8 элементов на домен)
+- Уровень 3: Объекты знаний (неограниченно)
 
----
-
-## Decision #007: MkDocs with Material Theme
-
-**Status:** Accepted  
-**Date:** 2026-07-23  
-**Context:** Need a static site generator that supports structured content, navigation, and customization.
-
-**Decision:** Use MkDocs with Material for MkDocs theme.
-
-**Rationale:**
-- Markdown-based (simple, version-controlled)
-- Excellent navigation features
-- Highly customizable
-- Strong search capabilities
-- Active community and documentation
-- Supports plugins and extensions
-
-**Alternatives Considered:**
-1. **Jekyll:** More complex Ruby dependency
-2. **Hugo:** Faster but less mature ecosystem
-3. **Docusaurus:** React-based, more complex
-4. **Custom Solution:** Too much development effort
-5. **WordPress:** Overkill, database-dependent
-
-**Consequences:**
-- Positive: Simple, markdown-based workflow
-- Positive: Excellent navigation and search
-- Positive: Highly customizable
-- Negative: Limited to static sites
-- Negative: Requires Python dependency
-- Negative: Some features require plugins
-
-**Related Decisions:** None
+**Связанные решения:** #003
 
 ---
 
-## Decision #008: YAML Frontmatter for Metadata
+## Решение #005: Процесс редакционного обзора
 
-**Status:** Accepted  
-**Date:** 2026-07-23  
-**Context:** Need structured metadata for every Knowledge Object to support search, filtering, and relationships.
+**Статус:** Принято  
+**Дата:** 2026-07-23  
+**Контекст:** Качество содержимого должно поддерживаться при масштабировании платформы. Открытое редактирование подорвёт научную достоверность.
 
-**Decision:** Use YAML frontmatter in Markdown files for metadata.
+**Решение:** Реализовать процесс редакционного обзора с отслеживанием статуса (draft → reviewed → published).
 
-**Rationale:**
-- Native to Markdown
-- Human-readable
-- Easy to parse
-- Supports complex data structures
-- Version-controlled with content
+**Обоснование:**
+- Поддерживает научную достоверность
+- Обеспечивает стандарты качества
+- Обеспечивает ответственность
+- Поддерживает содержимое на основе доказательств
+- Предотвращает дезинформацию
 
-**Alternatives Considered:**
-1. **JSON Frontmatter:** Less human-readable
-2. **TOML Frontmatter:** Less familiar
-3. **Separate Metadata Files:** Harder to maintain
-4. **Database-Backed Metadata:** Too complex for current needs
-5. **No Structured Metadata:** Insufficient for platform features
+**Рассмотренные альтернативы:**
+1. **Открытое редактирование (модель вики):** Масштабируется, но качество переменно
+2. **Без редакционного процесса:** Быстро, но качество неконтролируемо
+3. **Только рецензирование:** Слишком медленно для практического содержимого
+4. **Голосование сообщества:** Подвержено предвзятости
 
-**Consequences:**
-- Positive: Human-readable and editable
-- Positive: Version-controlled with content
-- Positive: Supports complex data structures
-- Negative: Manual editing required
-- Negative: No validation by default
+**Последствия:**
+- Положительные: Поддерживает качество и достоверность
+- Положительные: Чёткая ответственность
+- Отрицательные: Более медленная публикация содержимого
+- Отрицательные: Требует редакционных ресурсов
+- Отрицательные: Может ограничить рост авторов
 
-**Related Decisions:** #001, #007
+**Редакционный статус:**
+- draft: Первичное создание
+- reviewed: Внутренний редакционный обзор
+- published: Публично доступно
+- update-needed: Отмечено для обзора
+- deprecated: Устарело, отмечено как таковое
 
----
-
-## Decision #009: Russian as Primary Language
-
-**Status:** Accepted  
-**Date:** 2026-07-23  
-**Context:** Target audience is primarily Russian-speaking professionals in veterinary and zoo contexts.
-
-**Decision:** Russian as primary language with English translations for key terms.
-
-**Rationale:**
-- Primary audience is Russian-speaking
-- Russian veterinary and zoo communities are significant
-- English translations enable international accessibility
-- Supports bilingual terminology
-
-**Alternatives Considered:**
-1. **English Only:** Excludes Russian-speaking audience
-2. **Russian Only:** Limits international accessibility
-3. **Full Bilingual:** Doubles content maintenance burden
-4. **Multi-Language:** Too complex for current resources
-
-**Consequences:**
-- Positive: Serves primary audience effectively
-- Positive: English translations enable international access
-- Negative: Limited non-Russian content
-- Negative: Translation maintenance overhead
-
-**Related Decisions:** None
+**Связанные решения:** #002
 
 ---
 
-## Decision #010: Premium Academic Design System
+## Решение #006: Централизованный глоссарий
 
-**Status:** Accepted  
-**Date:** 2026-07-23  
-**Context:** Platform must convey scientific credibility and support long reading sessions.
+**Статус:** Принято  
+**Дата:** 2026-07-23  
+**Контекст:** Согласованность терминологии критична для обнаруживаемости и понимания. Дублирующиеся определения создают путаницу.
 
-**Decision:** Implement Premium Academic design system with clean typography, high readability, and evidence-based color palette.
+**Решение:** Реализовать централизованный глоссарий с каноническими определениями. Все термины связаны с глоссарием.
 
-**Rationale:**
-- Conveys scientific credibility
-- Optimized for long reading sessions
-- Reduces eye strain
-- Professional appearance
-- Distinct from "wiki" aesthetic
+**Обоснование:**
+- Один термин, одно определение
+- Улучшает обнаруживаемость
+- Обеспечивает согласованность
+- Обеспечивает перевод
+- Поддерживает обработку AI
 
-**Alternatives Considered:**
-1. **Gaming/Thematic Design:** Conveys wrong message
-2. **Minimalist Design:** May lack character
-3. **Corporate Design:** Too formal
-4. **Blog Design:** Too casual
+**Рассмотренные альтернативы:**
+1. **Встроенные определения:** Удобно, но несогласно
+2. **Распределённые глоссарии:** Трудно поддерживать
+3. **Без глоссария:** Просто, но терминология несогласована
+4. **Внешний глоссарий:** Не интегрирован с платформой
 
-**Consequences:**
-- Positive: Professional, credible appearance
-- Positive: Optimized for readability
-- Positive: Distinct from typical wikis
-- Negative: May feel less "modern"
-- Negative: Requires careful color contrast testing
+**Последствия:**
+- Положительные: Согласованная терминология
+- Положительные: Улучшенная обнаруживаемость
+- Положительные: Обеспечивает перевод
+- Отрицательные: Требует предварительного создания глоссария
+- Отрицательные: Дополнительные накладные расходы на связывание
 
-**Design Elements:**
-- System fonts for readability
-- High line-height (1.7)
-- Slate color palette
-- Teal accents
-- Evidence level color coding
-
-**Related Decisions:** None
+**Связанные решения:** #001
 
 ---
 
-## Decision #011: Unique Immutable IDs
+## Решение #007: MkDocs с темой Material
 
-**Status:** Accepted  
-**Date:** 2026-07-23  
-**Context:** Need stable identifiers for Knowledge Objects that don't change when content is renamed or restructured.
+**Статус:** Принято  
+**Дата:** 2026-07-23  
+**Контекст:** Нужен генератор статических сайтов, поддерживающий структурированное содержимое, навигацию и настройку.
 
-**Decision:** Implement unique immutable IDs in format: ELE-DOM-CATE-TYPE-NNN
+**Решение:** Использовать MkDocs с темой Material для MkDocs.
 
-**Rationale:**
-- Stable URLs even when titles change
-- Enables reliable linking
-- Supports API access
-- Prevents broken links
-- Clear object identification
+**Обоснование:**
+- На основе Markdown (простой, с контролем версий)
+- Отличные функции навигации
+- Высоко настраиваемый
+- Сильные возможности поиска
+- Активное сообщество и документация
+- Поддерживает плагины и расширения
 
-**Alternatives Considered:**
-1. **Title-Based URLs:** Break when titles change
-2. **Random UUIDs:** Unreadable, no semantic meaning
-3. **Database Auto-Increment:** Not semantic
-4. **No IDs:** Unreliable linking
+**Рассмотренные альтернативы:**
+1. **Jekyll:** Более сложная зависимость Ruby
+2. **Hugo:** Быстрее, но менее зрелая экосистема
+3. **Docusaurus:** На основе React, более сложный
+4. **Кастомное решение:** Слишком много усилий разработки
+5. **WordPress:** Избыточно, зависит от базы данных
 
-**Consequences:**
-- Positive: Stable, reliable linking
-- Positive: Semantic, readable IDs
-- Positive: Supports API access
-- Negative: Manual ID assignment required
-- Negative: ID collision risk if not managed
+**Последствия:**
+- Положительные: Простой, на основе Markdown рабочий процесс
+- Положительные: Отличная навигация и поиск
+- Положительные: Высоко настраиваемый
+- Отрицательные: Ограничен статическими сайтами
+- Отрицательные: Требует зависимости Python
+- Отрицательные: Некоторые функции требуют плагинов
 
-**ID Format:**
-- ELE: Platform prefix
-- DOM: Domain (3-letter code)
-- CATE: Category (4-letter code)
-- TYPE: Type (4-letter code)
-- NNN: Sequential number
-
-**Example:** ELE-BIO-ANAT-CARD-001
-
-**Related Decisions:** #001
+**Связанные решения:** Нет
 
 ---
 
-## Decision #012: Content Type Taxonomy
+## Решение #008: YAML frontmatter для метаданных
 
-**Status:** Accepted  
-**Date:** 2026-07-23  
-**Context:** Different types of content require different structures, metadata, and presentation.
+**Статус:** Принято  
+**Дата:** 2026-07-23  
+**Контекст:** Нужны структурированные метаданные для каждого объекта знаний для поддержки поиска, фильтрации и отношений.
 
-**Decision:** Implement content type taxonomy with 8 primary types: article, protocol, case-study, glossary, reference, timeline, faq, organization.
+**Решение:** Использовать YAML frontmatter в файлах Markdown для метаданных.
 
-**Rationale:**
-- Different content needs different structures
-- Enables type-specific features
-- Supports filtering and search
-- Clear user expectations
-- Scalable content model
+**Обоснование:**
+- Родной для Markdown
+- Читаем человеком
+- Легко парсить
+- Поддерживает сложные структуры данных
+- Контролируется версиями вместе с содержимым
 
-**Alternatives Considered:**
-1. **Single Content Type:** Simple but inflexible
-2. **More Granular Types:** Too complex to manage
-3. **Tag-Based Typing:** Less structured
-4. **No Content Types:** No differentiation
+**Рассмотренные альтернативы:**
+1. **JSON frontmatter:** Менее читаем человеком
+2. **TOML frontmatter:** Менее знаком
+3. **Отдельные файлы метаданных:** Труднее поддерживать
+4. **Метаданные на основе базы данных:** Слишком сложно для текущих потребностей
+5. **Без структурированных метаданных:** Недостаточно для функций платформы
 
-**Consequences:**
-- Positive: Type-specific features and templates
-- Positive: Clear user expectations
-- Positive: Scalable content model
-- Negative: Requires type definition and maintenance
-- Negative: More complex content creation
+**Последствия:**
+- Положительные: Читаем и редактируется человеком
+- Положительные: Контролируется версиями вместе с содержимым
+- Положительные: Поддерживает сложные структуры данных
+- Отрицательные: Требует ручного редактирования
+- Отрицательные: Нет валидации по умолчанию
 
-**Content Types:**
-- article: Standard educational content
-- protocol: Step-by-step procedures
-- case-study: Real-world examples
-- glossary: Term definitions
-- reference: Quick reference materials
-- timeline: Historical development
-- faq: Common questions
-- organization: Institutional profiles
-
-**Related Decisions:** #001
+**Связанные решения:** #001, #007
 
 ---
 
-## Decision #013: Scientific Neutrality Policy
+## Решение #009: Русский как основной язык
 
-**Status:** Accepted  
-**Date:** 2026-07-23  
-**Context:** Platform must maintain scientific credibility and avoid advocacy.
+**Статус:** Принято  
+**Дата:** 2026-07-23  
+**Контекст:** Основная аудитория — русскоязычные профессионалы в ветеринарных и зоопарковых контекстах.
 
-**Decision:** Implement strict scientific neutrality policy. Present facts without advocacy, acknowledge uncertainty, distinguish consensus from controversy.
+**Решение:** Русский как основной язык с английскими переводами для ключевых терминов.
 
-**Rationale:**
-- Maintains scientific credibility
-- Avoids bias
-- Enables evidence-based decision-making
-- Distinguishes platform from advocacy sites
-- Supports diverse viewpoints
+**Обоснование:**
+- Основная аудитория говорит по-русски
+- Русские ветеринарные и зоопарковые сообщества значительны
+- Английские переводы обеспечивают международную доступность
+- Поддерживает двуязычную терминологию
 
-**Alternatives Considered**
-1. **Advocacy Position:** Compromises credibility
-2. **No Position on Controversy:** Avoids important topics
-3. **Multiple Viewpoints Without Context:** Confusing for users
-4. **Editorial Opinion:** Introduces bias
+**Рассмотренные альтернативы:**
+1. **Только английский:** Исключает русскоязычную аудиторию
+2. **Только русский:** Ограничивает международную доступность
+3. **Полностью двуязычный:** Удваивает нагрузку на поддержку содержимого
+4. **Многоязычный:** Слишком сложно для текущих ресурсов
 
-**Consequences:**
-- Positive: Maintains scientific credibility
-- Positive: Avoids bias
-- Positive: Enables evidence-based decisions
-- Negative: May seem "wishy-washy" on controversial topics
-- Negative: Requires careful editorial judgment
+**Последствия:**
+- Положительные: Эффективно обслуживает основную аудиторию
+- Положительные: Английские переводы обеспечивают международный доступ
+- Отрицательные: Ограниченное не-русское содержимое
+- Отрицательные: Накладные расходы на поддержку переводов
 
-**Policy Elements:**
-- Present facts without advocacy
-- Acknowledge uncertainty explicitly
-- Distinguish consensus from controversy
-- Attribute claims to sources
-- Present multiple viewpoints when appropriate
-
-**Related Decisions:** #005
+**Связанные решения:** Нет
 
 ---
 
-## Decision #014: Open Access Policy
+## Решение #010: Премиальная академическая система дизайна
 
-**Status:** Accepted  
-**Date:** 2026-07-23  
-**Context:** Knowledge should be accessible to all who need it, regardless of ability to pay.
+**Статус:** Принято  
+**Дата:** 2026-07-23  
+**Контекст:** Платформа должна передавать научную достоверность и поддерживать длительные сеансы чтения.
 
-**Decision:** All content is free to access with proper attribution. No paywalls, no subscriptions.
+**Решение:** Реализовать премиальную академическую систему дизайна с чистой типографикой, высокой читаемостью и палитрой цветов на основе доказательств.
 
-**Rationale:**
-- Maximizes impact
-- Serves global audience
-- Supports conservation and veterinary work in resource-limited areas
-- Aligns with scientific principles
-- Encourages contribution
+**Обоснование:**
+- Передаёт научную достоверность
+- Оптимизировано для длительных сеансов чтения
+- Снижает нагрузку на глаза
+- Профессиональный внешний вид
+- Отличается от эстетики «вики»
 
-**Alternatives Considered:**
-1. **Paywall:** Generates revenue but limits access
-2. **Subscription Model:** Recurring revenue but excludes many users
-3. **Freemium:** Complex to implement
-4. **Donation-Based:** Unreliable revenue
+**Рассмотренные альтернативы:**
+1. **Игровой/тематический дизайн:** Передаёт неверное сообщение
+2. **Минималистичный дизайн:** Может лишиться характера
+3. **Корпоративный дизайн:** Слишком формальный
+4. **Дизайн блога:** Слишком случайный
 
-**Consequences:**
-- Positive: Maximum accessibility
-- Positive: Global impact
-- Positive: Aligns with scientific principles
-- Negative: No direct revenue model
-- Negative: Requires alternative funding
+**Последствия:**
+- Положительные: Профессиональный, достоверный внешний вид
+- Положительные: Оптимизировано для читаемости
+- Положительные: Отличается от типичных вики
+- Отрицательные: Может казаться менее «современным»
+- Отрицательные: Требует тщательного тестирования контраста цветов
 
-**Related Decisions:** None
+**Элементы дизайна:**
+- Системные шрифты для читаемости
+- Высокая высота строки (1.7)
+- Палитра цветов slate
+- Акценты teal
+- Цветовое кодирование уровня доказательности
+
+**Связанные решения:** Нет
 
 ---
 
-## Decision #015: Philosophy Documentation Structure
+## Решение #011: Уникальные неизменяемые идентификаторы
 
-**Status:** Accepted  
-**Date:** 2026-07-23  
-**Context:** Architectural and philosophical decisions must be documented for long-term maintainability and future contributors.
+**Статус:** Принято  
+**Дата:** 2026-07-23  
+**Контекст:** Нужны стабильные идентификаторы для объектов знаний, которые не изменяются при переименовании или реструктуризации содержимого.
 
-**Decision:** Create dedicated `docs/philosophy/` directory for all philosophical and architectural documentation.
+**Решение:** Реализовать уникальные неизменяемые идентификаторы в формате: ELE-DOM-CATE-TYPE-NNN
 
-**Rationale:**
-- Separates philosophy from content
-- Provides clear governance documentation
-- Enables future contributor onboarding
-- Documents architectural decisions
-- Maintains project vision over time
+**Обоснование:**
+- Стабильные URL даже при изменении заголовков
+- Обеспечивает надёжное связывание
+- Поддерживает доступ к API
+- Предотвращает разрыв ссылок
+- Чёткая идентификация объектов
 
-**Alternatives Considered:**
-1. **Root Level Files:** Clutters repository root
-2. **Wiki-Based Documentation:** External dependency
-3. **No Philosophy Documentation:** Loss of institutional knowledge
-4. **README Only:** Insufficient for complex architecture
+**Рассмотренные альтернативы:**
+1. **URL на основе заголовков:** Разрываются при изменении заголовков
+2. **Случайные UUID:** Нечитаемы, без семантического значения
+3. **Автоинкремент базы данных:** Не семантический
+4. **Без идентификаторов:** Ненадёжное связывание
 
-**Consequences:**
-- Positive: Clear separation of concerns
-- Positive: Comprehensive governance documentation
-- Positive: Future contributor onboarding
-- Negative: Additional documentation maintenance
-- Negative: May seem "bureaucratic"
+**Последствия:**
+- Положительные: Стабильное, надёжное связывание
+- Положительные: Семантические, читаемые идентификаторы
+- Положительные: Поддерживает доступ к API
+- Отрицательные: Требует ручного назначения идентификаторов
+- Отрицательные: Риск коллизий идентификаторов при неправильном управлении
 
-**Philosophy Documents:**
+**Формат идентификатора:**
+- ELE: Префикс платформы
+- DOM: Домен (3-буквенный код)
+- CATE: Категория (4-буквенный код)
+- TYPE: Тип (4-буквенный код)
+- NNN: Последовательный номер
+
+**Пример:** ELE-BIO-ANAT-CARD-001
+
+**Связанные решения:** #001
+
+---
+
+## Решение #012: Таксономия типов содержимого
+
+**Статус:** Принято  
+**Дата:** 2026-07-23  
+**Контекст:** Разные типы содержимого требуют разных структур, метаданных и презентации.
+
+**Решение:** Реализовать таксономию типов содержимого с 8 основными типами: article, protocol, case-study, glossary, reference, timeline, faq, organization.
+
+**Обоснование:**
+- Разное содержимое нуждается в разных структурах
+- Обеспечивает специфичные для типа функции
+- Поддерживает фильтрацию и поиск
+- Чёткие ожидания пользователей
+- Масштабируемая модель содержимого
+
+**Рассмотренные альтернативы:**
+1. **Одиночный тип содержимого:** Просто, но негибко
+2. **Более гранулярные типы:** Слишком сложно для управления
+3. **Типизация на основе тегов:** Менее структурирована
+4. **Без типов содержимого:** Нет дифференциации
+
+**Последствия:**
+- Положительные: Специфичные для типа функции и шаблоны
+- Положительные: Чёткие ожидания пользователей
+- Положительные: Масштабируемая модель содержимого
+- Отрицательные: Требует определения и поддержки типов
+- Отрицательные: Более сложное создание содержимого
+
+**Типы содержимого:**
+- article: Стандартное образовательное содержимое
+- protocol: Пошаговые процедуры
+- case-study: Реальные примеры
+- glossary: Определения терминов
+- reference: Материалы быстрой справки
+- timeline: Историческое развитие
+- faq: Общие вопросы
+- organization: Профили учреждений
+
+**Связанные решения:** #001
+
+---
+
+## Решение #013: Политика научной нейтральности
+
+**Статус:** Принято  
+**Дата:** 2026-07-23  
+**Контекст:** Платформа должна поддерживать научную достоверность и избегать адвокатства.
+
+**Решение:** Реализовать строгую политику научной нейтральности. Представлять факты без адвокатства, признавать неопределённость, отличать консенсус от противоречия.
+
+**Обоснование:**
+- Поддерживает научную достоверность
+- Избегает предвзятости
+- Обеспечивает принятие решений на основе доказательств
+- Отличает платформу от сайтов адвокатства
+- Поддерживает разнообразные точки зрения
+
+**Рассмотренные альтернативы:**
+1. **Позиция адвокатства:** Подрывает достоверность
+2. **Без позиции по противоречию:** Избегает важных тем
+3. **Множественные точки зрения без контекста:** Путает пользователей
+4. **Редакционное мнение:** Вносит предвзятость
+
+**Последствия:**
+- Положительные: Поддерживает научную достоверность
+- Положительные: Избегает предвзятости
+- Положительные: Обеспечивает решения на основе доказательств
+- Отрицательные: Может казаться «неопределённым» на противоречивых темах
+- Отрицательные: Требует тщательного редакционного суждения
+
+**Элементы политики:**
+- Представлять факты без адвокатства
+- Признавать неопределённость явно
+- Отличать консенсус от противоречия
+- Приписывать утверждения источникам
+- Представлять множественные точки зрения когда уместно
+
+**Связанные решения:** #005
+
+---
+
+## Решение #014: Политика открытого доступа
+
+**Статус:** Принято  
+**Дата:** 2026-07-23  
+**Контекст:** Знания должны быть доступны всем, кто в них нуждается, независимо от способности платить.
+
+**Решение:** Всё содержимое бесплатно для доступа с proper атрибуцией. Никаких paywalls, никаких подписок.
+
+**Обоснование:**
+- Максимизирует влияние
+- Обслуживает глобальную аудиторию
+- Поддерживает работу по охране и ветеринарии в регионах с ограниченными ресурсами
+- Соответствует научным принципам
+- Поощряет вклад
+
+**Рассмотренные альтернативы:**
+1. **Paywall:** Генерирует доход, но ограничивает доступ
+2. **Модель подписки:** Повторяющийся доход, но исключает многих пользователей
+3. **Freemium:** Сложно реализовать
+4. **На основе донатов:** Ненадёжный доход
+
+**Последствия:**
+- Положительные: Максимальная доступность
+- Положительные: Глобальное влияние
+- Положительные: Соответствует научным принципам
+- Отрицательные: Нет прямой модели дохода
+- Отрицательные: Требует альтернативного финансирования
+
+**Связанные решения:** Нет
+
+---
+
+## Решение #015: Структура документации философии
+
+**Статус:** Принято  
+**Дата:** 2026-07-23  
+**Контекст:** Архитектурные и философские решения должны быть документированы для долгосрочной поддерживаемости и будущих авторов.
+
+**Решение:** Создать выделенный каталог `docs/philosophy/` для всей философской и архитектурной документации.
+
+**Обоснование:**
+- Разделяет философию от содержимого
+- Предоставляет чёткую документацию управления
+- Обеспечивает онбординг будущих авторов
+- Документирует архитектурные решения
+- Поддерживает видение проекта во времени
+
+**Рассмотренные альтернативы:**
+1. **Файлы на корневом уровне:** Загромождает корень репозитория
+2. **Документация на основе вики:** Внешняя зависимость
+3. **Без философской документации:** Потеря институциональных знаний
+4. **Только README:** Недостаточно для сложной архитектуры
+
+**Последствия:**
+- Положительные: Чёткое разделение ответственности
+- Положительные: Комплексная документация управления
+- Положительные: Онбординг будущих авторов
+- Отрицательные: Дополнительная поддержка документации
+- Отрицательные: Может казаться «бюрократическим»
+
+**Документы философии:**
 - PROJECT_MANIFESTO.md
 - ARCHITECTURE.md
 - DESIGN_PRINCIPLES.md
@@ -554,73 +554,73 @@
 - ONTOLOGY.md (future)
 - ROADMAP.md (future)
 
-**Related Decisions:** None
+**Связанные решения:** Нет
 
 ---
 
-## Future Decisions
+## Будущие решения
 
-The following decisions are anticipated but not yet finalized:
+Следующие решения ожидаются, но ещё не окончательны:
 
-- **#016:** API Design and Authentication
-- **#017:** Mobile Application Strategy
-- **#018:** AI-Powered Search Implementation
-- **#019:** Multilingual Expansion Strategy
-- **#020:** Contribution and Collaboration Platform
+- **#016:** Дизайн API и аутентификация
+- **#017:** Стратегия мобильного приложения
+- **#018:** Реализация поиска на основе AI
+- **#019:** Стратегия многоязычного расширения
+- **#020:** Платформа вклада и сотрудничества
 
 ---
 
-## Decision Template
+## Шаблон решения
 
-For future decisions, use this template:
+Для будущих решений используйте этот шаблон:
 
 ```markdown
-## Decision #XXX: [Decision Title]
+## Решение #XXX: [Название решения]
 
-**Status:** [Proposed|Accepted|Rejected|Deprecated]  
-**Date:** [YYYY-MM-DD]  
-**Context:** [Background and problem statement]
+**Статус:** [Предложено|Принято|Отклонено|Устарело]  
+**Дата:** [ГГГГ-ММ-ДД]  
+**Контекст:** [Фон и постановка проблемы]
 
-**Decision:** [The decision made]
+**Решение:** [Принятое решение]
 
-**Rationale:** [Why this decision was made]
+**Обоснование:** [Почему было принято это решение]
 
-**Alternatives Considered:**
-1. [Alternative 1]: [Pros/Cons]
-2. [Alternative 2]: [Pros/Cons]
-3. [Alternative 3]: [Pros/Cons]
+**Рассмотренные альтернативы:**
+1. [Альтернатива 1]: [Плюсы/Минусы]
+2. [Альтернатива 2]: [Плюсы/Минусы]
+3. [Альтернатива 3]: [Плюсы/Минусы]
 
-**Consequences:**
-- Positive: [Positive impacts]
-- Negative: [Negative impacts]
+**Последствия:**
+- Положительные: [Положительные влияния]
+- Отрицательные: [Отрицательные влияния]
 
-**Related Decisions:** [#XXX, #XXX]
+**Связанные решения:** [#XXX, #XXX]
 ```
 
 ---
 
-## Decision Review Process
+## Процесс обзора решений
 
-Decisions should be reviewed annually or when:
-- New information suggests the decision may be suboptimal
-- Technology changes make alternatives more attractive
-- Project scale reveals unforeseen consequences
-- User feedback indicates problems
+Решения должны быть рассмотрены ежегодно или когда:
+- Новая информация предполагает, что решение может быть неоптимальным
+- Технологические изменения делают альтернативы более привлекательными
+- Масштаб проекта раскрывает непредвиденные последствия
+- Обратная связь пользователей указывает на проблемы
 
-To revise a decision:
-1. Document the need for revision
-2. Propose alternatives
-3. Evaluate impact
-4. Update decision record with new status
-5. Communicate changes to contributors
-6. Implement changes if approved
+Для пересмотра решения:
+1. Документируйте необходимость пересмотра
+2. Предложите альтернативы
+3. Оцените влияние
+4. Обновите запись решения с новым статусом
+5. Сообщите изменения авторам
+6. Реализуйте изменения если одобрено
 
 ---
 
-## Conclusion
+## Заключение
 
-This decision log serves as the historical record of architectural choices for the Elephantology Knowledge Platform. Each decision is made with careful consideration of alternatives, consequences, and long-term impact.
+Этот журнал решений служит исторической записью архитектурных выборов для платформы знаний «Слонология». Каждое решение принимается с тщательным рассмотрением альтернатив, последствий и долгосрочного влияния.
 
-When questions arise about why something is implemented a certain way, this document provides the answer. Future contributors and AI agents can understand the evolution of the platform by reviewing these decisions.
+Когда возникают вопросы о почему что-то реализовано определённым образом, этот документ предоставляет ответ. Будущие авторы и AI-агенты могут понять эволюцию платформы, рассмотрев эти решения.
 
-Decisions are not set in stone—they may be revised as the platform evolves. However, changes require careful consideration and documentation to maintain architectural coherence.
+Решения не высечены в камне — они могут быть пересмотрены по мере эволюции платформы. Однако изменения требуют тщательного рассмотрения и документации для поддержания архитектурной согласованности.
