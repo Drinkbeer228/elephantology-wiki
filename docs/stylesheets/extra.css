@@ -487,3 +487,180 @@ html {
   text-align: right;
   letter-spacing: 0;
 }
+
+/* ============================================================
+   GTA SA Radar (Mini-map) — right bottom
+   ============================================================ */
+.sa-radar {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 140px;
+  height: 140px;
+  z-index: 1000;
+  pointer-events: none;
+}
+
+.sa-radar-inner {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 45%, #3a6b30 0%, #4a8c3f 40%, #2d5a26 100%);
+  border: 3px solid #000;
+  box-shadow:
+    0 0 0 2px #444,
+    0 0 25px rgba(0, 0, 0, 0.9),
+    inset 0 0 20px rgba(0, 0, 0, 0.5);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Roads */
+.sa-radar-road {
+  position: absolute;
+  background: #2a2a2a;
+  border-radius: 1px;
+}
+
+.sa-radar-road.h1 { top: 48%; left: 0; width: 100%; height: 5px; }
+.sa-radar-road.v1 { top: 0; left: 38%; width: 4px; height: 100%; }
+.sa-radar-road.v2 { top: 0; left: 68%; width: 3px; height: 65%; }
+.sa-radar-road.d1 { top: 22%; left: 18%; width: 55%; height: 3px; transform: rotate(32deg); }
+
+/* Buildings */
+.sa-radar-building {
+  position: absolute;
+  background: rgba(180, 180, 180, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.sa-radar-building.b1 { top: 28%; left: 42%; width: 16px; height: 12px; }
+.sa-radar-building.b2 { top: 58%; left: 22%; width: 12px; height: 16px; }
+.sa-radar-building.b3 { top: 62%; left: 72%; width: 20px; height: 10px; }
+
+/* Icons */
+.sa-radar-icon {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid;
+  z-index: 5;
+  animation: radar-pulse 2s infinite;
+}
+
+@keyframes radar-pulse {
+  0% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4); }
+  100% { box-shadow: 0 0 0 8px rgba(255, 255, 255, 0); }
+}
+
+.sa-radar-icon.player {
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  border-color: #fff;
+  box-shadow: 0 0 6px #fff;
+  animation: none;
+}
+
+.sa-radar-icon.anatomy {
+  top: 26%; left: 62%;
+  background: #ff4444;
+  border-color: #ff4444;
+}
+
+.sa-radar-icon.ethogram {
+  top: 62%; left: 32%;
+  background: #44ff44;
+  border-color: #44ff44;
+}
+
+.sa-radar-icon.taxonomy {
+  top: 35%; left: 28%;
+  background: #4488ff;
+  border-color: #4488ff;
+}
+
+.sa-radar-icon.vet {
+  top: 72%; left: 58%;
+  background: #ffcc00;
+  border-color: #ffcc00;
+}
+
+.sa-radar-icon.ecology {
+  top: 45%; left: 75%;
+  background: #cc44ff;
+  border-color: #cc44ff;
+}
+
+/* North indicator */
+.sa-radar-north {
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #000;
+  color: #fff;
+  font-size: 9px;
+  font-weight: bold;
+  padding: 1px 4px;
+  border-radius: 1px;
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 1px;
+}
+
+/* ============================================================
+   Map Legend — right side
+   ============================================================ */
+.sa-legend {
+  position: fixed;
+  top: 90px;
+  right: 20px;
+  width: 180px;
+  background: rgba(0, 0, 0, 0.95);
+  border: 1px solid #222;
+  padding: 14px;
+  z-index: 999;
+}
+
+.sa-legend-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 16px;
+  letter-spacing: 4px;
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #333;
+}
+
+.sa-legend-item {
+  display: flex;
+  align-items: center;
+  padding: 4px 0;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 13px;
+  letter-spacing: 2px;
+  color: #888;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: color 0.15s;
+}
+
+.sa-legend-item:hover {
+  color: #fff;
+}
+
+.sa-legend-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+
+.dot-anatomy { background: #ff4444; }
+.dot-ethogram { background: #44ff44; }
+.dot-taxonomy { background: #4488ff; }
+.dot-vet { background: #ffcc00; }
+.dot-ecology { background: #cc44ff; }

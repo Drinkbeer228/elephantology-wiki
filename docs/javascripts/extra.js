@@ -15,12 +15,12 @@
         const gain = ctx.createGain();
         osc.connect(gain);
         gain.connect(ctx.destination);
-        osc.frequency.value = 800;
+        osc.frequency.value = 1200;
         osc.type = 'square';
-        gain.gain.setValueAtTime(0.08, ctx.currentTime);
-        gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.08);
+        gain.gain.setValueAtTime(0.06, ctx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.05);
         osc.start(ctx.currentTime);
-        osc.stop(ctx.currentTime + 0.08);
+        osc.stop(ctx.currentTime + 0.05);
       } catch(e) {}
     }
   };
