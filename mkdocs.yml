@@ -48,7 +48,7 @@ plugins:
       lang: [ru, en]
 
 extra_css:
-  - stylesheets/extra.css?v=5
+  - stylesheets/extra.css?v=6
 
 
 nav:

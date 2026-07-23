@@ -6,33 +6,21 @@ hide:
 
 # Энциклопедия «Слонология»
 
+<div class="sa-hero">
+  <div class="sa-hero__emoji">🐘</div>
+</div>
+
 **Слонология** — это интерактивная база знаний и структурированный датасет, собранный на основе современных академических исследований, ветеринарных протоколов и полевых этограмм.
 
 ---
 
 ## Состояние базы знаний
 
-<div class="sa-stats sa-stats--project">
-<div class="sa-stat-row">
-<span class="sa-stat-label">Статей</span>
-<div class="sa-stat-bar"><div class="sa-stat-fill" style="width: 60%"></div></div>
-<span class="sa-stat-value">18</span>
-</div>
-<div class="sa-stat-row">
-<span class="sa-stat-label">Источников</span>
-<div class="sa-stat-bar"><div class="sa-stat-fill" style="width: 48%"></div></div>
-<span class="sa-stat-value">24</span>
-</div>
-<div class="sa-stat-row">
-<span class="sa-stat-label">Терминов</span>
-<div class="sa-stat-bar"><div class="sa-stat-fill" style="width: 40%"></div></div>
-<span class="sa-stat-value">40+</span>
-</div>
-<div class="sa-stat-row">
-<span class="sa-stat-label">Разделов</span>
-<div class="sa-stat-bar"><div class="sa-stat-fill" style="width: 50%"></div></div>
-<span class="sa-stat-value">5</span>
-</div>
+<div class="sa-facts" markdown>
+<div class="sa-fact"><span class="sa-fact__num">18</span><span class="sa-fact__label">статей</span></div>
+<div class="sa-fact"><span class="sa-fact__num">24</span><span class="sa-fact__label">источника</span></div>
+<div class="sa-fact"><span class="sa-fact__num">40+</span><span class="sa-fact__label">терминов</span></div>
+<div class="sa-fact"><span class="sa-fact__num">5</span><span class="sa-fact__label">разделов</span></div>
 </div>
 
 ---
