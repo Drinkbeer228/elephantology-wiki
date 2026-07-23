@@ -472,13 +472,6 @@ html {
   transition: width 0.5s ease;
 }
 
-.sa-stat-fill.anatomy { width: 80%; }
-.sa-stat-fill.ethogram { width: 75%; }
-.sa-stat-fill.taxonomy { width: 60%; }
-.sa-stat-fill.vet { width: 65%; }
-.sa-stat-fill.ecology { width: 55%; }
-.sa-stat-fill.glossary { width: 70%; }
-
 .sa-stat-value {
   font-family: 'Courier New', monospace;
   font-size: 12px;
@@ -486,6 +479,20 @@ html {
   min-width: 50px;
   text-align: right;
   letter-spacing: 0;
+}
+
+/* Reader stats — orange accent (like wanted level) */
+.sa-stats--reader .sa-stat-fill {
+  background: linear-gradient(90deg, #8b4513 0%, #ff6600 100%);
+}
+
+.sa-stats--reader .sa-stat-label {
+  color: #ffaa66;
+}
+
+/* Project stats — green accent */
+.sa-stats--project .sa-stat-fill {
+  background: linear-gradient(90deg, #2d5a26 0%, #4a8c3f 100%);
 }
 
 /* ============================================================

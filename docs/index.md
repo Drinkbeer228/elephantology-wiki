@@ -12,40 +12,55 @@ hide:
 
 ---
 
-## Статистика проекта
+## Состояние базы знаний
 
-<div class="sa-stats">
+<div class="sa-stats sa-stats--project">
   <div class="sa-stat-row">
-    <span class="sa-stat-label">Анатомия</span>
-    <div class="sa-stat-bar"><div class="sa-stat-fill anatomy"></div></div>
-    <span class="sa-stat-value">8/10</span>
+    <span class="sa-stat-label">Статей</span>
+    <div class="sa-stat-bar"><div class="sa-stat-fill" style="width: 60%"></div></div>
+    <span class="sa-stat-value">18</span>
   </div>
   <div class="sa-stat-row">
-    <span class="sa-stat-label">Этограмма</span>
-    <div class="sa-stat-bar"><div class="sa-stat-fill ethogram"></div></div>
-    <span class="sa-stat-value">6/8</span>
+    <span class="sa-stat-label">Источников</span>
+    <div class="sa-stat-bar"><div class="sa-stat-fill" style="width: 48%"></div></div>
+    <span class="sa-stat-value">24</span>
   </div>
   <div class="sa-stat-row">
-    <span class="sa-stat-label">Таксономия</span>
-    <div class="sa-stat-bar"><div class="sa-stat-fill taxonomy"></div></div>
-    <span class="sa-stat-value">2/3</span>
+    <span class="sa-stat-label">Терминов</span>
+    <div class="sa-stat-bar"><div class="sa-stat-fill" style="width: 40%"></div></div>
+    <span class="sa-stat-value">40+</span>
   </div>
   <div class="sa-stat-row">
-    <span class="sa-stat-label">Ветеринария</span>
-    <div class="sa-stat-bar"><div class="sa-stat-fill vet"></div></div>
-    <span class="sa-stat-value">3/5</span>
-  </div>
-  <div class="sa-stat-row">
-    <span class="sa-stat-label">Экология</span>
-    <div class="sa-stat-bar"><div class="sa-stat-fill ecology"></div></div>
-    <span class="sa-stat-value">2/4</span>
-  </div>
-  <div class="sa-stat-row">
-    <span class="sa-stat-label">Словарь</span>
-    <div class="sa-stat-bar"><div class="sa-stat-fill glossary"></div></div>
-    <span class="sa-stat-value">40+/80</span>
+    <span class="sa-stat-label">Разделов</span>
+    <div class="sa-stat-bar"><div class="sa-stat-fill" style="width: 50%"></div></div>
+    <span class="sa-stat-value">5</span>
   </div>
 </div>
+
+---
+
+## Твой прогресс
+
+<div class="sa-stats sa-stats--reader">
+  <div class="sa-stat-row">
+    <span class="sa-stat-label">Прочитано статей</span>
+    <div class="sa-stat-bar"><div class="sa-stat-fill sa-stat-fill--reader-read" style="width: 0%"></div></div>
+    <span class="sa-stat-value sa-stat-value--reader-read">0/35</span>
+  </div>
+  <div class="sa-stat-row">
+    <span class="sa-stat-label">Время на сайте</span>
+    <div class="sa-stat-bar"><div class="sa-stat-fill" style="width: 10%"></div></div>
+    <span class="sa-stat-value sa-stat-value--reader-time">0мин</span>
+  </div>
+  <div class="sa-stat-row">
+    <span class="sa-stat-label">Визитов</span>
+    <div class="sa-stat-bar"><div class="sa-stat-fill" style="width: 5%"></div></div>
+    <span class="sa-stat-value sa-stat-value--reader-visits">0</span>
+  </div>
+</div>
+
+!!! tip "Как прокачаться?"
+    Читай статьи, возвращайся — твой прогресс сохраняется в браузере. Цель: зачистить всю базу знаний! 🐘
 
 ---
 
@@ -112,9 +127,6 @@ hide:
 </div>
 
 <br>
-
-!!! tip "Навигация и поиск"
-    Используйте **строку поиска** (в верхней панели) для мгновенного нахождения нужного термина, патологии или поведенческого паттерна. Все материалы связаны системой **тегов** — обращайте на них внимание под заголовком каждой статьи.
 
 !!! info "Структура данных"
     Все статьи используют стандартизированный YAML frontmatter с полями `title`, `description`, `tags`, `difficulty`, `last_reviewed` и типизированными `references`. Это обеспечивает машиночитаемость данных для будущей миграции в динамические приложения. Подробнее см. [README.md](https://github.com/Drinkbeer228/elephantology-wiki/blob/main/README.md).
