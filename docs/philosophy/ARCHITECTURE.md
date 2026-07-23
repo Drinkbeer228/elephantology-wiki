@@ -1,226 +1,226 @@
-# Elephantology Architecture Specification
+# Спецификация архитектуры «Слонологии»
 
-**Version:** 1.0  
-**Status:** Foundation Document  
-**Last Updated:** 2026-07-23  
-**Purpose:** Define the complete architectural foundation for the Elephantology Knowledge Platform
-
----
-
-## 1. Project Identity
-
-### 1.1 Purpose
-
-Elephantology exists to collect, organize, and preserve reliable knowledge about elephants in a form that is practical for researchers, veterinarians, zoo professionals, and conservationists.
-
-The platform transforms scattered academic research, veterinary protocols, and field experience into a structured, interconnected knowledge base that supports evidence-based decision-making in elephant care, research, and conservation.
-
-### 1.2 Target Audience
-
-**Primary Users:**
-- Veterinarians treating elephants
-- Zoo professionals managing elephant care
-- Researchers studying elephant biology
-- Conservationists working with elephant populations
-
-**Secondary Users:**
-- Veterinary students
-- Zoology students
-- Elephant handlers and keepers
-- Policy makers
-- General public with scientific interest
-
-### 1.3 Long-term Vision
-
-To become the definitive reference for elephant knowledge, enabling evidence-based decision-making in veterinary practice, conservation policy, and husbandry standards worldwide. The platform should scale to support thousands of interconnected knowledge objects while maintaining scientific credibility and practical applicability.
-
-### 1.4 Design Philosophy
-
-**Knowledge-First Approach**
-- Content is structured as Knowledge Objects, not articles
-- Every object has defined relationships to other objects
-- The system is a knowledge graph, not a collection of pages
-
-**Evidence-Based**
-- All claims must be sourced
-- Source reliability is explicitly rated
-- Scientific consensus is distinguished from emerging research
-
-**Practical Applicability**
-- Bridge research to practice
-- Include protocols and procedures
-- Maintain field-relevant information
-
-**Scalability**
-- Architecture must support thousands of knowledge objects
-- No hard-coded assumptions about content volume
-- Metadata-driven rather than content-driven
-
-**Scientific Neutrality**
-- Present facts without advocacy
-- Acknowledge uncertainty and controversy
-- Distinguish between established science and minority views
+**Версия:** 1.0  
+**Статус:** Базовый документ  
+**Последнее обновление:** 2026-07-23  
+**Назначение:** Определить полную архитектурную основу для платформы знаний «Слонология»
 
 ---
 
-## 2. Information Architecture
+## 1. Идентификация проекта
 
-### 2.1 Main Domains
+### 1.1 Назначение
 
-The platform is organized into eight primary domains:
+«Слонология» существует для сбора, организации и сохранения надёжных знаний о слонах в форме, практичной для исследователей, ветеринаров, сотрудников зоопарков и зоозащитников.
 
-1. **Biology** - Anatomy, physiology, genetics, development
-2. **Behavior** - Communication, social structure, reproduction, cognition
-3. **Veterinary** - Diseases, treatments, protocols, pharmacology
-4. **Husbandry** - Nutrition, housing, enrichment, handling, foot care
-5. **Conservation** - Population status, threats, protection strategies, policy
-6. **Management** - Transport, records, staff, facilities, safety
-7. **Research** - Methods, studies, data collection, analysis
-8. **Reference** - Glossary, organizations, bibliography, timelines
+Платформа трансформирует разрозненные академические исследования, ветеринарные протоколы и полевой опыт в структурированную, взаимосвязанную базу знаний, которая поддерживает принятие решений на основе доказательств в содержании, исследованиях и охране слонов.
 
-### 2.2 Category Structure
+### 1.2 Целевая аудитория
 
-Each domain contains categories. Maximum depth: 3 levels.
+**Основные пользователи:**
+- Ветеринары, лечащие слонов
+- Сотрудники зоопарков, управляющие содержанием слонов
+- Исследователи, изучающие биологию слонов
+- Зоозащитники, работающие с популяциями слонов
 
-**Example Structure:**
+**Вторичные пользователи:**
+- Студенты ветеринарных специальностей
+- Студенты зоологии
+- Махауты и смотрители слонов
+- Политики
+- Общественность с научным интересом
+
+### 1.3 Долгосрочное видение
+
+Стать окончательным справочником по знаниям о слонах, обеспечивая принятие решений на основе доказательств в ветеринарной практике, политике охраны и стандартах содержания во всём мире. Платформа должна масштабироваться для поддержки тысяч взаимосвязанных объектов знаний при поддержании научной достоверности и практической применимости.
+
+### 1.4 Философия дизайна
+
+**Подход с приоритетом знаний**
+- Содержимое структурировано как объекты знаний, не статьи
+- Каждый объект имеет определённые отношения с другими объектами
+- Система — это граф знаний, не коллекция страниц
+
+**На основе доказательств**
+- Все утверждения должны быть подтверждены источниками
+- Надёжность источника явно оценена
+- Научный консенсус отличен от возникающих исследований
+
+**Практическая применимость**
+- Связать исследования с практикой
+- Включать протоколы и процедуры
+- Поддерживать информацию, релевантную для поля
+
+**Масштабируемость**
+- Архитектура должна поддерживать тысячи объектов знаний
+- Никаких жёстко закодированных предположений об объёме содержимого
+- На основе метаданных, не на основе содержимого
+
+**Научная нейтральность**
+- Представлять факты без адвокатства
+- Признавать неопределённость и противоречие
+- Отличать установленную науку от мнений меньшинства
+
+---
+
+## 2. Архитектура информации
+
+### 2.1 Основные домены
+
+Платформа организована в восемь основных доменов:
+
+1. **Биология** — Анатомия, физиология, генетика, развитие
+2. **Поведение** — Коммуникация, социальная структура, размножение, когнитивные способности
+3. **Ветеринария** — Болезни, лечение, протоколы, фармакология
+4. **Содержание и уход** — Питание, размещение, обогащение среды, обращение, уход за ногами
+5. **Охрана** — Статус популяций, угрозы, стратегии защиты, политика
+6. **Управление** — Транспорт, записи, персонал, объекты, безопасность
+7. **Исследования** — Методы, исследования, сбор данных, анализ
+8. **Справка** — Глоссарий, организации, библиография, хронологии
+
+### 2.2 Структура категорий
+
+Каждый домен содержит категории. Максимальная глубина: 3 уровня.
+
+**Пример структуры:**
 ```
-Biology (Domain)
-├── Anatomy (Category)
-│   ├── Systems (Subcategory)
-│   │   ├── Cardiovascular
-│   │   ├── Respiratory
-│   │   └── Digestive
-│   ├── Skeleton (Subcategory)
-│   │   ├── Cranial
-│   │   └── Appendicular
-│   └── Soft Tissue (Subcategory)
-│       ├── Muscular
-│       └── Integumentary
+Биология (Домен)
+├── Анатомия (Категория)
+│   ├── Системы (Подкатегория)
+│   │   ├── Сердечно-сосудистая
+│   │   ├── Дыхательная
+│   │   └── Пищеварительная
+│   ├── Скелет (Подкатегория)
+│   │   ├── Череп
+│   │   └── Конечности
+│   └── Мягкие ткани (Подкатегория)
+│       ├── Мышечная
+│       └── Покровная
 ```
 
-### 2.3 Navigation Rules
+### 2.3 Правила навигации
 
-**Maximum Hierarchy Depth:** 3 levels
-- Level 1: Domain (8 items)
-- Level 2: Category (5-8 items per domain)
-- Level 3: Knowledge Objects (unlimited)
+**Максимальная глубина иерархии:** 3 уровня
+- Уровень 1: Домен (8 элементов)
+- Уровень 2: Категория (5-8 элементов на домен)
+- Уровень 3: Объекты знаний (неограниченно)
 
-**Navigation Components:**
-- Sidebar: Collapsible 3-level navigation
-- Breadcrumbs: Home > Domain > Category > Object
-- Top Navigation: Domains only
-- Reading Path: Prerequisites → Current → Next
-- Related Objects: Contextual recommendations
+**Компоненты навигации:**
+- Боковая панель: Сворачиваемая 3-уровневая навигация
+- Навигационная цепочка: Главная > Домен > Категория > Объект
+- Верхняя навигация: Только домены
+- Путь чтения: Предварительные → Текущий → Следующий
+- Связанные объекты: Контекстуальные рекомендации
 
-### 2.4 URL Conventions
+### 2.4 Соглашения URL
 
-**Pattern:** `/domain/category/object-id`
+**Шаблон:** `/domain/category/object-id`
 
-**Examples:**
+**Примеры:**
 - `/biology/anatomy/cardiovascular/ELE-BIO-ANAT-CARD-001`
 - `/veterinary/diseases/eehv/ELE-VET-DISE-EEHV-001`
 - `/behavior/communication/acoustic/ELE-BEH-COMM-ACOU-001`
 
-**Rules:**
-- All lowercase
-- Hyphens separate words
-- IDs are immutable
-- Human-readable slugs redirect to IDs
+**Правила:**
+- Все строчные буквы
+- Дефисы разделяют слова
+- Идентификаторы неизменяемы
+- Читаемые человеком слуги перенаправляют на идентификаторы
 
 ---
 
-## 3. Knowledge Object Model
+## 3. Модель объекта знаний
 
-### 3.1 Content Types
+### 3.1 Типы содержимого
 
-**Article**
-- Standard educational content
-- Structured with standard sections
-- Overview, definitions, main content, implications, safety, references
+**Статья**
+- Стандартное образовательное содержимое
+- Структурировано со стандартными разделами
+- Обзор, определения, основное содержимое, последствия, безопасность, ссылки
 
-**Protocol**
-- Step-by-step procedures
-- Veterinary protocols
-- Husbandry procedures
-- Emergency procedures
-- Includes prerequisites, equipment, steps, warnings
+**Протокол**
+- Пошаговые процедуры
+- Ветеринарные протоколы
+- Процедуры содержания и ухода
+- Экстренные процедуры
+- Включает предварительные требования, оборудование, шаги, предупреждения
 
-**Case Study**
-- Real-world examples
-- Medical cases
-- Behavioral interventions
-- Conservation outcomes
-- Includes context, intervention, outcome, lessons
+**Кейс**
+- Реальные примеры
+- Медицинские случаи
+- Поведенческие вмешательства
+- Результаты охраны
+- Включает контекст, вмешательство, результат, уроки
 
-**Glossary**
-- Term definitions
-- Single-term focus
-- Cross-references
-- Pronunciation guides
-- Etymology when relevant
+**Глоссарий**
+- Определения терминов
+- Фокус на одном термине
+- Перекрёстные ссылки
+- Руководства по произношению
+- Этимология когда уместно
 
-**Reference**
-- Quick reference materials
-- Tables, charts, diagrams
-- Drug dosages
-- Normal ranges
-- Species comparisons
+**Справка**
+- Материалы быстрой справки
+- Таблицы, диаграммы, схемы
+- Дозировки лекарств
+- Нормальные диапазоны
+- Сравнения видов
 
-**Timeline**
-- Historical development
-- Evolution timelines
-- Conservation milestones
-- Research history
-- Chronological events
+**Хронология**
+- Историческое развитие
+- Хронологии эволюции
+- Вехи охраны
+- История исследований
+- Хронологические события
 
 **FAQ**
-- Common questions
-- Quick answers
-- Links to detailed content
-- Categorized by domain
+- Общие вопросы
+- Быстрые ответы
+- Ссылки на детальное содержимое
+- Категоризировано по доменам
 
-**Organization**
-- Institutional profiles
-- Contact information
-- Standards and guidelines
-- Research focus
-- Conservation programs
+**Организация**
+- Профили учреждений
+- Контактная информация
+- Стандарты и руководства
+- Фокус исследований
+- Программы охраны
 
-### 3.2 Required Metadata
+### 3.2 Обязательные метаданные
 
-Every Knowledge Object must include:
+Каждый объект знаний должен включать:
 
 ```yaml
-id: "ELE-DOM-CATE-TYPE-NNN"  # Unique, immutable identifier
-title: "Human-readable title"
-title_en: "English translation"
+id: "ELE-DOM-CATE-TYPE-NNN"  # Уникальный, неизменяемый идентификатор
+title: "Читаемый человеком заголовок"
+title_en: "Английский перевод"
 type: "article|protocol|case-study|glossary|reference|timeline|faq|organization"
 category: "DOMAIN"
 subcategory: "SUBCATEGORY"
-summary: "One-sentence summary"
-description: "Detailed description for SEO"
-created: "YYYY-MM-DD"
-last_updated: "YYYY-MM-DD"
+summary: "Резюме в одном предложении"
+description: "Детальное описание для SEO"
+created: "ГГГГ-ММ-ДД"
+last_updated: "ГГГГ-ММ-ДД"
 editorial_status: "draft|reviewed|published|update-needed|deprecated"
 ```
 
-### 3.3 Optional Metadata
+### 3.3 Необязательные метаданные
 
 ```yaml
-aliases: ["Alternative name 1", "Alternative name 2"]
+aliases: ["Альтернативное название 1", "Альтернативное название 2"]
 species: ["african", "asian", "both"]
 age_group: ["calf", "juvenile", "adult", "geriatric"]
 difficulty: "beginner|intermediate|advanced"
-reading_time: 15  # minutes
+reading_time: 15  # минуты
 prerequisites: ["ELE-XXX-XXX-XXX-001"]
 related_objects: ["ELE-XXX-XXX-XXX-002", "ELE-XXX-XXX-XXX-003"]
 see_also: ["ELE-XXX-XXX-XXX-004"]
-evidence_level: 1-5  # Source reliability rating
+evidence_level: 1-5  # Рейтинг надёжности источника
 scientific_certainty: "high|medium|low|unknown"
 consensus: "high|medium|low|controversial"
-authors: ["Author Name"]
-reviewers: ["Reviewer Name"]
-next_review: "YYYY-MM-DD"
+authors: ["Имя автора"]
+reviewers: ["Имя рецензента"]
+next_review: "ГГГГ-ММ-ДД"
 keywords: ["keyword1", "keyword2"]
 tags: ["tag1", "tag2"]
 media_count: 5
@@ -228,340 +228,340 @@ downloads: ["file1.pdf", "file2.pdf"]
 external_resources: ["https://example.com"]
 ```
 
-### 3.4 Relationship Types
+### 3.4 Типы отношений
 
-**is-a** (Taxonomic)
-- Musth is-a Reproductive State
-- EEHV is-a Viral Disease
+**is-a** (Таксономический)
+- Муст is-a Репродуктивное состояние
+- EEHV is-a Вирусная болезнь
 
-**part-of** (Meronymic)
-- Heart part-of Cardiovascular System
-- Tusks part-of Skeleton
+**part-of** (Меронимический)
+- Сердце part-of Сердечно-сосудистая система
+- Бивни part-of Скелет
 
-**causes** (Causal)
-- Stress causes EEHV Reactivation
-- Malnutrition causes Foot Problems
+**causes** (Причинный)
+- Стресс causes Реактивация EEHV
+- Неправильное питание causes Проблемы с ногами
 
-**treats** (Therapeutic)
-- Famciclovir treats EEHV
-- Plasma Transfusion treats Thrombocytopenia
+**treats** (Терапевтический)
+- Фамцикловир treats EEHV
+- Переливание плазмы treats Тромбоцитопения
 
-**prevents** (Prophylactic)
-- Vaccination prevents Disease
-- Enrichment prevents Stereotypy
+**prevents** (Профилактический)
+- Вакцинация prevents Болезнь
+- Обогащение среды prevents Стереотипия
 
-**requires** (Prerequisite)
-- Surgery requires Anesthesia
-- Transport requires Permits
+**requires** (Предварительный)
+- Хирургия requires Анестезия
+- Транспорт requires Разрешения
 
-**contradicts** (Conflict)
-- Free Contact contradicts Protected Contact
-- Punishment contradicts Positive Reinforcement
+**contradicts** (Конфликт)
+- Свободный контакт contradicts Защищённый контакт
+- Наказание contradicts Позитивное подкрепление
 
-**related-to** (Association)
-- Foot Care related-to Nutrition
-- Behavior related-to Health
+**related-to** (Ассоциация)
+- Уход за ногами related-to Питание
+- Поведение related-to Здоровье
 
-**prerequisite-for** (Learning Path)
-- Anatomy prerequisite-for Physiology
-- Basic Handling prerequisite-for Advanced Training
-
----
-
-## 4. Ontology
-
-### 4.1 Entity Types
-
-**Biological Entities**
-- Elephant (species, subspecies)
-- Anatomical structures
-- Physiological processes
-- Diseases
-- Behaviors
-
-**Procedural Entities**
-- Protocols
-- Procedures
-- Treatments
-- Diagnostic methods
-
-**Organizational Entities**
-- Organizations
-- Institutions
-- Programs
-- Projects
-
-**Temporal Entities**
-- Time periods
-- Events
-- Milestones
-
-**Conceptual Entities**
-- Theories
-- Principles
-- Standards
-- Guidelines
-
-### 4.2 Relationship Types
-
-See Section 3.4 for complete relationship type definitions.
-
-### 4.3 Parent-Child Hierarchy
-
-**Biological Hierarchy:**
-```
-Elephant
-├── African Elephant
-│   ├── Savanna Elephant
-│   └── Forest Elephant
-└── Asian Elephant
-    ├── Mainland Asian
-    ├── Sri Lankan
-    ├── Sumatran
-    └── Bornean
-```
-
-**Anatomical Hierarchy:**
-```
-Body
-├── Systems
-│   ├── Cardiovascular
-│   ├── Respiratory
-│   └── Digestive
-├── Skeleton
-│   ├── Axial
-│   └── Appendicular
-└── Soft Tissue
-    ├── Muscular
-    └── Integumentary
-```
-
-**Behavioral Hierarchy:**
-```
-Behavior
-├── Communication
-│   ├── Acoustic
-│   ├── Seismic
-│   ├── Visual
-│   └── Chemical
-├── Social
-│   ├── Hierarchy
-│   ├── Bonding
-│   └── Care
-└── Reproductive
-    ├── Mating
-    ├── Parenting
-    └── Development
-```
-
-### 4.4 Cross References
-
-Every entity should reference:
-- Parent entities
-- Child entities
-- Related entities
-- Contradictory entities
-- Prerequisite entities
-
-Cross references are bidirectional where applicable.
+**prerequisite-for** (Путь обучения)
+- Анатомия prerequisite-for Физиология
+- Базовое обращение prerequisite-for Продвинутая дрессировка
 
 ---
 
-## 5. Editorial Standards
+## 4. Онтология
 
-### 5.1 Writing Style
+### 4.1 Типы сущностей
 
-**Tone**
-- Objective, neutral, scientific
-- Avoid advocacy or opinion
-- Use passive voice for procedures
-- Present uncertainty explicitly
-- Acknowledge conflicting evidence
+**Биологические сущности**
+- Слон (вид, подвид)
+- Анатомические структуры
+- Физиологические процессы
+- Болезни
+- Поведения
 
-**Language**
-- Russian (primary language)
-- English translations for key terms
-- Consistent terminology
-- No jargon without definition
-- Define technical terms on first use
+**Процедурные сущности**
+- Протоколы
+- Процедуры
+- Лечение
+- Диагностические методы
 
-**Structure**
-- Standard article template
-- Consistent heading hierarchy (H1 → H2 → H3)
-- Logical flow from general to specific
-- Clear section divisions
-- One concept per paragraph
+**Организационные сущности**
+- Организации
+- Учреждения
+- Программы
+- Проекты
 
-**Formatting**
-- Markdown for all content
-- YAML frontmatter for metadata
-- Consistent citation format
-- Proper use of emphasis
-- No excessive formatting
+**Временные сущности**
+- Периоды времени
+- События
+- Вехи
 
-### 5.2 Terminology Rules
+**Концептуальные сущности**
+- Теории
+- Принципы
+- Стандарты
+- Руководства
 
-**Standardization**
-- Use glossary-defined terms
-- One term per concept
-- Provide English equivalents
-- Note regional variations
-- Document deprecated terms
+### 4.2 Типы отношений
 
-**Translation**
-- Primary language: Russian
-- Secondary language: English
-- Provide translations for key terms
-- Maintain consistency across translations
-- Note cultural differences
+См. раздел 3.4 для полных определений типов отношений.
 
-**Acronyms**
-- Define on first use
-- Use standard abbreviations
-- Avoid obscure acronyms
-- Maintain acronym glossary
+### 4.3 Иерархия родитель-потомок
 
-### 5.3 Citation Rules
+**Биологическая иерархия:**
+```
+Слон
+├── Африканский слон
+│   ├── Саванный слон
+│   └── Лесной слон
+└── Азиатский слон
+    ├── Материковый азиатский
+    ├── Шри-ланкийский
+    ├── Суматранский
+    └── Борнейский
+```
 
-**Source Hierarchy**
-- Level 5: Peer-reviewed research ⭐⭐⭐⭐⭐
-- Level 4: Official organizations ⭐⭐⭐⭐
-- Level 3: Academic books ⭐⭐⭐
-- Level 2: Professional publications ⭐⭐
-- Level 1: Web resources ⭐
+**Анатомическая иерархия:**
+```
+Тело
+├── Системы
+│   ├── Сердечно-сосудистая
+│   ├── Дыхательная
+│   └── Пищеварительная
+├── Скелет
+│   ├── Осевой
+│   └── Конечности
+└── Мягкие ткани
+    ├── Мышечная
+    └── Покровная
+```
 
-**Citation Format**
+**Поведенческая иерархия:**
+```
+Поведение
+├── Коммуникация
+│   ├── Акустическая
+│   ├── Сейсмическая
+│   ├── Визуальная
+│   └── Химическая
+├── Социальная
+│   ├── Иерархия
+│   ├── Связывание
+│   └── Забота
+└── Репродуктивная
+    ├── Спаривание
+    ├── Родительство
+    └── Развитие
+```
+
+### 4.4 Перекрёстные ссылки
+
+Каждая сущность должна ссылаться на:
+- Родительские сущности
+- Дочерние сущности
+- Связанные сущности
+- Противоречивые сущности
+- Предварительные сущности
+
+Перекрёстные ссылки двунаправленные где применимо.
+
+---
+
+## 5. Редакционные стандарты
+
+### 5.1 Стиль письма
+
+**Тон**
+- Объективный, нейтральный, научный
+- Избегать адвокатства или мнения
+- Использовать пассивный залог для процедур
+- Представлять неопределённость явно
+- Признавать противоречивые доказательства
+
+**Язык**
+- Русский (основной язык)
+- Английские переводы для ключевых терминов
+- Согласованная терминология
+- Никакого жаргона без определения
+- Определять технические термины при первом использовании
+
+**Структура**
+- Стандартный шаблон статьи
+- Согласованная иерархия заголовков (H1 → H2 → H3)
+- Логический поток от общего к частному
+- Чёткие разделения разделов
+- Одна концепция на абзац
+
+**Форматирование**
+- Markdown для всего содержимого
+- YAML frontmatter для метаданных
+- Согласованный формат цитирования
+- Правильное использование акцента
+- Никакого чрезмерного форматирования
+
+### 5.2 Правила терминологии
+
+**Стандартизация**
+- Использовать термины, определённые в глоссарии
+- Один термин на концепцию
+- Предоставлять английские эквиваленты
+- Отмечать региональные вариации
+- Документировать устаревшие термины
+
+**Перевод**
+- Основной язык: Русский
+- Вторичный язык: Английский
+- Предоставлять переводы для ключевых терминов
+- Поддерживать согласованность между переводами
+- Отмечать культурные различия
+
+**Аббревиатуры**
+- Определять при первом использовании
+- Использовать стандартные сокращения
+- Избегать неясных аббревиатур
+- Поддерживать глоссарий аббревиатур
+
+### 5.3 Правила цитирования
+
+**Иерархия источников**
+- Уровень 5: Рецензируемые исследования ⭐⭐⭐⭐⭐
+- Уровень 4: Официальные организации ⭐⭐⭐⭐
+- Уровень 3: Академические книги ⭐⭐⭐
+- Уровень 2: Профессиональные публикации ⭐⭐
+- Уровень 1: Веб-ресурсы ⭐
+
+**Формат цитирования**
 ```markdown
-[Source #] Title, Authors, Year, Publisher/Journal, Evidence Level
+[Источник #] Название, Авторы, Год, Издатель/Журнал, Уровень доказательности
 ```
 
-**Requirements**
-- All claims must be sourced
-- Sources must be accessible
-- Broken links trigger review
-- Sources older than 20 years marked as historical
-- Conflicting sources require explicit discussion
+**Требования**
+- Все утверждения должны быть подтверждены источниками
+- Источники должны быть доступны
+- Сломанные ссылки инициируют обзор
+- Источники старше 20 лет отмечены как исторические
+- Противоречивые источники требуют явного обсуждения
 
-### 5.4 Scientific Neutrality
+### 5.4 Научная нейтральность
 
-**Principles**
-- Present facts without advocacy
-- Acknowledge uncertainty
-- Distinguish consensus from controversy
-- Present multiple viewpoints when appropriate
-- Avoid loaded language
+**Принципы**
+- Представлять факты без адвокатства
+- Признавать неопределённость
+- Отличать консенсус от противоречия
+- Представлять множественные точки зрения когда уместно
+- Избегать нагруженного языка
 
-**Controversial Topics**
-- Present all major viewpoints
-- Attribute claims to sources
-- Note scientific consensus status
-- Avoid taking sides
-- Provide evidence for each viewpoint
+**Противоречивые темы**
+- Представлять все основные точки зрения
+- Приписывать утверждения источникам
+- Отмечать статус научного консенсуса
+- Избегать принятия сторон
+- Предоставлять доказательства для каждой точки зрения
 
-### 5.5 Evidence Policy
+### 5.5 Политика доказательств
 
-**Evidence Levels**
-- Explicitly rate source reliability
-- Display evidence level in content
-- Color-code evidence badges
-- Filter by evidence level in search
+**Уровни доказательности**
+- Явно оценивать надёжность источника
+- Отображать уровень доказательности в содержимом
+- Цветовое кодирование значков доказательств
+- Фильтрация по уровню доказательности в поиске
 
-**Scientific Certainty**
-- High: Well-established, consensus
-- Medium: Some evidence, limited consensus
-- Low: Limited evidence, no consensus
-- Unknown: Insufficient data
+**Научная определённость**
+- Высокая: Хорошо установлено, консенсус
+- Средняя: Некоторые доказательства, ограниченный консенсус
+- Низкая: Ограниченные доказательства, нет консенсуса
+- Неизвестно: Недостаточно данных
 
-**Consensus Status**
-- High: Strong scientific agreement
-- Medium: General agreement with some dissent
-- Low: Significant disagreement
-- Controversial: Major disagreement
+**Статус консенсуса**
+- Высокий: Сильное научное согласие
+- Средний: Общее согласие с некоторым несогласием
+- Низкий: Значительное несогласие
+- Противоречивый: Основное несогласие
 
 ---
 
-## 6. Design System
+## 6. Система дизайна
 
-### 6.1 Typography
+### 6.1 Типографика
 
-**Font Stack**
+**Набор шрифтов**
 ```css
 font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 ```
 
-**Font Sizes**
-- Base: 16px
+**Размеры шрифтов**
+- Базовый: 16px
 - H1: 2.2em
 - H2: 1.6em
 - H3: 1.3em
 - H4: 1.1em
 - Small: 0.875em
 
-**Line Height**
-- Body: 1.7
-- Headings: 1.3
-- Code: 1.5
+**Высота строки**
+- Тело: 1.7
+- Заголовки: 1.3
+- Код: 1.5
 
-**Font Weights**
+**Вес шрифтов**
 - Regular: 400
 - Medium: 500
 - Semibold: 600
 - Bold: 700
 
-### 6.2 Components
+### 6.2 Компоненты
 
-**Evidence Block**
+**Блок доказательств**
 ```markdown
-!!! evidence "Evidence Level: ★★★★★"
-    **Consensus:** High  
-    **Scientific Certainty:** High  
-    **Last Review:** 2026
+!!! evidence "Уровень доказательности: ★★★★★"
+    **Консенсус:** Высокий  
+    **Научная определённость:** Высокая  
+    **Последний обзор:** 2026
 ```
 
-**Reading Path**
+**Путь чтения**
 ```markdown
 !!! reading-path
-    **Prerequisites:** [Anatomy Basics](...)  
-    **Read Next:** [Physiology](...)  
-    **Advanced Topics:** [Comparative Anatomy](...)
+    **Предварительные требования:** [Основы анатомии](...)  
+    **Читать далее:** [Физиология](...)  
+    **Продвинутые темы:** [Сравнительная анатомия](...)
 ```
 
-**Expert Notes**
+**Заметки экспертов**
 ```markdown
-!!! note "Editor's Note"
-    Editorial commentary on content
+!!! note "Примечание редактора"
+    Редакторский комментарий к содержимому
 
-!!! note "Practical Note"
-    Field-relevant information
+!!! note "Практическая заметка"
+    Информация, релевантная для поля
 
-!!! note "Clinical Note"
-    Veterinary-specific insights
+!!! note "Клиническая заметка"
+    Специфичные для ветеринарии инсайты
 
-!!! note "Historical Note"
-    Historical context
+!!! note "Историческая заметка"
+    Исторический контекст
 
-!!! note "Research Note"
-    Research-specific information
+!!! note "Исследовательская заметка"
+    Специфичная для исследований информация
 ```
 
-**Warning Blocks**
+**Блоки предупреждений**
 ```markdown
-!!! warning "Clinical Warning"
-    Medical safety information
+!!! warning "Клиническое предупреждение"
+    Информация о медицинской безопасности
 
-!!! warning "Safety Warning"
-    General safety information
+!!! warning "Предупреждение о безопасности"
+    Общая информация о безопасности
 
-!!! warning "Controversial Topic"
-    Note scientific disagreement
+!!! warning "Противоречивая тема"
+    Отметить научное несогласие
 
-!!! warning "Outdated Practice"
-    Note deprecated methods
+!!! warning "Устаревшая практика"
+    Отметить устаревшие методы
 ```
 
-### 6.3 Admonitions
+### 6.3 Предупреждения
 
-**Standard Types**
+**Стандартные типы**
 - note
 - warning
 - tip
@@ -571,768 +571,768 @@ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, A
 - bug
 - example
 - quote
-- evidence (custom)
-- reading-path (custom)
+- evidence (кастомный)
+- reading-path (кастомный)
 
-**Styling**
-- Consistent color coding
-- Icon indicators
-- Clear visual hierarchy
-- Accessible contrast ratios
+**Стилизация**
+- Согласованное цветовое кодирование
+- Индикаторы иконок
+- Чёткая визуальная иерархия
+- Доступные коэффициенты контраста
 
-### 6.4 Cards
+### 6.4 Карточки
 
-**Card Types**
-- Category overview
-- Related articles
-- Quick reference
-- Organization profile
-- Case study summary
+**Типы карточек**
+- Обзор категории
+- Связанные статьи
+- Быстрая справка
+- Профиль организации
+- Резюме кейса
 
-**Card Structure**
-- Title
-- Summary
-- Metadata (type, evidence level)
-- Action link
-- Tags
+**Структура карточки**
+- Заголовок
+- Резюме
+- Метаданные (тип, уровень доказательности)
+- Ссылка действия
+- Теги
 
-### 6.5 Tables
+### 6.5 Таблицы
 
-**Standard Table**
-- Clean borders
-- Alternating row colors
-- Sticky headers
-- Responsive design
-- Sortable when applicable
+**Стандартная таблица**
+- Чистые границы
+- Чередующиеся цвета строк
+- Липкие заголовки
+- Адаптивный дизайн
+- Сортируемая когда применимо
 
-**Reference Table**
-- Source column
-- Evidence level badge
-- Year
-- Link to source
+**Таблица справки**
+- Столбец источника
+- Значок уровня доказательности
+- Год
+- Ссылка на источник
 
-**Comparison Table**
-- Feature rows
-- Entity columns
-- Highlighted differences
-- Clear visual separation
+**Таблица сравнения**
+- Строки функций
+- Столбцы сущностей
+- Подсвеченные различия
+- Чёткое визуальное разделение
 
-### 6.6 Icons
+### 6.6 Иконки
 
-**Icon System**
-- Material Icons (primary)
-- Consistent sizing
-- Semantic meaning
-- Accessible labels
+**Система иконок**
+- Material Icons (основные)
+- Согласованный размер
+- Семантическое значение
+- Доступные метки
 
-**Icon Categories**
-- Navigation
-- Actions
-- Status
-- Evidence levels
-- Content types
-- Warnings
+**Категории иконок**
+- Навигация
+- Действия
+- Статус
+- Уровни доказательности
+- Типы содержимого
+- Предупреждения
 
-### 6.7 Color Usage
+### 6.7 Использование цветов
 
-**Primary Palette**
-- Background: Slate 900 (#0f172a)
-- Text: Slate 300 (#cbd5e1)
-- Accent: Teal 500 (#14b8a6)
-- Secondary: Slate 500 (#64748b)
+**Основная палитра**
+- Фон: Slate 900 (#0f172a)
+- Текст: Slate 300 (#cbd5e1)
+- Акцент: Teal 500 (#14b8a6)
+- Вторичный: Slate 500 (#64748b)
 
-**Evidence Level Colors**
-- Level 5: Emerald (#10b981)
-- Level 4: Blue (#3b82f6)
-- Level 3: Yellow (#eab308)
-- Level 2: Orange (#f97316)
-- Level 1: Red (#ef4444)
+**Цвета уровней доказательности**
+- Уровень 5: Emerald (#10b981)
+- Уровень 4: Blue (#3b82f6)
+- Уровень 3: Yellow (#eab308)
+- Уровень 2: Orange (#f97316)
+- Уровень 1: Red (#ef4444)
 
-**Semantic Colors**
+**Семантические цвета**
 - Success: Emerald
 - Warning: Amber
 - Error: Red
 - Info: Blue
 - Neutral: Slate
 
-**Accessibility**
-- WCAG AA contrast ratios
-- Color not sole indicator
-- Focus states visible
-- Dark mode optimized
+**Доступность**
+- Коэффициенты контраста WCAG AA
+- Цвет не единственный индикатор
+- Состояния фокуса видимые
+- Оптимизировано для тёмного режима
 
 ---
 
-## 7. Navigation System
+## 7. Система навигации
 
-### 7.1 Sidebar
+### 7.1 Боковая панель
 
-**Structure**
-- 3-level collapsible navigation
-- Active page highlighting
-- Expand/collapse state persistence
-- Mobile responsive
+**Структура**
+- 3-уровневая сворачиваемая навигация
+- Подсветка активной страницы
+- Сохранение состояния развёртывания/сворачивания
+- Адаптивность для мобильных
 
-**Behavior**
-- Auto-expand current path
-- Manual expand/collapse
-- Search within navigation
-- Keyboard navigation
+**Поведение**
+- Авто-развёртывание текущего пути
+- Ручное развёртывание/сворачивание
+- Поиск в навигации
+- Навигация с клавиатуры
 
-### 7.2 Breadcrumbs
+### 7.2 Навигационная цепочка
 
-**Format**
-Home > Domain > Category > Object
+**Формат**
+Главная > Домен > Категория > Объект
 
-**Behavior**
-- Clickable navigation
-- Current page not linked
-- Truncate long paths
-- Mobile responsive
+**Поведение**
+- Кликабельная навигация
+- Текущая страница не связана
+- Обрезка длинных путей
+- Адаптивность для мобильных
 
-### 7.3 Reading Paths
+### 7.3 Пути чтения
 
-**Prerequisites**
-- Display required knowledge
-- Link to prerequisite objects
-- Show completion status
-- Suggest learning order
+**Предварительные требования**
+- Отображать требуемые знания
+- Ссылка на предварительные объекты
+- Показывать статус завершения
+- Предлагать порядок обучения
 
-**Read Next**
-- Suggest logical next steps
-- Based on relationships
-- User-customizable
-- Progress tracking
+**Читать далее**
+- Предлагать логические следующие шаги
+- На основе отношений
+- Настраиваемый пользователем
+- Отслеживание прогресса
 
-**Advanced Topics**
-- Deep dive suggestions
-- Related specialized content
-- Research directions
-- Expert-level material
+**Продвинутые темы**
+- Предложения для глубокого погружения
+- Связанное специализированное содержимое
+- Направления исследований
+- Материал уровня эксперта
 
-### 7.4 Related Articles
+### 7.4 Связанные статьи
 
-**Relationship-Based**
-- Automatically generated
-- Based on ontology
-- Weighted by relevance
-- Categorized by type
+**На основе отношений**
+- Автоматически генерируется
+- На основе онтологии
+- Взвешено по релевантности
+- Категоризировано по типу
 
-**Manual Curation**
-- Editor-specified relationships
-- Featured content
-- Cross-domain connections
-- Editorial picks
+**Ручная куратория**
+- Отношения, указанные редактором
+- Рекомендуемое содержимое
+- Связи между доменами
+- Редакторский выбор
 
-### 7.5 Knowledge Graph
+### 7.5 Граф знаний
 
-**Visualization**
-- Interactive node graph
-- Relationship types color-coded
-- Expandable/collapsible
-- Search within graph
+**Визуализация**
+- Интерактивный граф узлов
+- Цветовое кодирование типов отношений
+- Развёртываемый/сворачиваемый
+- Поиск в графе
 
-**Behavior**
-- Click to navigate
-- Hover for preview
-- Filter by relationship type
-- Export as image/data
+**Поведение**
+- Клик для навигации
+- Наведение для предпросмотра
+- Фильтрация по типу отношений
+- Экспорт как изображение/данные
 
-### 7.6 Search Behavior
+### 7.6 Поведение поиска
 
-**Search Types**
-- Full-text search
-- Semantic search
-- Relationship search
-- Faceted search
+**Типы поиска**
+- Полнотекстовый поиск
+- Семантический поиск
+- Поиск по отношениям
+- Фасетный поиск
 
-**Search Results**
-- Relevance ranking
-- Evidence level badges
-- Content type icons
-- Related results
-- Search suggestions
+**Результаты поиска**
+- Ранжирование по релевантности
+- Значки уровня доказательности
+- Иконки типов содержимого
+- Связанные результаты
+- Предложения поиска
 
-**Filters**
-- Domain
-- Category
-- Evidence level
-- Species
-- Age group
-- Difficulty
-- Date range
+**Фильтры**
+- Домен
+- Категория
+- Уровень доказательности
+- Вид
+- Возрастная группа
+- Сложность
+- Диапазон дат
 
 ---
 
-## 8. Metadata Standard
+## 8. Стандарт метаданных
 
-### 8.1 Complete Metadata Schema
+### 8.1 Полная схема метаданных
 
 ```yaml
-# === Core Identity ===
-id: "ELE-DOM-CATE-TYPE-NNN"              # Unique, immutable identifier
-title: "Human-readable title"             # Primary title
-title_en: "English translation"           # English translation
-aliases: ["Alternative name 1", "Alternative name 2"]  # Alternative names
+# === Основная идентификация ===
+id: "ELE-DOM-CATE-TYPE-NNN"              # Уникальный, неизменяемый идентификатор
+title: "Читаемый человеком заголовок"             # Основной заголовок
+title_en: "Английский перевод"           # Английский перевод
+aliases: ["Альтернативное название 1", "Альтернативное название 2"]  # Альтернативные названия
 
-# === Classification ===
+# === Классификация ===
 type: "article|protocol|case-study|glossary|reference|timeline|faq|organization"
-category: "DOMAIN"                        # Primary domain
-subcategory: "SUBCATEGORY"               # Secondary classification
-species: ["african", "asian", "both"]    # Applicable species
-age_group: ["calf", "juvenile", "adult", "geriatric"]  # Applicable life stages
-domain: ["biology", "veterinary", "husbandry", "conservation"]  # Knowledge domains
+category: "DOMAIN"                        # Основной домен
+subcategory: "SUBCATEGORY"               # Вторичная классификация
+species: ["african", "asian", "both"]    # Применимые виды
+age_group: ["calf", "juvenile", "adult", "geriatric"]  # Применимые жизненные стадии
+domain: ["biology", "veterinary", "husbandry", "conservation"]  # Домены знаний
 
-# === Content Description ===
-summary: "One-sentence summary"           # Brief overview
-description: "Detailed description"      # SEO description
-difficulty: "beginner|intermediate|advanced"  # Content complexity
-reading_time: 15                          # Estimated reading time (minutes)
+# === Описание содержимого ===
+summary: "Резюме в одном предложении"           # Краткий обзор
+description: "Детальное описание"      # Описание для SEO
+difficulty: "beginner|intermediate|advanced"  # Сложность содержимого
+reading_time: 15                          # Оценочное время чтения (минуты)
 
-# === Relationships ===
-prerequisites: ["ELE-XXX-XXX-XXX-001"]    # Required knowledge
-related_objects: ["ELE-XXX-XXX-XXX-002"]  # Related knowledge
-see_also: ["ELE-XXX-XXX-XXX-003"]        # Additional references
+# === Отношения ===
+prerequisites: ["ELE-XXX-XXX-XXX-001"]    # Требуемые знания
+related_objects: ["ELE-XXX-XXX-XXX-002"]  # Связанные знания
+see_also: ["ELE-XXX-XXX-XXX-003"]        # Дополнительные ссылки
 
-# === Evidence & Quality ===
-evidence_level: 1-5                       # Source reliability rating
-scientific_certainty: "high|medium|low|unknown"  # Scientific confidence
-consensus: "high|medium|low|controversial"  # Scientific agreement
-primary_sources: 12                       # Number of primary sources
+# === Доказательства и качество ===
+evidence_level: 1-5                       # Рейтинг надёжности источника
+scientific_certainty: "high|medium|low|unknown"  # Научная уверенность
+consensus: "high|medium|low|controversial"  # Научное согласие
+primary_sources: 12                       # Количество первичных источников
 
-# === Editorial ===
-authors: ["Author Name"]                  # Content authors
-reviewers: ["Reviewer Name"]              # Content reviewers
+# === Редакционное ===
+authors: ["Имя автора"]                  # Авторы содержимого
+reviewers: ["Имя рецензента"]              # Рецензенты содержимого
 editorial_status: "draft|reviewed|published|update-needed|deprecated"
-created: "YYYY-MM-DD"
+created: "ГГГГ-ММ-ДД"
 
-# === Maintenance ===
-last_updated: "YYYY-MM-DD"                # Last content update
-next_review: "YYYY-MM-DD"                # Scheduled review date
+# === Поддержка ===
+last_updated: "ГГГГ-ММ-ДД"                # Последнее обновление содержимого
+next_review: "ГГГГ-ММ-ДД"                # Запланированная дата обзора
 review_frequency: "annual|biennial|triennial|as-needed"
 
-# === Discovery ===
-keywords: ["keyword1", "keyword2"]        # Search keywords
-tags: ["tag1", "tag2"]                    # Content tags
-search_boost: 0.8                         # Search ranking boost (0-1)
+# === Обнаружение ===
+keywords: ["keyword1", "keyword2"]        # Ключевые слова поиска
+tags: ["tag1", "tag2"]                    # Теги содержимого
+search_boost: 0.8                         # Усиление ранжирования поиска (0-1)
 
-# === Multimedia ===
-media_count: 5                            # Number of media files
-media_types: ["image", "video", "audio"]  # Media type list
-downloads: ["file1.pdf", "file2.pdf"]    # Downloadable files
+# === Мультимедиа ===
+media_count: 5                            # Количество медиафайлов
+media_types: ["image", "video", "audio"]  # Список типов медиа
+downloads: ["file1.pdf", "file2.pdf"]    # Загружаемые файлы
 
-# === External ===
-external_resources: ["https://example.com"]  # External links
-doi: "10.xxx/xxxx"                        # Digital Object Identifier
-isbn: "978-xxx-xxx-xxx"                   # ISBN for books
+# === Внешнее ===
+external_resources: ["https://example.com"]  # Внешние ссылки
+doi: "10.xxx/xxxx"                        # Цифровой идентификатор объекта
+isbn: "978-xxx-xxx-xxx"                   # ISBN для книг
 ```
 
-### 8.2 Field Explanations
+### 8.2 Объяснения полей
 
-**Core Identity**
-- `id`: Unique identifier, never changes, used for stable URLs
-- `title`: Human-readable title, may change over time
-- `title_en`: English translation for international users
-- `aliases`: Alternative names for search and redirects
+**Основная идентификация**
+- `id`: Уникальный идентификатор, никогда не изменяется, используется для стабильных URL
+- `title`: Читаемый человеком заголовок, может изменяться со временем
+- `title_en`: Английский перевод для международных пользователей
+- `aliases`: Альтернативные названия для поиска и перенаправлений
 
-**Classification**
-- `type`: Defines content structure and behavior
-- `category`: Primary navigation grouping
-- `subcategory`: Secondary navigation grouping
-- `species`: Filters content by applicable elephant species
-- `age_group`: Filters content by applicable life stage
-- `domain`: Cross-cutting knowledge areas
+**Классификация**
+- `type`: Определяет структуру и поведение содержимого
+- `category`: Основная группировка навигации
+- `subcategory`: Вторичная группировка навигации
+- `species`: Фильтрует содержимое по применимым видам слонов
+- `age_group`: Фильтрует содержимое по применимым жизненным стадиям
+- `domain`: Сквозные области знаний
 
-**Content Description**
-- `summary`: Displayed in search results and cards
-- `description`: Used for SEO meta tags
-- `difficulty`: Helps users choose appropriate content
-- `reading_time`: Sets user expectations
+**Описание содержимого**
+- `summary`: Отображается в результатах поиска и карточках
+- `description`: Используется для мета-тегов SEO
+- `difficulty`: Помогает пользователям выбирать соответствующее содержимое
+- `reading_time`: Устанавливает ожидания пользователей
 
-**Relationships**
-- `prerequisites`: Defines learning paths
-- `related_objects`: Automatic graph generation
-- `see_also`: Manual editorial curation
+**Отношения**
+- `prerequisites`: Определяет пути обучения
+- `related_objects`: Автоматическая генерация графа
+- `see_also`: Ручная редакционная куратория
 
-**Evidence & Quality**
-- `evidence_level`: Source reliability rating (1-5)
-- `scientific_certainty`: Confidence in scientific claims
-- `consensus`: Level of scientific agreement
-- `primary_sources`: Count of peer-reviewed sources
+**Доказательства и качество**
+- `evidence_level`: Рейтинг надёжности источника (1-5)
+- `scientific_certainty`: Уверенность в научных утверждениях
+- `consensus`: Уровень научного согласия
+- `primary_sources`: Количество рецензируемых источников
 
-**Editorial**
-- `authors`: Content creators, attribution
-- `reviewers`: Content validators, accountability
-- `editorial_status`: Content lifecycle state
-- `created`: Original publication date
+**Редакционное**
+- `authors`: Создатели содержимого, атрибуция
+- `reviewers`: Валидаторы содержимого, ответственность
+- `editorial_status`: Состояние жизненного цикла содержимого
+- `created`: Дата оригинальной публикации
 
-**Maintenance**
-- `last_updated`: Most recent content change
-- `next_review`: Scheduled content review
-- `review_frequency`: How often content should be reviewed
+**Поддержка**
+- `last_updated`: Последнее изменение содержимого
+- `next_review`: Запланированный обзор содержимого
+- `review_frequency`: Как часто содержимое должно быть рассмотрено
 
-**Discovery**
-- `keywords`: Search optimization
-- `tags`: Content categorization
-- `search_boost`: Manual search ranking adjustment
+**Обнаружение**
+- `keywords`: Оптимизация поиска
+- `tags`: Категоризация содержимого
+- `search_boost`: Ручная настройка ранжирования поиска
 
-**Multimedia**
-- `media_count`: Number of associated media files
-- `media_types`: Types of media included
-- `downloads`: Downloadable resources
+**Мультимедиа**
+- `media_count`: Количество связанных медиафайлов
+- `media_types`: Типы включённого медиа
+- `downloads`: Загружаемые ресурсы
 
-**External**
-- `external_resources`: Supplementary external content
-- `doi`: Academic identifier for papers
-- `isbn`: Identifier for books
-
----
-
-## 9. Scalability
-
-### 9.1 100 Articles
-
-**Performance**
-- Fast page loads (<1s)
-- Instant search results
-- No performance degradation
-
-**Navigation**
-- Flat navigation acceptable
-- Manual curation feasible
-- Simple search sufficient
-
-**Maintenance**
-- Manual review possible
-- Editorial oversight manageable
-- Link checking manual
-
-### 9.2 500 Articles
-
-**Performance**
-- Page loads remain fast
-- Search remains responsive
-- Begin caching strategies
-
-**Navigation**
-- Subcategories become necessary
-- Automated relationship generation
-- Faceted search beneficial
-
-**Maintenance**
-- Automated link checking
-- Scheduled review system
-- Editorial workflow needed
-
-### 9.3 1,000 Articles
-
-**Performance**
-- Implement caching
-- Optimize search indexing
-- Consider pagination
-
-**Navigation**
-- Subcategories essential
-- Knowledge graph valuable
-- Advanced filtering necessary
-
-**Maintenance**
-- Automated review scheduling
-- Content lifecycle management
-- Editorial board structure
-
-### 9.4 10,000 Knowledge Objects
-
-**Performance**
-- Distributed caching
-- Search optimization critical
-- Consider CDN deployment
-- Database-backed search
-
-**Navigation**
-- Subcategories mandatory
-- Knowledge graph essential
-- AI-powered search
-- Personalized recommendations
-
-**Maintenance**
-- Automated content auditing
-- Peer review system
-- Contribution workflow
-- Editorial governance
-
-**Potential Bottlenecks**
-- Search performance at scale
-- Navigation rendering complexity
-- Relationship graph computation
-- Content review backlog
-- Editorial process scaling
-
-**Mitigation Strategies**
-- Implement caching early
-- Design for distributed systems
-- Automate editorial processes
-- Use incremental relationship updates
-- Implement content lifecycle automation
+**Внешнее**
+- `external_resources`: Дополнительное внешнее содержимое
+- `doi`: Академический идентификатор для статей
+- `isbn`: Идентификатор для книг
 
 ---
 
-## 10. Future Features
+## 9. Масштабируемость
 
-### 10.1 Knowledge Graph
+### 9.1 100 статей
 
-**Architecture Support**
-- Relationship metadata already defined
-- RDF/JSON-LD export capability
-- Graph visualization API
-- Relationship query interface
+**Производительность**
+- Быстрая загрузка страниц (<1с)
+- Мгновенные результаты поиска
+- Нет деградации производительности
 
-**Implementation Path**
-- Phase 1: Define relationship types
-- Phase 2: Implement relationship metadata
-- Phase 3: Build graph visualization
-- Phase 4: Add graph search
-- Phase 5: Enable graph export
+**Навигация**
+- Плоская навигация приемлема
+- Ручная куратория выполнима
+- Простой поиск достаточен
 
-### 10.2 Interactive Maps
+**Поддержка**
+- Ручной обзор возможен
+- Редакционный надзор управляем
+- Проверка ссылок ручная
 
-**Architecture Support**
-- Location metadata in objects
-- Geographic data structures
-- Map rendering components
-- Location-based search
+### 9.2 500 статей
 
-**Use Cases**
-- Species distribution maps
-- Conservation project locations
-- Research study sites
-- Organization locations
+**Производительность**
+- Загрузка страниц остаётся быстрой
+- Поиск остаётся отзывчивым
+- Начать стратегии кэширования
 
-### 10.3 Glossary
+**Навигация**
+- Подкатегории становятся необходимыми
+- Автоматическая генерация отношений
+- Фасетный поиск полезен
 
-**Architecture Support**
-- Glossary content type defined
-- Term relationship types
-- Cross-reference system
-- Pronunciation metadata
+**Поддержка**
+- Автоматическая проверка ссылок
+- Система запланированного обзора
+- Редакционный рабочий процесс нужен
 
-**Implementation**
-- Centralized glossary section
-- Auto-linking to glossary terms
-- Term definition tooltips
-- Glossary search
+### 9.3 1,000 статей
 
-### 10.4 Timeline
+**Производительность**
+- Реализовать кэширование
+- Оптимизировать индексацию поиска
+- Рассмотреть пагинацию
 
-**Architecture Support**
-- Timeline content type defined
-- Date metadata standard
-- Chronological ordering
-- Event relationship types
+**Навигация**
+- Подкатегории существенны
+- Граф знаний ценен
+- Расширенная фильтрация необходима
 
-**Implementation**
-- Timeline visualization
-- Filterable by domain
-- Interactive events
-- Export capabilities
+**Поддержка**
+- Автоматическое планирование обзора
+- Управление жизненным циклом содержимого
+- Структура редакционной коллегии
 
-### 10.5 Protocols
+### 9.4 10,000 объектов знаний
 
-**Architecture Support**
-- Protocol content type defined
-- Step-by-step structure
-- Prerequisite metadata
-- Warning block system
+**Производительность**
+- Распределённое кэширование
+- Оптимизация поиска критична
+- Рассмотреть развёртывание CDN
+- Поиск на основе базы данных
 
-**Implementation**
-- Protocol templates
-- Checklist generation
-- Protocol versioning
-- Protocol search
+**Навигация**
+- Подкатегории обязательны
+- Граф знаний существенен
+- Поиск на основе AI
+- Персонализированные рекомендации
 
-### 10.6 Case Studies
+**Поддержка**
+- Автоматический аудит содержимого
+- Система рецензирования
+- Рабочий процесс вклада
+- Редакционное управление
 
-**Architecture Support**
-- Case study content type defined
-- Outcome metadata
-- Lesson extraction
-- Relationship to protocols
+**Потенциальные узкие места**
+- Производительность поиска в масштабе
+- Сложность рендеринга навигации
+- Вычисление графа отношений
+- Отставание обзора содержимого
+- Масштабирование редакционного процесса
 
-**Implementation**
-- Case study database
-- Outcome analysis
-- Success/failure patterns
-- Case study search
+**Стратегии смягчения**
+- Реализовать кэширование рано
+- Дизайн для распределённых систем
+- Автоматизировать редакционные процессы
+- Использовать инкрементные обновления отношений
+- Реализовать автоматизацию жизненного цикла содержимого
 
-### 10.7 Organizations
+---
 
-**Architecture Support**
-- Organization content type defined
-- Contact metadata
-- Standards relationship
-- Project relationships
+## 10. Будущие функции
 
-**Implementation**
-- Organization directory
-- Contact management
-- Standards repository
-- Organization search
+### 10.1 Граф знаний
 
-### 10.8 Species Comparison
+**Поддержка архитектуры**
+- Метаданные отношений уже определены
+- Возможность экспорта RDF/JSON-LD
+- API визуализации графа
+- Интерфейс запроса отношений
 
-**Architecture Support**
-- Species metadata in objects
-- Comparison table components
-- Species-specific filtering
-- Cross-species relationships
+**Путь реализации**
+- Фаза 1: Определить типы отношений
+- Фаза 2: Реализовать метаданные отношений
+- Фаза 3: Построить визуализацию графа
+- Фаза 4: Добавить поиск по графу
+- Фаза 5: Включить экспорт графа
 
-**Implementation**
-- Comparison templates
-- Side-by-side views
-- Species-specific content
-- Comparative search
+### 10.2 Интерактивные карты
 
-### 10.9 Media Library
+**Поддержка архитектуры**
+- Метаданные местоположения в объектах
+- Структуры географических данных
+- Компоненты рендеринга карт
+- Поиск на основе местоположения
 
-**Architecture Support**
-- Media metadata in objects
-- Media type classification
-- Download metadata
-- Media relationship types
+**Сценарии использования**
+- Карты распределения видов
+- Местоположения проектов охраны
+- Места исследований
+- Местоположения организаций
 
-**Implementation**
-- Centralized media storage
-- Media tagging system
-- Media search
-- Media licensing
+### 10.3 Глоссарий
+
+**Поддержка архитектуры**
+- Тип содержимого глоссария определён
+- Типы отношений терминов
+- Система перекрёстных ссылок
+- Метаданные произношения
+
+**Реализация**
+- Централизованный раздел глоссария
+- Автосвязывание с терминами глоссария
+- Всплывающие подсказки определений
+- Поиск по глоссарию
+
+### 10.4 Хронология
+
+**Поддержка архитектуры**
+- Тип содержимого хронологии определён
+- Стандарт метаданных даты
+- Хронологическое упорядочивание
+- Типы отношений событий
+
+**Реализация**
+- Визуализация хронологии
+- Фильтрация по домену
+- Интерактивные события
+- Возможности экспорта
+
+### 10.5 Протоколы
+
+**Поддержка архитектуры**
+- Тип содержимого протокола определён
+- Пошаговая структура
+- Метаданные предварительных требований
+- Система блоков предупреждений
+
+**Реализация**
+- Шаблоны протоколов
+- Генерация чек-листов
+- Версионирование протоколов
+- Поиск протоколов
+
+### 10.6 Кейсы
+
+**Поддержка архитектуры**
+- Тип содержимого кейса определён
+- Метаданные результатов
+- Извлечение уроков
+- Отношения к протоколам
+
+**Реализация**
+- База данных кейсов
+- Анализ результатов
+- Шаблоны успеха/неудачи
+- Поиск кейсов
+
+### 10.7 Организации
+
+**Поддержка архитектуры**
+- Тип содержимого организации определён
+- Метаданные контактов
+- Отношения стандартов
+- Отношения проектов
+
+**Реализация**
+- Каталог организаций
+- Управление контактами
+- Репозиторий стандартов
+- Поиск организаций
+
+### 10.8 Сравнение видов
+
+**Поддержка архитектуры**
+- Метаданные видов в объектах
+- Компоненты таблиц сравнения
+- Специфичная для вида фильтрация
+- Отношения между видами
+
+**Реализация**
+- Шаблоны сравнения
+- Представления рядом
+- Специфичное для вида содержимое
+- Сравнительный поиск
+
+### 10.9 Медиатека
+
+**Поддержка архитектуры**
+- Метаданные медиа в объектах
+- Классификация типов медиа
+- Метаданные загрузки
+- Типы отношений медиа
+
+**Реализация**
+- Централизованное хранилище медиа
+- Система тегирования медиа
+- Поиск медиа
+- Лицензирование медиа
 
 ### 10.10 API
 
-**Architecture Support**
-- Structured metadata
-- Unique identifiers
-- Relationship definitions
-- Content type schemas
+**Поддержка архитектуры**
+- Структурированные метаданные
+- Уникальные идентификаторы
+- Определения отношений
+- Схемы типов содержимого
 
-**Implementation**
+**Реализация**
 - REST API
 - GraphQL API
-- Authentication
-- Rate limiting
-- API documentation
+- Аутентификация
+- Ограничение частоты
+- Документация API
 
-### 10.11 Mobile Application
+### 10.11 Мобильное приложение
 
-**Architecture Support**
-- Responsive design system
-- Offline-capable content
-- Mobile-optimized navigation
-- Touch-friendly interactions
+**Поддержка архитектуры**
+- Адаптивная система дизайна
+- Содержимое, доступное офлайн
+- Оптимизированная для мобильных навигация
+- Дружественные к касанию взаимодействия
 
-**Implementation**
-- Native or hybrid app
-- Offline content sync
-- Push notifications
-- Mobile-specific features
+**Реализация**
+- Нативное или гибридное приложение
+- Синхронизация содержимого офлайн
+- Push-уведомления
+- Специфичные для мобильных функции
 
-### 10.12 Offline Mode
+### 10.12 Офлайн режим
 
-**Architecture Support**
-- Static site generation
-- Self-contained content
-- No external dependencies
-- Local search capability
+**Поддержка архитектуры**
+- Генерация статического сайта
+- Самодостаточное содержимое
+- Никаких внешних зависимостей
+- Возможность локального поиска
 
-**Implementation**
+**Реализация**
 - Service workers
-- Content caching
-- Offline search index
-- Sync on reconnect
+- Кэширование содержимого
+- Индекс поиска офлайн
+- Синхронизация при переподключении
 
-### 10.13 AI Semantic Search
+### 10.13 AI семантический поиск
 
-**Architecture Support**
-- Structured metadata
-- Relationship graph
-- Content summaries
-- Keyword tagging
+**Поддержка архитектуры**
+- Структурированные метаданные
+- Граф отношений
+- Резюме содержимого
+- Тегирование ключевыми словами
 
-**Implementation**
-- Vector embeddings
-- Semantic similarity
-- Natural language queries
-- Contextual results
-
----
-
-## 11. Implementation Phases
-
-### Phase 1: Foundation (Months 1-3)
-
-**Editorial Infrastructure**
-- Create editorial guidelines
-- Establish review process
-- Define evidence level system
-- Create content templates
-
-**Metadata System**
-- Implement complete metadata schema
-- Create content type templates
-- Define relationship types
-- Build validation system
-
-**Glossary**
-- Implement glossary system
-- Define core terminology
-- Create cross-reference system
-- Build term database
-
-### Phase 2: Content Expansion (Months 4-6)
-
-**New Sections**
-- Create Husbandry section
-- Create Conservation section
-- Create Management section
-- Create Research section
-
-**Content Migration**
-- Apply new metadata to existing content
-- Restructure into new categories
-- Implement standard templates
-- Build relationship graph
-
-### Phase 3: Advanced Features (Months 7-9)
-
-**Navigation Enhancement**
-- Implement reading paths
-- Add breadcrumb system
-- Build related articles
-- Create knowledge graph visualization
-
-**Search Enhancement**
-- Implement faceted search
-- Add semantic search
-- Improve ranking
-- Add search suggestions
-
-### Phase 4: Platform Features (Months 10-12)
-
-**Content Lifecycle**
-- Implement review scheduling
-- Add version control
-- Create deprecation process
-- Build content auditing
-
-**Contribution System**
-- Build contribution workflow
-- Implement peer review platform
-- Create quality gates
-- Add contributor profiles
+**Реализация**
+- Векторные вложения
+- Семантическое сходство
+- Запросы на естественном языке
+- Контекстуальные результаты
 
 ---
 
-## 12. Success Metrics
+## 11. Фазы реализации
 
-### 12.1 Content Metrics
+### Фаза 1: Фундамент (Месяцы 1-3)
 
-- Knowledge objects: 500+
-- Glossary terms: 200+
-- Protocols: 50+
-- Case studies: 100+
-- Organizations: 50+
+**Редакционная инфраструктура**
+- Создать редакционные рекомендации
+- Установить процесс обзора
+- Определить систему уровней доказательности
+- Создать шаблоны содержимого
 
-### 12.2 Quality Metrics
+**Система метаданных**
+- Реализовать полную схему метаданных
+- Создать шаблоны типов содержимого
+- Определить типы отношений
+- Построить систему валидации
 
-- Editorial status: 80%+ published
-- Evidence level 4+ sources: 60%+
-- Broken links: <1%
-- Content up-to-date: 95%+
-- Relationship coverage: 70%+
+**Глоссарий**
+- Реализовать систему глоссария
+- Определить основную терминологию
+- Создать систему перекрёстных ссылок
+- Построить базу данных терминов
 
-### 12.3 Engagement Metrics
+### Фаза 2: Расширение содержимого (Месяцы 4-6)
 
-- Monthly visitors: 10,000+
-- Average session duration: 5+ minutes
-- Search success rate: 85%+
-- Return visitor rate: 40%+
-- Knowledge graph usage: 30%+
+**Новые разделы**
+- Создать раздел содержания и ухода
+- Создать раздел охраны
+- Создать раздел управления
+- Создать раздел исследований
 
-### 12.4 Authority Metrics
+**Миграция содержимого**
+- Применить новые метаданные к существующему содержимому
+- Реструктурировать в новые категории
+- Реализовать стандартные шаблоны
+- Построить граф отношений
 
-- Citations by other sources
-- Backlinks from institutions
-- Media mentions
-- Expert endorsements
-- Organizational partnerships
+### Фаза 3: Расширенные функции (Месяцы 7-9)
 
----
+**Улучшение навигации**
+- Реализовать пути чтения
+- Добавить систему навигационных цепочек
+- Построить связанные статьи
+- Создать визуализацию графа знаний
 
-## 13. Governance
+**Улучшение поиска**
+- Реализовать фасетный поиск
+- Добавить семантический поиск
+- Улучшить ранжирование
+- Добавить предложения поиска
 
-### 13.1 Editorial Board
+### Фаза 4: Функции платформы (Месяцы 10-12)
 
-**Roles**
-- Editor-in-Chief
-- Domain Editors (8 domains)
-- Peer Reviewers
-- Technical Maintainer
+**Жизненный цикл содержимого**
+- Реализовать планирование обзора
+- Добавить контроль версий
+- Создать процесс устаревания
+- Построить аудит содержимого
 
-**Responsibilities**
-- Content quality standards
-- Editorial decisions
-- Review process oversight
-- Strategic direction
-
-### 13.2 Contribution Workflow
-
-**Submission**
-- Topic proposal
-- Editorial approval
-- Author assignment
-- Content creation
-
-**Review**
-- Internal review
-- Peer review
-- Editorial approval
-- Publication
-
-**Maintenance**
-- Annual review schedule
-- Update tracking
-- Deprecation process
-- Content archiving
-
-### 13.3 Quality Standards
-
-**Content Standards**
-- Evidence-based
-- Scientifically accurate
-- Practically applicable
-- Well-sourced
-- Clearly written
-
-**Technical Standards**
-- Valid markdown
-- Complete metadata
-- Proper relationships
-- Accessible formatting
-- Optimized performance
+**Система вклада**
+- Построить рабочий процесс вклада
+- Реализовать платформу рецензирования
+- Создать ворота качества
+- Добавить профили авторов
 
 ---
 
-## 14. Conclusion
+## 12. Метрики успеха
 
-This architecture defines Elephantology as a scientific knowledge platform rather than a documentation website. The focus on structured Knowledge Objects, comprehensive metadata, and relationship-based navigation positions it to scale to thousands of interconnected knowledge objects while maintaining scientific credibility and practical applicability.
+### 12.1 Метрики содержимого
 
-The architecture is designed to support future features including knowledge graphs, APIs, mobile applications, and AI-powered search without requiring fundamental restructuring. This foundation enables sustainable growth while maintaining quality standards at every stage.
+- Объекты знаний: 500+
+- Термины глоссария: 200+
+- Протоколы: 50+
+- Кейсы: 100+
+- Организации: 50+
 
-**Next Steps:**
-1. Editorial board approval of architecture
-2. Implementation of editorial guidelines
-3. Creation of content templates
-4. Migration of existing content to new standards
-5. Expansion into new sections
-6. Implementation of advanced features
+### 12.2 Метрики качества
 
-This architecture provides the foundation for Elephantology to become the definitive reference for elephant knowledge, supporting evidence-based decision-making in veterinary practice, conservation policy, and husbandry standards worldwide.
+- Редакционный статус: 80%+ опубликовано
+- Источники уровня доказательности 4+: 60%+
+- Сломанные ссылки: <1%
+- Содержимое актуальное: 95%+
+- Покрытие отношений: 70%+
+
+### 12.3 Метрики вовлечения
+
+- Ежемесячные посетители: 10,000+
+- Средняя длительность сессии: 5+ минут
+- Успешность поиска: 85%+
+- Частота возвращающихся посетителей: 40%+
+- Использование графа знаний: 30%+
+
+### 12.4 Метрики авторитета
+
+- Цитации другими источниками
+- Обратные ссылки от учреждений
+- Упоминания в медиа
+- Одобрения экспертов
+- Партнёрства с организациями
+
+---
+
+## 13. Управление
+
+### 13.1 Редакционная коллегия
+
+**Роли**
+- Главный редактор
+- Редакторы доменов (8 доменов)
+- Рецензенты
+- Технический сопровождающий
+
+**Ответственности**
+- Стандарты качества содержимого
+- Редакционные решения
+- Надзор за процессом обзора
+- Стратегическое направление
+
+### 13.2 Рабочий процесс вклада
+
+**Подача**
+- Предложение темы
+- Редакционное одобрение
+- Назначение автора
+- Создание содержимого
+
+**Обзор**
+- Внутренний обзор
+- Рецензирование
+- Редакционное одобрение
+- Публикация
+
+**Поддержка**
+- График ежегодного обзора
+- Отслеживание обновлений
+- Процесс устаревания
+- Архивирование содержимого
+
+### 13.3 Стандарты качества
+
+**Стандарты содержимого**
+- На основе доказательств
+- Научно точно
+- Практично применимо
+- Хорошо подтверждено
+- Чётко написано
+
+**Технические стандарты**
+- Валидный markdown
+- Полные метаданные
+- Правильные отношения
+- Доступное форматирование
+- Оптимизированная производительность
+
+---
+
+## 14. Заключение
+
+Эта архитектура определяет «Слонологию» как научную платформу знаний, а не веб-сайт документации. Фокус на структурированных объектах знаний, комплексных метаданных и навигации на основе отношений позиционирует её для масштабирования до тысяч взаимосвязанных объектов знаний при поддержании научной достоверности и практической применимости.
+
+Архитектура разработана для поддержки будущих функций, включая графы знаний, API, мобильные приложения и поиск на основе AI, без потребности в фундаментальной реструктуризации. Эта основа обеспечивает устойчивый рост при поддержании стандартов качества на каждом этапе.
+
+**Следующие шаги:**
+1. Одобрение архитектуры редакционной коллегией
+2. Реализация редакционных рекомендаций
+3. Создание шаблонов содержимого
+4. Миграция существующего содержимого на новые стандарты
+5. Расширение в новые разделы
+6. Реализация расширенных функций
+
+Эта архитектура обеспечивает основу для «Слонологии» стать окончательным справочником по знаниям о слонах, поддерживая принятие решений на основе доказательств в ветеринарной практике, политике охраны и стандартах содержания во всём мире.
