@@ -45,7 +45,17 @@ hide:
   <div class="sa-stat-row">
     <span class="sa-stat-label">Прочитано статей</span>
     <div class="sa-stat-bar"><div class="sa-stat-fill sa-stat-fill--reader-read" style="width: 0%"></div></div>
-    <span class="sa-stat-value sa-stat-value--reader-read">0/35</span>
+    <span class="sa-stat-value sa-stat-value--reader-read">0/18</span>
+  </div>
+  <div class="sa-stat-row">
+    <span class="sa-stat-label">Уровень розыска</span>
+    <div class="sa-wanted-stars">
+      <span class="star"></span>
+      <span class="star"></span>
+      <span class="star"></span>
+      <span class="star"></span>
+      <span class="star"></span>
+    </div>
   </div>
   <div class="sa-stat-row">
     <span class="sa-stat-label">Время на сайте</span>

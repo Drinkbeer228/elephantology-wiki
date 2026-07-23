@@ -47,7 +47,7 @@ markdown_extensions:
 
 plugins:
   - search:
-      lang: ru
+      lang: [ru, en]
 
 extra_css:
   - stylesheets/extra.css

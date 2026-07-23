@@ -1,102 +1,143 @@
 /* ========================================================================
-   GTA San Andreas Theme — Elephantology Wiki (Clean)
+   GTA San Andreas Theme — Elephantology Wiki (Reworx v2)
    ======================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap');
 
 :root {
   --md-default-bg-color: #000000;
-  --md-default-fg-color: #aaaaaa;
-  --md-accent-fg-color: #ffffff;
+  --md-default-fg-color: #c8c8c8;
+  --md-accent-fg-color: #FF9900;
 
-  --md-primary-fg-color: #111111;
+  --md-primary-fg-color: #000000;
   --md-primary-bg-color: #000000;
 
   --md-code-bg-color: #0a0a0a;
   --md-code-fg-color: #cccccc;
 
-  --md-typeset-a-color: #ffffff;
-  --md-typeset-mark-color: rgba(255, 255, 255, 0.1);
+  --md-typeset-a-color: #FF9900;
+  --md-typeset-mark-color: rgba(255, 153, 0, 0.1);
+
+  /* GTA SA palette */
+  --gta-orange: #FF9900;
+  --gta-orange-dim: #CC7A00;
+  --gta-green: #33CC33;
+  --gta-red: #CC3333;
+  --gta-bg: #000000;
+  --gta-surface: #0a0a0a;
+  --gta-border: #1a1a1a;
+  --gta-text: #c8c8c8;
+  --gta-text-dim: #888888;
 }
 
 /* ============================================================
-   Body — Чёрный фон
+   Body — Чёрный фон с текстурой noise
    ============================================================ */
 body {
-  background-color: #000000;
-  color: #aaaaaa;
-  font-family: 'Bebas Neue', 'Segoe UI', sans-serif;
-  letter-spacing: 2px;
+  background-color: #000;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+  color: var(--gta-text);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 16px;
+  line-height: 1.75;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Scanlines */
+/* Объединённые scanlines + vignette (один оверлей вместо двух) */
 body::after {
   content: '';
   position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
+  inset: 0;
+  z-index: 100;
   pointer-events: none;
-  z-index: 9999;
-  background: repeating-linear-gradient(
-    0deg,
-    transparent, transparent 2px,
-    rgba(0, 0, 0, 0.04) 2px, rgba(0, 0, 0, 0.04) 4px
-  );
-}
-
-/* Vignette */
-body::before {
-  content: '';
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  pointer-events: none;
-  z-index: 9998;
-  background: radial-gradient(ellipse at center, transparent 50%, rgba(0, 0, 0, 0.6) 100%);
+  background:
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(0, 0, 0, 0.03) 2px,
+      rgba(0, 0, 0, 0.03) 4px
+    ),
+    radial-gradient(
+      ellipse at center,
+      transparent 60%,
+      rgba(0, 0, 0, 0.4) 100%
+    );
 }
 
 /* ============================================================
-   Typography
+   Accessibility
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+:focus-visible {
+  outline: 2px solid var(--gta-orange);
+  outline-offset: 2px;
+}
+
+/* ============================================================
+   Typography — Bebas Neue только для заголовков
    ============================================================ */
 .md-typeset {
-  font-size: 17px;
-  line-height: 1.6;
-  color: #aaaaaa;
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--gta-text);
 }
 
 .md-typeset h1 {
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Oswald', 'Bebas Neue', sans-serif;
   font-size: 2.5em;
   color: #ffffff;
   text-transform: uppercase;
-  letter-spacing: 2px;
-  border-bottom: 2px solid #222;
+  letter-spacing: 1.5px;
+  border-bottom: 2px solid var(--gta-border);
   padding-bottom: 0.75rem;
   margin-bottom: 1.5rem;
 }
 
 .md-typeset h2 {
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: 'Bebas Neue', 'Oswald', sans-serif;
   font-size: 1.8em;
-  letter-spacing: 4px;
-  color: #cccccc;
+  letter-spacing: 1.5px;
+  color: var(--gta-orange);
   text-transform: uppercase;
-  border-bottom: 1px solid #222;
+  border-bottom: 1px solid var(--gta-border);
   padding-bottom: 0.5rem;
   margin-top: 2.5rem;
   margin-bottom: 1.2rem;
 }
 
 .md-typeset h3 {
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: 'Bebas Neue', 'Oswald', sans-serif;
   font-size: 1.3em;
-  letter-spacing: 3px;
-  color: #999999;
+  letter-spacing: 1px;
+  color: #aaaaaa;
   text-transform: uppercase;
   margin-top: 2rem;
   margin-bottom: 1rem;
+}
+
+/* ============================================================
+   Links — оранжевый акцент
+   ============================================================ */
+.md-typeset a {
+  color: var(--gta-orange);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.md-typeset a:hover {
+  color: #FFB84D;
+  border-bottom: 1px solid var(--gta-orange);
+  text-shadow: 0 0 10px rgba(255, 153, 0, 0.3);
 }
 
 /* ============================================================
@@ -104,7 +145,7 @@ body::before {
    ============================================================ */
 .md-header {
   background: #000000;
-  border-bottom: 2px solid #222;
+  border-bottom: 2px solid var(--gta-border);
   box-shadow: none;
 }
 
@@ -114,10 +155,10 @@ body::before {
 }
 
 .md-header__title {
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Oswald', 'Bebas Neue', sans-serif;
   font-size: 1.3em;
   color: #ffffff !important;
-  letter-spacing: 2px;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
 }
 
@@ -125,22 +166,24 @@ body::before {
    Navigation
    ============================================================ */
 .md-nav {
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
 .md-nav__title {
+  font-family: 'Bebas Neue', 'Oswald', sans-serif;
   font-size: 1.2em;
-  letter-spacing: 4px;
+  letter-spacing: 1px;
   color: #ffffff !important;
   text-transform: uppercase;
 }
 
 .md-nav__link {
   font-weight: 400;
-  color: #888888;
-  letter-spacing: 3px;
+  color: var(--gta-text-dim);
+  letter-spacing: 0.5px;
   text-transform: uppercase;
-  font-size: 15px;
+  font-size: 14px;
+  font-family: 'Bebas Neue', 'Oswald', sans-serif;
   padding: 4px 8px;
   border-radius: 0;
   transition: all 0.2s ease;
@@ -155,40 +198,42 @@ body::before {
   content: '►';
   position: absolute;
   left: -4px;
-  color: #ffffff;
+  color: var(--gta-orange);
   font-size: 10px;
 }
 
 .md-nav__link--active {
   color: #ffffff !important;
-  border-left: 3px solid #ffffff;
+  border-left: 3px solid var(--gta-orange);
 }
 
 .md-nav__item--active > .md-nav__link {
   color: #ffffff !important;
-  border-left: 3px solid #ffffff;
+  border-left: 3px solid var(--gta-orange);
 }
 
 /* Tabs */
 .md-tabs {
   background: #000000;
-  border-bottom: 2px solid #222;
+  border-bottom: 2px solid var(--gta-border);
 }
 
 .md-tabs__link {
-  font-family: 'Bebas Neue', sans-serif;
-  letter-spacing: 3px;
+  font-family: 'Bebas Neue', 'Oswald', sans-serif;
+  letter-spacing: 1px;
   text-transform: uppercase;
   font-size: 15px;
-  color: #888888;
+  color: var(--gta-text-dim);
 }
 
 .md-tabs__link:hover {
   color: #ffffff;
 }
 
-.md-tabs__item--active .md-tabs__link {
-  color: #ffffff;
+.md-tabs__item--active .md-tabs__link,
+.md-tabs__link--active {
+  color: var(--gta-orange);
+  border-bottom: 3px solid var(--gta-orange);
 }
 
 /* ============================================================
@@ -203,7 +248,7 @@ body::before {
 
 .md-typeset .grid.cards > ul > li {
   background: rgba(255, 255, 255, 0.02);
-  border: 1px solid #222;
+  border: 1px solid var(--gta-border);
   border-left: 4px solid #666;
   padding: 20px 24px;
   margin: 0;
@@ -219,14 +264,14 @@ body::before {
   top: 50%;
   transform: translateY(-50%);
   opacity: 0;
-  color: #ffffff;
+  color: var(--gta-orange);
   font-size: 12px;
   transition: all 0.25s ease;
 }
 
 .md-typeset .grid.cards > ul > li:hover {
   background: rgba(255, 255, 255, 0.05);
-  border-left-color: #ff6600;
+  border-left-color: var(--gta-orange);
   transform: translateX(6px);
 }
 
@@ -236,20 +281,20 @@ body::before {
 }
 
 .md-typeset .grid.cards > ul > li > p:first-child {
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: 'Bebas Neue', 'Oswald', sans-serif;
   font-size: 1.4em;
-  letter-spacing: 4px;
+  letter-spacing: 1px;
   color: #ffffff;
   text-transform: uppercase;
   margin: 0 0 8px 0;
 }
 
 /* ============================================================
-   Tables
+   Tables — моноширинный только для .sources таблиц
    ============================================================ */
 .md-typeset table:not([class]) {
-  border: 1px solid #222;
-  background: #0a0a0a;
+  border: 1px solid var(--gta-border);
+  background: var(--gta-surface);
   border-radius: 0;
   overflow: hidden;
   box-shadow: none;
@@ -260,23 +305,23 @@ body::before {
 .md-typeset table:not([class]) th {
   background: #111111;
   color: #ffffff;
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: 'Bebas Neue', 'Oswald', sans-serif;
   font-weight: 400;
-  letter-spacing: 3px;
+  letter-spacing: 1px;
   text-transform: uppercase;
-  border-bottom: 2px solid #222;
+  border-bottom: 2px solid var(--gta-border);
   padding: 12px 16px;
   text-align: left;
   font-size: 15px;
 }
 
 .md-typeset table:not([class]) td {
-  border-bottom: 1px solid #1a1a1a;
+  border-bottom: 1px solid var(--gta-border);
   padding: 12px 16px;
-  color: #aaaaaa;
+  color: var(--gta-text);
   vertical-align: top;
-  font-family: 'Courier New', monospace;
-  font-size: 14px;
+  font-family: inherit;
+  font-size: 15px;
   letter-spacing: 0;
 }
 
@@ -288,22 +333,29 @@ body::before {
   border-bottom: none;
 }
 
+/* Моноширинный только в таблицах источников */
+.article-sources table td,
+.md-typeset table.sources td {
+  font-family: 'Roboto Mono', 'Courier New', monospace;
+  font-size: 13px;
+}
+
 /* ============================================================
    Code Blocks
    ============================================================ */
 .md-typeset code {
   background: #111111;
   color: #cccccc;
-  border: 1px solid #222;
+  border: 1px solid var(--gta-border);
   padding: 2px 6px;
-  border-radius: 0;
+  border-radius: 2px;
   font-family: 'Courier New', monospace;
 }
 
 .md-typeset pre {
-  border: 1px solid #222;
+  border: 1px solid var(--gta-border);
   border-radius: 0;
-  background: #0a0a0a !important;
+  background: var(--gta-surface) !important;
   box-shadow: none;
 }
 
@@ -314,29 +366,13 @@ body::before {
 }
 
 /* ============================================================
-   Links
-   ============================================================ */
-.md-typeset a {
-  color: #cccccc;
-  text-decoration: none;
-  border-bottom: 1px solid transparent;
-  transition: all 0.2s ease;
-}
-
-.md-typeset a:hover {
-  color: #ffffff;
-  border-bottom: 1px solid #ffffff;
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
-}
-
-/* ============================================================
    Admonitions
    ============================================================ */
 .md-typeset .admonition,
 .md-typeset details {
-  border: 1px solid #222;
+  border: 1px solid var(--gta-border);
   border-radius: 0;
-  background: #0a0a0a;
+  background: var(--gta-surface);
   box-shadow: none;
 }
 
@@ -344,10 +380,10 @@ body::before {
 .md-typeset details > summary {
   background: #111111;
   color: #ffffff;
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: 'Bebas Neue', 'Oswald', sans-serif;
   text-transform: uppercase;
-  letter-spacing: 3px;
-  border-bottom: 1px solid #222;
+  letter-spacing: 1px;
+  border-bottom: 1px solid var(--gta-border);
 }
 
 /* ============================================================
@@ -355,15 +391,15 @@ body::before {
    ============================================================ */
 .md-search__input {
   background-color: #111111;
-  border: 1px solid #222;
+  border: 1px solid var(--gta-border);
   border-radius: 0;
   color: #ffffff;
 }
 
 .md-search__input::placeholder {
   color: #666666;
-  font-family: 'Bebas Neue', sans-serif;
-  letter-spacing: 2px;
+  font-family: 'Bebas Neue', 'Oswald', sans-serif;
+  letter-spacing: 1px;
 }
 
 .md-search__result {
@@ -395,7 +431,7 @@ body::before {
    Footer
    ============================================================ */
 .md-footer {
-  border-top: 2px solid #222;
+  border-top: 2px solid var(--gta-border);
   background: #000000;
 }
 
@@ -433,7 +469,7 @@ html {
 }
 
 /* ============================================================
-   Stats Bars
+   Stats Bars — GTA SA стиль
    ============================================================ */
 .sa-stats {
   display: flex;
@@ -449,10 +485,10 @@ html {
 }
 
 .sa-stat-label {
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: 'Bebas Neue', 'Oswald', sans-serif;
   font-size: 14px;
-  letter-spacing: 3px;
-  color: #aaaaaa;
+  letter-spacing: 1px;
+  color: var(--gta-text);
   text-transform: uppercase;
   min-width: 120px;
 }
@@ -460,39 +496,62 @@ html {
 .sa-stat-bar {
   flex: 1;
   height: 14px;
-  background: #0a0a0a;
-  border: 1px solid #222;
+  background: var(--gta-surface);
+  border: 1px solid var(--gta-border);
   position: relative;
   overflow: hidden;
 }
 
 .sa-stat-fill {
   height: 100%;
-  background: linear-gradient(90deg, #2d5a26 0%, #4a8c3f 100%);
+  background: linear-gradient(90deg, var(--gta-orange-dim), var(--gta-orange));
   transition: width 0.5s ease;
 }
 
 .sa-stat-value {
   font-family: 'Courier New', monospace;
   font-size: 12px;
-  color: #888;
+  color: var(--gta-text-dim);
   min-width: 50px;
   text-align: right;
   letter-spacing: 0;
 }
 
-/* Reader stats — orange accent (like wanted level) */
+/* Reader stats — orange accent (wanted level style) */
 .sa-stats--reader .sa-stat-fill {
-  background: linear-gradient(90deg, #8b4513 0%, #ff6600 100%);
+  background: linear-gradient(90deg, var(--gta-orange-dim), var(--gta-orange));
 }
 
 .sa-stats--reader .sa-stat-label {
-  color: #ffaa66;
+  color: var(--gta-orange);
 }
 
 /* Project stats — green accent */
 .sa-stats--project .sa-stat-fill {
-  background: linear-gradient(90deg, #2d5a26 0%, #4a8c3f 100%);
+  background: linear-gradient(90deg, #2d5a26, var(--gta-green));
+}
+
+/* ============================================================
+   Wanted Stars (замена полоски прогресса)
+   ============================================================ */
+.sa-wanted-stars {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.sa-wanted-stars .star {
+  width: 16px;
+  height: 16px;
+  background: #333;
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  transition: background 0.3s, filter 0.3s;
+  flex-shrink: 0;
+}
+
+.sa-wanted-stars .star.active {
+  background: var(--gta-orange);
+  filter: drop-shadow(0 0 4px rgba(255, 153, 0, 0.6));
 }
 
 /* ============================================================
@@ -504,15 +563,15 @@ html {
   right: 20px;
   width: 200px;
   background: rgba(0, 0, 0, 0.95);
-  border: 1px solid #222;
+  border: 1px solid var(--gta-border);
   padding: 16px;
   z-index: 999;
 }
 
 .sa-legend-title {
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: 'Bebas Neue', 'Oswald', sans-serif;
   font-size: 18px;
-  letter-spacing: 4px;
+  letter-spacing: 1px;
   color: #ffffff;
   text-transform: uppercase;
   margin-bottom: 12px;
@@ -524,10 +583,10 @@ html {
   display: flex;
   align-items: center;
   padding: 8px 0;
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: 'Bebas Neue', 'Oswald', sans-serif;
   font-size: 14px;
-  letter-spacing: 2px;
-  color: #888888;
+  letter-spacing: 1px;
+  color: var(--gta-text-dim);
   text-transform: uppercase;
   text-decoration: none;
   transition: all 0.15s ease;
@@ -544,8 +603,8 @@ html {
 }
 
 .sa-legend-item.active {
-  color: #ffffff;
-  border-left-color: currentColor;
+  color: var(--gta-orange);
+  border-left-color: var(--gta-orange);
 }
 
 .sa-legend-dot {
@@ -565,21 +624,28 @@ html {
 .dot-glossary { background: #00cccc; color: #00cccc; }
 .dot-biblio { background: #ff8844; color: #ff8844; }
 
+/* Скрыть легенду на средних экранах (1024–1400px) */
+@media (max-width: 1400px) {
+  .sa-legend {
+    display: none;
+  }
+}
+
 /* Mobile: legend becomes horizontal bar at bottom */
 @media (max-width: 768px) {
   .sa-legend {
+    display: flex;
     position: fixed;
     top: auto;
     bottom: 0;
     left: 0;
     right: 0;
     width: 100%;
-    display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 8px;
     padding: 10px;
-    border-top: 1px solid #222;
+    border-top: 1px solid var(--gta-border);
     border-left: none;
     border-right: none;
   }
