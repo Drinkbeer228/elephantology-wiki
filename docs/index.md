@@ -48,26 +48,26 @@ hide:
 ## Состояние базы знаний
 
 <div class="sa-stats sa-stats--project">
-  <div class="sa-stat-row">
-    <span class="sa-stat-label">Статей</span>
-    <div class="sa-stat-bar"><div class="sa-stat-fill" style="width: 60%"></div></div>
-    <span class="sa-stat-value">18</span>
-  </div>
-  <div class="sa-stat-row">
-    <span class="sa-stat-label">Источников</span>
-    <div class="sa-stat-bar"><div class="sa-stat-fill" style="width: 48%"></div></div>
-    <span class="sa-stat-value">24</span>
-  </div>
-  <div class="sa-stat-row">
-    <span class="sa-stat-label">Терминов</span>
-    <div class="sa-stat-bar"><div class="sa-stat-fill" style="width: 40%"></div></div>
-    <span class="sa-stat-value">40+</span>
-  </div>
-  <div class="sa-stat-row">
-    <span class="sa-stat-label">Разделов</span>
-    <div class="sa-stat-bar"><div class="sa-stat-fill" style="width: 50%"></div></div>
-    <span class="sa-stat-value">5</span>
-  </div>
+<div class="sa-stat-row">
+<span class="sa-stat-label">Статей</span>
+<div class="sa-stat-bar"><div class="sa-stat-fill" style="width: 60%"></div></div>
+<span class="sa-stat-value">18</span>
+</div>
+<div class="sa-stat-row">
+<span class="sa-stat-label">Источников</span>
+<div class="sa-stat-bar"><div class="sa-stat-fill" style="width: 48%"></div></div>
+<span class="sa-stat-value">24</span>
+</div>
+<div class="sa-stat-row">
+<span class="sa-stat-label">Терминов</span>
+<div class="sa-stat-bar"><div class="sa-stat-fill" style="width: 40%"></div></div>
+<span class="sa-stat-value">40+</span>
+</div>
+<div class="sa-stat-row">
+<span class="sa-stat-label">Разделов</span>
+<div class="sa-stat-bar"><div class="sa-stat-fill" style="width: 50%"></div></div>
+<span class="sa-stat-value">5</span>
+</div>
 </div>
 
 ---
