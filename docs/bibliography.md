@@ -83,5 +83,3 @@ last_reviewed: 2026-07-23
 ---
 
 *Этот список обновляется по мере добавления новых статей. Всего источников: 29.*
-
-*[Предложить источник или исправление](https://github.com/Drinkbeer228/elephantology-wiki/edit/main/docs/bibliography.md)*
