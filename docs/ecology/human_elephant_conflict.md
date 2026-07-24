@@ -181,13 +181,13 @@ raiding), которые приводят к уничтожению годово
 сельскохозяйственных практик и территориальном зонировании, являются единственным
 гуманным и эффективным путем к устойчивому будущему как для людей, так и для слонов[^ref9].
 
-[^ref1]: Архив базы знаний «Слонология» (elephant_bot_archive.md). ⭐⭐⭐
-[^ref2]: Mara ecosystem connectivity analysis (2016). GPS-tracking of collared elephants — conservation report. ⭐⭐⭐⭐
-[^ref3]: Sitati N. W. et al. (2003). *Assessment of crop raiding by elephants in a Kenyan protected area*. ⭐⭐⭐⭐⭐
-[^ref4]: Hoare R. E. (2000). *Determinants of human–elephant conflict in a land-use mosaic*. ⭐⭐⭐⭐⭐
-[^ref5]: Campos-Arceiz A., Blake S. (2011). *Mega-gardeners of the forest: the role of elephants in seed dispersal*. ⭐⭐⭐⭐⭐
-[^ref6]: Pringle R. M. (2008). *Elephants as agents of habitat creation for small vertebrates*. ⭐⭐⭐⭐⭐
-[^ref7]: Vollrath F., Douglas-Hamilton I. (2005). *African bees to control African elephants*. ⭐⭐⭐⭐⭐
-[^ref8]: Osborn F. V., Parker G. E. (2002). *Community-based methods to reduce crop loss to elephants*. ⭐⭐⭐⭐⭐
-[^ref9]: Ethical Approaches to Elephant Conservation (CH21). ⭐⭐⭐
-[^ref10]: Dickman A. J. (2010). *Complexities of conflict: the importance of considering social factors for effectively resolving human–wildlife conflict*. ⭐⭐⭐⭐⭐
+[^ref1]: Архив базы знаний «Слонология» (elephant_bot_archive.md).
+[^ref2]: Mara ecosystem connectivity analysis (2016). GPS-tracking of collared elephants — conservation report.
+[^ref3]: Sitati N. W. et al. (2003). *Assessment of crop raiding by elephants in a Kenyan protected area*.
+[^ref4]: Hoare R. E. (2000). *Determinants of human–elephant conflict in a land-use mosaic*.
+[^ref5]: Campos-Arceiz A., Blake S. (2011). *Mega-gardeners of the forest: the role of elephants in seed dispersal*.
+[^ref6]: Pringle R. M. (2008). *Elephants as agents of habitat creation for small vertebrates*.
+[^ref7]: Vollrath F., Douglas-Hamilton I. (2005). *African bees to control African elephants*.
+[^ref8]: Osborn F. V., Parker G. E. (2002). *Community-based methods to reduce crop loss to elephants*.
+[^ref9]: Ethical Approaches to Elephant Conservation (CH21).
+[^ref10]: Dickman A. J. (2010). *Complexities of conflict: the importance of considering social factors for effectively resolving human–wildlife conflict*.

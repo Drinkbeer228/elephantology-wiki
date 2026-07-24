@@ -63,14 +63,14 @@ connectivity), нарушения которой ведут к быстрым и
 фенотип вида на условия жёсткой территориальной изоляции.
 
 [^archie2007]: Archie E. A. et al. (2007). *Inbreeding avoidance and genetic
-  structure in elephant societies* — peer-reviewed research. ⭐⭐⭐⭐⭐.
+  structure in elephant societies* — peer-reviewed research.
 [^panindia]: Pan-India population genetics study. *Significance of habitat
   connectivity for wild Asian elephant conservation* — peer-reviewed research.
-  ⭐⭐⭐⭐⭐. С. 1.
+  С. 1.
 [^mara2016]: Mara ecosystem connectivity analysis (2016). GPS-tracking of
-  collared elephants — conservation report. ⭐⭐⭐⭐. С. 7–8, 24–25.
+  collared elephants — conservation report. С. 7–8, 24–25.
 [^shoshani1996]: Shoshani J., Tassy P. (eds.) (1996). *The Proboscidea:
   Evolution and Palaeoecology of Elephants and Their Relatives* — монография.
-  ⭐⭐⭐. С. 234.
+  С. 234.
 [^tetaert2026]: Tetaert et al. (2026). *Functional adaptations to body mass in
-  proboscidean ankle bones* — Palaeontology, peer-reviewed. ⭐⭐⭐⭐⭐. С. 2, 4.
+  proboscidean ankle bones* — Palaeontology, peer-reviewed. С. 2, 4.

@@ -73,14 +73,38 @@ img { image-rendering: pixelated; }
 .md-typeset .admonition, .md-typeset details { border: 2px solid var(--sl-border);
   border-radius: 0; background: var(--sl-surface); box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.35); }
 
+/* Сетка: строго 2 карточки в ряд на десктопе */
+.md-typeset .grid.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);   /* ДВЕ колонки, не auto-fit */
+  gap: 18px;
+}
+
+/* Квадратная «ограда» вокруг каждой карточки */
 .md-typeset .grid.cards > ul > li,
-.md-typeset .grid.cards > .card { background: var(--sl-surface);
-  border: 2px solid var(--sl-border); border-radius: 0; padding: 1rem 1.1rem;
-  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.4);
-  transition: transform .12s, box-shadow .12s, border-color .12s; }
-.md-typeset .grid.cards > ul > li:hover { border-color: var(--sl-accent);
-  transform: translate(-2px, -2px); box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.45); }
+.md-typeset .grid.cards > .card {
+  background: var(--sl-surface);
+  border: 3px solid var(--sl-border);      /* толще = читается как ограда */
+  border-radius: 0;                         /* острые углы */
+  box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.45); /* чёткая ступенчатая тень-забор */
+  padding: 1.1rem 1.2rem;
+  transition: transform .12s, box-shadow .12s, border-color .12s;
+  /* ЗАГОТОВКА НА ПОТОМ (пиксельный фон/картинка у раздела):
+     чтобы навесить фон, раскомментируй и подставь путь:
+     background-image: url(...); background-size: cover; background-position: center;
+     и добавь полупрозрачную подложку под текст, если фон яркий. */
+}
+.md-typeset .grid.cards > ul > li:hover {
+  border-color: var(--sl-accent);
+  transform: translate(-2px, -2px);
+  box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.5);
+}
 .md-typeset .grid.cards strong { color: var(--sl-heading); }
+
+/* Узкие экраны — одна колонка, чтобы не теснилось */
+@media (max-width: 760px) {
+  .md-typeset .grid.cards { grid-template-columns: 1fr; }
+}
 
 .sa-hero { text-align: center; margin: 1.5rem 0 2rem; }
 .sa-hero__emoji { display: inline-block; font-size: 4.5rem; line-height: 1;

@@ -179,11 +179,11 @@ ElephantVoices отслеживали перемещения 27 слонов, с
 экологических коридоров в юридическую канву землепользования, способно гарантировать
 выживание этих мегатравоядных в условиях антропоцена.
 
-[^ref1]: Mara ecosystem connectivity analysis (2016). GPS-tracking of collared elephants — conservation report. ⭐⭐⭐⭐
-[^ref2]: Mutinda H., Poole J. H., Moss C. J. (2011). *Decision making and leadership in the Amboseli elephant population* — глава в монографии. ⭐⭐⭐
-[^ref3]: Croze H., Moss C. J. (2011). *Patterns of habitat use and movement among Amboseli elephant families* — глава в монографии. ⭐⭐⭐
-[^ref4]: McComb K. et al. (2011). *Leadership in elephants: the adaptive value of age*. ⭐⭐⭐⭐⭐
-[^ref5]: ElephantVoices (2012). *Gorongosa Report* — отчёт. ⭐⭐⭐⭐
-[^ref6]: ElephantVoices (2014). *Mara ecosystem connectivity report* — отчёт. ⭐⭐⭐⭐
-[^ref7]: Gaynor K. M. et al. (2018). *Landscape connectivity and elephant movement in a human-dominated landscape*. African Journal of Ecology. ⭐⭐⭐⭐⭐
-[^ref8]: Архив базы знаний «Слонология» (elephant_bot_archive.md). ⭐⭐⭐
+[^ref1]: Mara ecosystem connectivity analysis (2016). GPS-tracking of collared elephants — conservation report.
+[^ref2]: Mutinda H., Poole J. H., Moss C. J. (2011). *Decision making and leadership in the Amboseli elephant population* — глава в монографии.
+[^ref3]: Croze H., Moss C. J. (2011). *Patterns of habitat use and movement among Amboseli elephant families* — глава в монографии.
+[^ref4]: McComb K. et al. (2011). *Leadership in elephants: the adaptive value of age*.
+[^ref5]: ElephantVoices (2012). *Gorongosa Report* — отчёт.
+[^ref6]: ElephantVoices (2014). *Mara ecosystem connectivity report* — отчёт.
+[^ref7]: Gaynor K. M. et al. (2018). *Landscape connectivity and elephant movement in a human-dominated landscape*. African Journal of Ecology.
+[^ref8]: Архив базы знаний «Слонология» (elephant_bot_archive.md).

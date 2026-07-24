@@ -142,8 +142,8 @@ last_reviewed: 2026-07-24
 ледникового периода, вымерев лишь около 4000 лет назад (в эпоху строительства
 египетских пирамид)[^ref1].
 
-[^ref1]: Shoshani J., Tassy P. (eds.) (1996). *The Proboscidea: Evolution and Palaeoecology of Elephants and Their Relatives* — академическая монография-сборник. ⭐⭐⭐
-[^ref2]: Larramendi A. (2016). *Shoulder height, body mass, and shape of proboscideans*. Acta Palaeontologica Polonica. ⭐⭐⭐⭐⭐
-[^ref3]: Tetaert C. et al. (2026). *Functional adaptations to body mass in proboscidean ankle bones*. Palaeontology. ⭐⭐⭐⭐⭐
-[^ref4]: Lull R. S. (1908). *Evolution of the Elephant* (исторический источник 1908 г.; современные морфометрические данные — ref2, ref3). ⭐⭐
-[^ref5]: Kretzoi M., Gillespie A. (1970). *Mammoth hair and habitat*. Science. ⭐⭐⭐⭐⭐
+[^ref1]: Shoshani J., Tassy P. (eds.) (1996). *The Proboscidea: Evolution and Palaeoecology of Elephants and Their Relatives* — академическая монография-сборник.
+[^ref2]: Larramendi A. (2016). *Shoulder height, body mass, and shape of proboscideans*. Acta Palaeontologica Polonica.
+[^ref3]: Tetaert C. et al. (2026). *Functional adaptations to body mass in proboscidean ankle bones*. Palaeontology.
+[^ref4]: Lull R. S. (1908). *Evolution of the Elephant* (исторический источник 1908 г.; современные морфометрические данные — ref2, ref3).
+[^ref5]: Kretzoi M., Gillespie A. (1970). *Mammoth hair and habitat*. Science.
