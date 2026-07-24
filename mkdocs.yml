@@ -49,7 +49,7 @@ plugins:
       lang: [ru, en]
 
 extra_css:
-  - stylesheets/extra.css?v=10
+  - stylesheets/extra.css?v=11
 
 
 nav:
